@@ -2,7 +2,7 @@
 
 [![Issues](https://img.shields.io/github/issues/bcgov/nr-fsa-theme)](/../../issues)
 [![Pull Requests](https://img.shields.io/github/issues-pr/bcgov/nr-fsa-theme)](/../../pulls)
-[![MIT License](https://img.shields.io/github/license/bcgov/nr-fsa-theme.svg)](/LICENSE.md)
+[![MIT License](https://img.shields.io/github/license/bcgov/nr-fsa-theme.svg)](/LICENSE)
 [![Lifecycle](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
 # **NR-FSA-Theme**
