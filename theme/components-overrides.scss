@@ -172,7 +172,7 @@ nav.#{variables.$bcgov-prefix}--side-nav {
   border-color: colors.$blue-60 !important;
 }
 
-a.#{variables.$bcgov-prefix}--header__name:hover {
+a.#{variables.$bcgov-prefix}--header__name, a.#{variables.$bcgov-prefix}--header__name:hover {
   border-color: colors.$blue-60 !important;
 }
 
