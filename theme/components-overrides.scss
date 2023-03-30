@@ -24,6 +24,14 @@
   border-top-right-radius: 4px;
 }
 
+.#{variables.$bcgov-prefix}--dropdown {
+  border-radius: 4px 4px 0px 0px !important;
+}
+.#{variables.$bcgov-prefix}--dropdown:focus {
+  outline: 2px solid colors.$blue-60 !important;
+  box-shadow: none !important;
+}
+
 .#{variables.$bcgov-prefix}--btn {
   border-radius: 4px !important;
 };
@@ -197,6 +205,11 @@ ul.#{variables.$bcgov-prefix}--accordion {
 button.#{variables.$bcgov-prefix}--side-nav__submenu,
 .#{variables.$bcgov-prefix}--side-nav__link {
   height: 3rem;
+  font-weight: normal !important;
+}
+
+.#{variables.$bcgov-prefix}--side-nav__link:hover {
+  background-color: rgba(colors.$gray-50, 0.12) !important;
 }
 
 div.#{variables.$bcgov-prefix}--side-nav__icon > svg {
