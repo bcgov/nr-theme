@@ -1,9 +1,9 @@
 @use 'sass:map';
 
-@use './variables.scss' as variables;
-@use './colors.scss' as colors;
-@use './light-theme.scss' as lightTheme;
-@use './light-buttons.scss' as lightButton;
+@use '../design-tokens/variables.scss' as variables;
+@use '../design-tokens/colors.scss' as colors;
+@use '../design-tokens/light-theme.scss' as lightTheme;
+@use '../design-tokens//light-buttons.scss' as lightButton;
 
 body {
     font-family: 'BC Sans';
