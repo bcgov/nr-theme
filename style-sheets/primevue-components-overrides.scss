@@ -1,0 +1,232 @@
+@use 'sass:map';
+
+@use '../design-tokens/variables.scss' as variables;
+@use '../design-tokens/colors.scss' as colors;
+@use '../design-tokens/light-theme.scss' as lightTheme;
+@use '../design-tokens//light-buttons.scss' as lightButton;
+
+body {
+    font-family: 'BC Sans';
+}
+
+label {
+    font-weight: 400;
+    font-size: 14px;
+    color: map.get(lightTheme.$light-theme, 'text-primary');
+}
+
+/* ------------------------------------ primevue button --------------------------------- */
+.#{variables.$primevue-prefix}-button {
+    border-radius: 4px;
+    border-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-primary'
+    );
+    background-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-primary'
+    );
+}
+.#{variables.$primevue-prefix}-button:enabled:hover {
+    border-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-primary-hover'
+    );
+    background: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-primary-hover'
+    );
+}
+.#{variables.$primevue-prefix}-button:enabled:active {
+    border-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-primary-active'
+    );
+    background: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-primary-active'
+    );
+}
+.#{variables.$primevue-prefix}-button:focus {
+    box-shadow: 0 0 0 2px #ffffff,
+        0 0 0 4px map.get(lightTheme.$light-theme, 'focus'), 0 1px 2px 0 black;
+}
+
+/* ------------------------------------ primevue button outlined--------------------------------- */
+// .#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined {
+//     color: map.get(
+//         lightButton.$light-button-token-overrides,
+//         'button-tertiary'
+//     );
+//     border: 1px solid
+//         map.get(lightButton.$light-button-token-overrides, 'button-tertiary');
+// }
+
+/* ------------------------------------ primevue inputtext ----------------------------------- */
+.#{variables.$primevue-prefix}-inputtext {
+    border: none;
+    border-bottom: 1px solid
+        map.get(lightTheme.$light-theme, 'border-strong-01');
+    border-radius: 4px 4px 0px 0px;
+    background: map.get(lightTheme.$light-theme, 'field-01');
+}
+.#{variables.$primevue-prefix}-inputtext:enabled:hover {
+    border-color: map.get(lightTheme.$light-theme, 'border-strong-01');
+}
+.#{variables.$primevue-prefix}-inputtext:enabled:focus {
+    border-bottom: 1px solid white;
+    box-shadow: 0 0 0 0.1rem map.get(lightTheme.$light-theme, 'focus');
+}
+
+/* -------------------------------------- primevue dropdown ------------------------------------ */
+.#{variables.$primevue-prefix}-dropdown {
+    border: none;
+    border-bottom: 1px solid
+        map.get(lightTheme.$light-theme, 'border-strong-01');
+    border-radius: 4px 4px 0px 0px;
+    background: map.get(lightTheme.$light-theme, 'field-01');
+}
+.#{variables.$primevue-prefix}-dropdown:not(
+        .#{variables.$primevue-prefix}-disabled
+    ):hover {
+    border: none;
+    border-bottom: 1px solid
+        map.get(lightTheme.$light-theme, 'border-strong-01');
+}
+.#{variables.$primevue-prefix}-dropdown:not(
+        .#{variables.$primevue-prefix}-disabled
+    ).#{variables.$primevue-prefix}-focus {
+    border-bottom: 1px solid white;
+    box-shadow: 0 0 0 0.1rem map.get(lightTheme.$light-theme, 'focus');
+}
+
+.#{variables.$primevue-prefix}-dropdown-panel {
+    background: map.get(lightTheme.$light-theme, 'layer-01');
+    box-shadow: 0px 2px 6px map.get(lightTheme.$light-theme, 'shadows-menu');
+    border-radius: 0px 0px 4px 4px;
+}
+.#{variables.$primevue-prefix}-dropdown-panel
+    .#{variables.$primevue-prefix}-dropdown-items {
+    padding: 0px;
+}
+.#{variables.$primevue-prefix}-dropdown-panel
+    .#{variables.$primevue-prefix}-dropdown-items
+    .#{variables.$primevue-prefix}-dropdown-item {
+    border-bottom: 1px solid
+        map.get(lightTheme.$light-theme, 'layer-selected-01');
+}
+.#{variables.$primevue-prefix}-dropdown-panel
+    .#{variables.$primevue-prefix}-dropdown-items
+    .#{variables.$primevue-prefix}-dropdown-item:last-child {
+    border: none;
+}
+.#{variables.$primevue-prefix}-dropdown-panel
+    .#{variables.$primevue-prefix}-dropdown-items
+    .#{variables.$primevue-prefix}-dropdown-item:not(
+        .#{variables.$primevue-prefix}-highlight
+    ):not(.#{variables.$primevue-prefix}-disabled):hover {
+    background: map.get(lightTheme.$light-theme, 'layer-hover-01');
+}
+.#{variables.$primevue-prefix}-dropdown-panel
+    .#{variables.$primevue-prefix}-dropdown-items
+    .#{variables.$primevue-prefix}-dropdown-item.#{variables.$primevue-prefix}-highlight {
+    color: #212529; // default prime vue dropdown item color
+    background-color: map.get(lightTheme.$light-theme, 'layer-selected-01');
+}
+.#{variables.$primevue-prefix}-dropdown-panel
+    .#{variables.$primevue-prefix}-dropdown-items
+    .#{variables.$primevue-prefix}-dropdown-item.#{variables.$primevue-prefix}-highlight.#{variables.$primevue-prefix}-focus {
+    background-color: map.get(lightTheme.$light-theme, 'layer-selected-01');
+}
+.#{variables.$primevue-prefix}-dropdown-panel
+    .#{variables.$primevue-prefix}-dropdown-items
+    .#{variables.$primevue-prefix}-dropdown-item:not(
+        .#{variables.$primevue-prefix}-highlight
+    ):not(
+        .#{variables.$primevue-prefix}-disabled
+    ).#{variables.$primevue-prefix}-focus {
+    background: map.get(lightTheme.$light-theme, 'layer-01');
+}
+.#{variables.$primevue-prefix}-dropdown-panel
+    .#{variables.$primevue-prefix}-dropdown-items
+    .#{variables.$primevue-prefix}-dropdown-item:not(
+        .#{variables.$primevue-prefix}-highlight
+    ):not(
+        .#{variables.$primevue-prefix}-disabled
+    ).#{variables.$primevue-prefix}-focus:hover {
+    background: map.get(lightTheme.$light-theme, 'layer-hover-01');
+}
+
+/* ---------------------------------- checkbox -------------------------------- */
+.#{variables.$primevue-prefix}-checkbox
+    .#{variables.$primevue-prefix}-checkbox-box {
+    border: 1px solid map.get(lightTheme.$light-theme, 'icon-primary');
+    border-radius: 2px;
+}
+.#{variables.$primevue-prefix}-checkbox:not(
+        .#{variables.$primevue-prefix}-checkbox-disabled
+    )
+    .#{variables.$primevue-prefix}-checkbox-box:hover {
+    border-color: map.get(lightTheme.$light-theme, 'icon-primary');
+}
+.#{variables.$primevue-prefix}-checkbox:not(
+        .#{variables.$primevue-prefix}-checkbox-disabled
+    )
+    .#{variables.$primevue-prefix}-checkbox-box.#{variables.$primevue-prefix}-focus {
+    box-shadow: 0 0 0 2px #ffffff,
+        0 0 0 4px map.get(lightTheme.$light-theme, 'focus'), 0 1px 2px 0 black;
+    border-color: map.get(lightTheme.$light-theme, 'icon-primary');
+}
+.#{variables.$primevue-prefix}-checkbox
+    .#{variables.$primevue-prefix}-checkbox-box.#{variables.$primevue-prefix}-highlight,
+.#{variables.$primevue-prefix}-checkbox:not(
+        .#{variables.$primevue-prefix}-checkbox-disabled
+    )
+    .#{variables.$primevue-prefix}-checkbox-box.#{variables.$primevue-prefix}-highlight:hover {
+    border-color: map.get(lightTheme.$light-theme, 'icon-primary');
+    background: map.get(lightTheme.$light-theme, 'icon-primary');
+}
+.#{variables.$primevue-prefix}-checkbox
+    .#{variables.$primevue-prefix}-checkbox-box.#{variables.$primevue-prefix}-highlight
+    .#{variables.$primevue-prefix}-checkbox-icon.pi-check {
+    font-size: 12px;
+}
+
+/* ------------------------------------ primevue radio--------------------------------- */
+.#{variables.$primevue-prefix}-radiobutton
+    .#{variables.$primevue-prefix}-radiobutton-box {
+    border: 1px solid map.get(lightTheme.$light-theme, 'icon-primary');
+}
+.#{variables.$primevue-prefix}-radiobutton
+    .#{variables.$primevue-prefix}-radiobutton-box:not(
+        .#{variables.$primevue-prefix}-disabled
+    ):not(.#{variables.$primevue-prefix}-highlight):hover {
+    border-color: map.get(lightTheme.$light-theme, 'icon-primary');
+}
+.#{variables.$primevue-prefix}-radiobutton
+    .#{variables.$primevue-prefix}-radiobutton-box:not(
+        .#{variables.$primevue-prefix}-disabled
+    ).#{variables.$primevue-prefix}-focus {
+    box-shadow: 0 0 0 2px #ffffff,
+        0 0 0 4px map.get(lightTheme.$light-theme, 'focus'), 0 1px 2px 0 black;
+    border-color: map.get(lightTheme.$light-theme, 'icon-primary');
+}
+.#{variables.$primevue-prefix}-radiobutton
+    .#{variables.$primevue-prefix}-radiobutton-box
+    .#{variables.$primevue-prefix}-radiobutton-icon {
+    background-color: map.get(lightTheme.$light-theme, 'icon-primary');
+}
+.#{variables.$primevue-prefix}-radiobutton
+    .#{variables.$primevue-prefix}-radiobutton-box.#{variables.$primevue-prefix}-highlight {
+    border-color: map.get(lightTheme.$light-theme, 'icon-primary');
+    background: map.get(lightTheme.$light-theme, 'background');
+}
+.#{variables.$primevue-prefix}-radiobutton
+    .#{variables.$primevue-prefix}-radiobutton-box.#{variables.$primevue-prefix}-highlight:not(
+        .#{variables.$primevue-prefix}-disabled
+    ):hover {
+    border-color: map.get(lightTheme.$light-theme, 'icon-primary');
+    background: map.get(lightTheme.$light-theme, 'background');
+}
+
+/* ------------------------------------ table --------------------------------- */

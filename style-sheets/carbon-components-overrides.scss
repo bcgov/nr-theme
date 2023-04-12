@@ -1,6 +1,6 @@
-@use './variables.scss' as variables;
+@use '../design-tokens/variables.scss' as variables;
 
-@use './colors.scss' as colors;
+@use '../design-tokens/colors.scss' as colors;
 
 @use '@carbon/styles/scss/config' with (
   $prefix: variables.$bcgov-prefix

@@ -1,0 +1,19 @@
+{
+  "name": "@bcgov-nr/nr-fsa-theme",
+  "version": "0.0.1",
+  "description": "FSA common theme repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcgov/nr-fsa-theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcgov/nr-fsa-theme/issues"
+  },
+  "homepage": "https://github.com/bcgov/nr-fsa-theme#readme"
+}
