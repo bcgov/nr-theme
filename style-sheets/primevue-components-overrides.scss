@@ -3,16 +3,26 @@
 @use '../design-tokens/variables.scss' as variables;
 @use '../design-tokens/colors.scss' as colors;
 @use '../design-tokens/light-theme.scss' as lightTheme;
-@use '../design-tokens//light-buttons.scss' as lightButton;
+@use '../design-tokens/light-buttons.scss' as lightButton;
+@use '../design-tokens/type-family.scss' as typeFamily;
+
+:root {
+    --font-family: map.get(typeFamily.$type-family, 'sans');
+}
 
 body {
-    font-family: 'BC Sans';
+    font-family: map.get(typeFamily.$type-family, 'sans');
 }
 
 label {
     font-weight: 400;
     font-size: 14px;
     color: map.get(lightTheme.$light-theme, 'text-primary');
+}
+
+.#{variables.$primevue-prefix}-component,
+.#{variables.$primevue-prefix}-inputtext {
+    font-family: map.get(typeFamily.$type-family, 'sans');
 }
 
 /* ------------------------------------ primevue button --------------------------------- */
@@ -53,14 +63,45 @@ label {
 }
 
 /* ------------------------------------ primevue button outlined--------------------------------- */
-// .#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined {
-//     color: map.get(
-//         lightButton.$light-button-token-overrides,
-//         'button-tertiary'
-//     );
-//     border: 1px solid
-//         map.get(lightButton.$light-button-token-overrides, 'button-tertiary');
-// }
+.#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined {
+    color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-tertiary'
+    );
+    border-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-tertiary'
+    );
+}
+.#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined:enabled:hover {
+    background: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-tertiary-hover'
+    );
+    border-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-tertiary-hover'
+    );
+    color: #ffffff;
+}
+.#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined:enabled:active {
+    background: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-tertiary-active'
+    );
+    border-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-tertiary-active'
+    );
+    color: #ffffff;
+}
+.#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined:focus {
+    background: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-tertiary-active'
+    ) !important;
+    color: #ffffff;
+}
 
 /* ------------------------------------ primevue inputtext ----------------------------------- */
 .#{variables.$primevue-prefix}-inputtext {
@@ -74,7 +115,7 @@ label {
     border-color: map.get(lightTheme.$light-theme, 'border-strong-01');
 }
 .#{variables.$primevue-prefix}-inputtext:enabled:focus {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #ffffff;
     box-shadow: 0 0 0 0.1rem map.get(lightTheme.$light-theme, 'focus');
 }
 
@@ -96,7 +137,7 @@ label {
 .#{variables.$primevue-prefix}-dropdown:not(
         .#{variables.$primevue-prefix}-disabled
     ).#{variables.$primevue-prefix}-focus {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #ffffff;
     box-shadow: 0 0 0 0.1rem map.get(lightTheme.$light-theme, 'focus');
 }
 
@@ -229,4 +270,6 @@ label {
     background: map.get(lightTheme.$light-theme, 'background');
 }
 
-/* ------------------------------------ table --------------------------------- */
+/* ------------------------------------ primevue card--------------------------------- */
+
+/* ------------------------------------ primevue table --------------------------------- */
