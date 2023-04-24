@@ -20,7 +20,7 @@ jobs:
       - name: increment version
         run: |
           npm set //registry.npmjs.org/:_authToken $NODE_AUTH_TOKEN
-          npm --no-git-tag-version version from-git
+          npm version from-git
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
