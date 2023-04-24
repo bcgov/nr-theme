@@ -1,9 +1,8 @@
 name: Publish to npm Registry
 
 on:
-  create:
-    tags: 
-      - "*"
+  release:
+    types: [ created ]
 
 jobs:
   publish:
@@ -21,7 +20,7 @@ jobs:
       - name: increment version
         run: |
           npm set //registry.npmjs.org/:_authToken $NODE_AUTH_TOKEN
-          npm version from-git
+          npm --no-git-tag-version version from-git
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
