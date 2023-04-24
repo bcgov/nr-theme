@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.1](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.0...v1.0.1) (2023-04-24)
+
+
+### Bug Fixes
+
+* Fix npm auto release pipeline to be triggered once a tag got created ([#21](https://github.com/bcgov/nr-fsa-theme/issues/21)) ([618532a](https://github.com/bcgov/nr-fsa-theme/commit/618532a1ff3d5ca4466306d3b49862ae81a4fa58))
+* Test npm auto release pipeline ([#24](https://github.com/bcgov/nr-fsa-theme/issues/24)) ([e128cd9](https://github.com/bcgov/nr-fsa-theme/commit/e128cd974abcc5daa6f50d68e287249b2bb4bcb8))
+* test the npm auto release pipeline ([#23](https://github.com/bcgov/nr-fsa-theme/issues/23)) ([360637d](https://github.com/bcgov/nr-fsa-theme/commit/360637d3e75d0187d05138fd2f9303943e2152ad))
+
 ## 1.0.0 (2023-04-21)
 
 
