@@ -1,9 +1,8 @@
 name: Publish to npm Registry
 
 on:
-  create:
-    tags: 
-      - "*"
+  release:
+    types: created
 
 jobs:
   publish:
