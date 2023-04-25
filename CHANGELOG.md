@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.2...v1.0.3) (2023-04-25)
+
+
+### Bug Fixes
+
+* Fix npm auto release version ([#28](https://github.com/bcgov/nr-fsa-theme/issues/28)) ([925a1af](https://github.com/bcgov/nr-fsa-theme/commit/925a1af052dac4592399f25bee31bb368777af41))
+
 ## [1.0.2](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.1...v1.0.2) (2023-04-24)
 
 
