@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.1...v1.0.2) (2023-04-24)
+
+
+### Bug Fixes
+
+* Test npm auto release pipeline ([#25](https://github.com/bcgov/nr-fsa-theme/issues/25)) ([37995f1](https://github.com/bcgov/nr-fsa-theme/commit/37995f1a7a3924941748d2fdf571827ffd96bac7))
+* Test npm auto release pipeline ([#27](https://github.com/bcgov/nr-fsa-theme/issues/27)) ([a626332](https://github.com/bcgov/nr-fsa-theme/commit/a626332495b77e05bbcf40ec02f11abe560f8165))
+
 ## [1.0.1](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.0...v1.0.1) (2023-04-24)
 
 
