@@ -21,11 +21,11 @@ jobs:
           npm set //registry.npmjs.org/:_authToken $NODE_AUTH_TOKEN
           npm --no-git-tag-version version $(git describe --abbrev=0 --tags)
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
       - name: publish
         run: |
           npm set //registry.npmjs.org/:_authToken $NODE_AUTH_TOKEN
           npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
