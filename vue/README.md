@@ -1,6 +1,6 @@
 # **Use FSA theme for VUE3 project**
 
-For vue3 application, due to the restirction of the [Carbon UI library](https://vue.carbondesignsystem.com/?path=/story/welcome--default), we will use [PrimeVue](https://primevue.org/) to integrate with this common theme repo.
+For vue3 application, due to the restriction of the [Carbon UI library](https://vue.carbondesignsystem.com/?path=/story/welcome--default), we will use [PrimeVue](https://primevue.org/) to integrate with this common theme repo.
 
 ### **Configuration:**
 
