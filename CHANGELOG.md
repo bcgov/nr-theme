@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.4...v1.0.5) (2023-05-03)
+
+
+### Bug Fixes
+
+* adding missing font assets and add style for landing page ([#32](https://github.com/bcgov/nr-fsa-theme/issues/32)) ([912befc](https://github.com/bcgov/nr-fsa-theme/commit/912befcff8666ff308b0a5fe1f6e641830327b42))
+
 ## [1.0.4](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.3...v1.0.4) (2023-04-28)
 
 
