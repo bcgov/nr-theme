@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.5...v1.0.6) (2023-05-08)
+
+
+### Bug Fixes
+
+* [#34](https://github.com/bcgov/nr-fsa-theme/issues/34) Fix font face import path ([#35](https://github.com/bcgov/nr-fsa-theme/issues/35)) ([91f3018](https://github.com/bcgov/nr-fsa-theme/commit/91f3018b80d463840477340e4ce301733b1c4840))
+
 ## [1.0.5](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.4...v1.0.5) (2023-05-03)
 
 
