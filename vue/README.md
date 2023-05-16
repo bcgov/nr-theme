@@ -31,3 +31,9 @@ For vue3 application, due to the restriction of the [Carbon UI library](https://
     const app = createApp(App);
     app.use(PrimeVue);
     ```
+
+    Install the SASS loader
+
+    ```
+    npm install -D sass-loader sass
+    ```
