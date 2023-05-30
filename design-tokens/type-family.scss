@@ -2,9 +2,9 @@
 
 @font-face {
     font-family: 'BC Sans';
-    src: url('/node_modules/@bcgov-nr/nr-fsa-theme/assets/font/BCSans-Regular.woff')
+    src: url('../assets/font/BCSans-Regular.woff')
             format('woff'),
-        url('/node_modules/@bcgov-nr/nr-fsa-theme/assets/font/BCSans-Regular.woff2')
+        url('../assets/font/BCSans-Regular.woff2')
             format('woff2');
     font-style: normal;
     font-weight: normal;
@@ -12,9 +12,9 @@
 
 @font-face {
     font-family: 'BC Sans';
-    src: url('/node_modules/@bcgov-nr/nr-fsa-theme/assets/font/BCSans-Italic.woff')
+    src: url('../assets/font/BCSans-Italic.woff')
             format('woff'),
-        url('/node_modules/@bcgov-nr/nr-fsa-theme/assets/font/BCSans-Italic.woff2')
+        url('../assets/font/BCSans-Italic.woff2')
             format('woff2');
     font-style: italic;
     font-weight: normal;
@@ -22,9 +22,9 @@
 
 @font-face {
     font-family: 'BC Sans';
-    src: url('/node_modules/@bcgov-nr/nr-fsa-theme/assets/font/BCSans-Bold.woff')
+    src: url('../assets/font/BCSans-Bold.woff')
             format('woff'),
-        url('/node_modules/@bcgov-nr/nr-fsa-theme/assets/font/BCSans-Bold.woff2')
+        url('../assets/font/BCSans-Bold.woff2')
             format('woff2');
     font-style: normal;
     font-weight: bold;
@@ -32,9 +32,9 @@
 
 @font-face {
     font-family: 'BC Sans';
-    src: url('/node_modules/@bcgov-nr/nr-fsa-theme/assets/font/BCSans-BoldItalic.woff')
+    src: url('../assets/font/BCSans-BoldItalic.woff')
             format('woff'),
-        url('/node_modules/@bcgov-nr/nr-fsa-theme/assets/font/BCSans-BoldItalic.woff2')
+        url('../assets/font/BCSans-BoldItalic.woff2')
             format('woff2');
     font-style: italic;
     font-weight: bold;
