@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.0](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.6...v1.1.0) (2023-05-30)
+## [1.0.7](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.6...v1.0.7) (2023-05-30)
 
 
 ### Features
