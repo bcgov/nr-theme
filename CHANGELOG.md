@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.8](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.7...v1.0.8) (2023-05-30)
+
+
+### Miscellaneous
+
+* changed the version in package.json ([#42](https://github.com/bcgov/nr-fsa-theme/issues/42)) ([6bdbdb2](https://github.com/bcgov/nr-fsa-theme/commit/6bdbdb21dd79cf99b39ecad72de23ae605a5f054))
+
 ## [1.0.7](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.6...v1.0.7) (2023-05-30)
 
 
