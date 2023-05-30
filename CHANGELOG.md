@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.7](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.6...v1.0.7) (2023-05-30)
+
+
+### Features
+
+* Added missing step in the readme file for vue3 project ([#37](https://github.com/bcgov/nr-fsa-theme/issues/37)) ([06aac90](https://github.com/bcgov/nr-fsa-theme/commit/06aac909b80c075dc0c5f23806d4687a29fab081))
+
+
+### Bug Fixes
+
+* fixed the type-family.scss ([#41](https://github.com/bcgov/nr-fsa-theme/issues/41)) ([e169398](https://github.com/bcgov/nr-fsa-theme/commit/e169398a4997acd5d31cad36ee57f158dfd8a91e))
+
 ## [1.0.6](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.5...v1.0.6) (2023-05-08)
 
 
