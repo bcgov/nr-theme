@@ -35,8 +35,8 @@ label {
 .#{variables.$primevue-prefix}-button {
     border-radius: 4px;
     text-align: left;
-    height: 42px;
     font-size: 14px;
+    padding: 9px 13px;
     border-color: map.get(
         lightButton.$light-button-token-overrides,
         'button-primary'
@@ -71,8 +71,12 @@ label {
         lightButton.$light-button-token-overrides,
         'button-primary-disabled'
     );
+    opacity: 1;
     color: map.get(lightTheme.$light-theme, 'text-disabled');
-    border: none;
+    border-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-primary-disabled'
+    );
 }
 /* ------------------------------------ primevue button outlined--------------------------------- */
 .#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined {
@@ -116,6 +120,7 @@ label {
 }
 .#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined:disabled {
     color: map.get(lightTheme.$light-theme, 'text-disabled');
+    opacity: 1;
     background-color: transparent;
     border: 1px solid map.get(
         lightTheme.$light-theme, 'text-disabled'
@@ -304,6 +309,23 @@ label {
     margin: 0;
 }
 
+.#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-subtitle {
+    color: var(--light-theme-text-text-secondary, #606062);
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.16px;
+}
+
+.#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-footer {
+    padding: 0;
+}
 /* ------------------------------------ primevue table --------------------------------- */
 .#{variables.$primevue-prefix}-datatable .#{variables.$primevue-prefix}-datatable-thead > tr > th {
     /* Light Theme/Layer accent/$layer-accent-hover-01 */
