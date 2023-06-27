@@ -16,8 +16,14 @@ body {
 
 label {
     font-weight: 400;
-    font-size: 14px;
-    color: map.get(lightTheme.$light-theme, 'text-primary');
+    // font-size: 14px;
+    // color: map.get(lightTheme.$light-theme, 'text-primary');
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.32px;
+
+    /* Light Theme/Text/$text-secondary */
+    color: #606062;
 }
 
 .#{variables.$primevue-prefix}-component,
@@ -28,6 +34,9 @@ label {
 /* ------------------------------------ primevue button --------------------------------- */
 .#{variables.$primevue-prefix}-button {
     border-radius: 4px;
+    text-align: left;
+    height: 42px;
+    font-size: 14px;
     border-color: map.get(
         lightButton.$light-button-token-overrides,
         'button-primary'
@@ -57,11 +66,14 @@ label {
         'button-primary-active'
     );
 }
-.#{variables.$primevue-prefix}-button:focus {
-    box-shadow: 0 0 0 2px #ffffff,
-        0 0 0 4px map.get(lightTheme.$light-theme, 'focus'), 0 1px 2px 0 black;
+.#{variables.$primevue-prefix}-button:disabled {
+    background: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-primary-disabled'
+    );
+    color: map.get(lightTheme.$light-theme, 'text-disabled');
+    border: none;
 }
-
 /* ------------------------------------ primevue button outlined--------------------------------- */
 .#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined {
     color: map.get(
@@ -101,6 +113,13 @@ label {
         'button-tertiary-active'
     ) !important;
     color: #ffffff;
+}
+.#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined:disabled {
+    color: map.get(lightTheme.$light-theme, 'text-disabled');
+    background-color: transparent;
+    border: 1px solid map.get(
+        lightTheme.$light-theme, 'text-disabled'
+    );
 }
 
 /* ------------------------------------ primevue inputtext ----------------------------------- */
@@ -271,5 +290,40 @@ label {
 }
 
 /* ------------------------------------ primevue card--------------------------------- */
+.#{variables.$primevue-prefix}-card {
+    box-shadow: none;
+    border: 1px solid colors.$gray-30;
+    padding: 32px;
+}
+.#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-body {
+    padding: 32px;
+}
+
+.#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-content {
+    padding: 0;
+    margin: 0;
+}
 
 /* ------------------------------------ primevue table --------------------------------- */
+.#{variables.$primevue-prefix}-datatable .#{variables.$primevue-prefix}-datatable-thead > tr > th {
+    /* Light Theme/Layer accent/$layer-accent-hover-01 */
+    background: #d2d2d4;
+    height: 32px;
+    padding: 0 1rem;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1599999964237213px;
+    text-align: left;
+    border: none;
+}
+.#{variables.$primevue-prefix}-datatable .#{variables.$primevue-prefix}-datatable-tbody > tr > td {
+    text-align: left;
+    border: 1px solid #dee2e6;
+    border-width: 1px 0 0 0;
+    padding: 0 1rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.16px;
+}

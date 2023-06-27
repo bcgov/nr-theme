@@ -1,6 +1,6 @@
 {
   "name": "@bcgov-nr/nr-fsa-theme",
-  "version": "1.0.7",
+  "version": "1.0.6",
   "description": "FSA common theme repository",
   "main": "index.js",
   "scripts": {
