@@ -11,6 +11,7 @@
     font-size: map.get(bodyTypes.$body-compact-01, 'font-size');
     font-weight: map.get(bodyTypes.$body-compact-01, 'font-weight');
     letter-spacing: map.get(bodyTypes.$body-compact-01, 'letter-spacing');
+    padding: map.get(bodyTypes.$body-compact-01, 'padding');
 }
 
 :root {
@@ -33,6 +34,10 @@ label {
 .#{variables.$primevue-prefix}-component,
 .#{variables.$primevue-prefix}-inputtext {
     font-family: map.get(typeFamily.$type-family, 'sans');
+}
+
+.#{variables.$primevue-prefix}-inputtext {
+    padding: map.get(bodyTypes.$body-compact-01, 'padding');
 }
 
 /* ------------------------------------ primevue button --------------------------------- */
