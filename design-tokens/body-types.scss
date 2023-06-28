@@ -1,8 +1,9 @@
 @use '../design-tokens/type-family.scss' as font-family;
 
 $body-compact-01: (
-    font-size: 16px,
+    font-size: 14px,
     font-weight: font-family.font-weight('regular'),
     line-height: 1.28572,
     letter-spacing: 0.16px,
+    padding: 12px 13px,
 ) !default;

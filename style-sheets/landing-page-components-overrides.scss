@@ -46,15 +46,7 @@
 
 .landing-button {
     width: 18rem;
-    height: 3rem;
-    text-align: inherit;
     margin-right: 0.625rem !important;
-    font-size: var(map-get(body-type.$body-compact-01, font-size), 0.875rem);
-    font-weight: var(map-get(body-type.$body-compact-01, font-weight), 400);
-    letter-spacing: var(
-        map-get(body-type.$body-compact-01, letter-spacing),
-        0.16px
-    );
 }
 
 .landing-img {
@@ -84,7 +76,7 @@ div.landing-img-column {
         line-height: 1.875rem;
     }
     .landing-button {
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.75rem !important;
     }
 }
 /* Medium - Up to 672px */
@@ -117,7 +109,7 @@ div.landing-img-column {
         line-height: 2.25rem;
     }
     .landing-button {
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.75rem !important;
     }
 }
 /* X-Large - Up to 1312px */
