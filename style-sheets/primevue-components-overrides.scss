@@ -20,7 +20,6 @@
 
 body {
     font-family: map.get(typeFamily.$type-family, 'sans');
-    @extend %body-compact-01;
 }
 
 label {
