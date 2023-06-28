@@ -25,9 +25,9 @@ body {
 label {
     font-size: 12px;
     line-height: 16px;
+    font-weight: 400;
     letter-spacing: 0.32px;
-
-    color: colors.$gray-70;
+    color: map.get(lightTheme.$light-theme, 'text-secondary');
 }
 
 .#{variables.$primevue-prefix}-component,
@@ -152,6 +152,10 @@ label {
     border-radius: 4px 4px 0px 0px;
     background: map.get(lightTheme.$light-theme, 'field-01');
 }
+.#{variables.$primevue-prefix}-dropdown
+    .#{variables.$primevue-prefix}-dropdown-label {
+    @extend %body-compact-01;
+}
 .#{variables.$primevue-prefix}-dropdown:not(
         .#{variables.$primevue-prefix}-disabled
     ):hover {
@@ -178,6 +182,7 @@ label {
 .#{variables.$primevue-prefix}-dropdown-panel
     .#{variables.$primevue-prefix}-dropdown-items
     .#{variables.$primevue-prefix}-dropdown-item {
+    @extend %body-compact-01;
     border-bottom: 1px solid
         map.get(lightTheme.$light-theme, 'layer-selected-01');
 }
@@ -298,7 +303,7 @@ label {
 /* ------------------------------------ primevue card--------------------------------- */
 .#{variables.$primevue-prefix}-card {
     box-shadow: none;
-    border: 1px solid colors.$gray-30;
+    border: 1px solid map.get(lightTheme.$light-theme, 'border-subtle-00');
     padding: 32px;
 }
 .#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-body {
