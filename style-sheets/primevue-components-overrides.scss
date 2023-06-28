@@ -5,6 +5,13 @@
 @use '../design-tokens/light-theme.scss' as lightTheme;
 @use '../design-tokens/light-buttons.scss' as lightButton;
 @use '../design-tokens/type-family.scss' as typeFamily;
+@use '../design-tokens/body-types.scss' as bodyTypes;
+
+%body-compact-01 {
+    font-size: map.get(bodyTypes.$body-compact-01, 'font-size');
+    font-weight: map.get(bodyTypes.$body-compact-01, 'font-weight');
+    letter-spacing: map.get(bodyTypes.$body-compact-01, 'letter-spacing');
+}
 
 :root {
     --font-family: map.get(typeFamily.$type-family, 'sans');
@@ -12,18 +19,15 @@
 
 body {
     font-family: map.get(typeFamily.$type-family, 'sans');
+    @extend %body-compact-01;
 }
 
 label {
-    font-weight: 400;
-    // font-size: 14px;
-    // color: map.get(lightTheme.$light-theme, 'text-primary');
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.32px;
 
-    /* Light Theme/Text/$text-secondary */
-    color: #606062;
+    color: colors.$gray-70;
 }
 
 .#{variables.$primevue-prefix}-component,
@@ -33,10 +37,9 @@ label {
 
 /* ------------------------------------ primevue button --------------------------------- */
 .#{variables.$primevue-prefix}-button {
+    @extend %body-compact-01;
     border-radius: 4px;
     text-align: left;
-    font-size: 14px;
-    padding: 9px 13px;
     border-color: map.get(
         lightButton.$light-button-token-overrides,
         'button-primary'
@@ -98,7 +101,7 @@ label {
         lightButton.$light-button-token-overrides,
         'button-tertiary-hover'
     );
-    color: #ffffff;
+    color: map.get(lightTheme.$light-theme, 'text-on-color');
 }
 .#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined:enabled:active {
     background: map.get(
@@ -109,22 +112,20 @@ label {
         lightButton.$light-button-token-overrides,
         'button-tertiary-active'
     );
-    color: #ffffff;
+    color: map.get(lightTheme.$light-theme, 'text-on-color');
 }
 .#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined:focus {
     background: map.get(
         lightButton.$light-button-token-overrides,
         'button-tertiary-active'
     ) !important;
-    color: #ffffff;
+    color: map.get(lightTheme.$light-theme, 'text-on-color');
 }
 .#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined:disabled {
     color: map.get(lightTheme.$light-theme, 'text-disabled');
     opacity: 1;
     background-color: transparent;
-    border: 1px solid map.get(
-        lightTheme.$light-theme, 'text-disabled'
-    );
+    border: 1px solid map.get(lightTheme.$light-theme, 'text-disabled');
 }
 
 /* ------------------------------------ primevue inputtext ----------------------------------- */
@@ -139,7 +140,7 @@ label {
     border-color: map.get(lightTheme.$light-theme, 'border-strong-01');
 }
 .#{variables.$primevue-prefix}-inputtext:enabled:focus {
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid map.get(lightTheme.$light-theme, 'background');
     box-shadow: 0 0 0 0.1rem map.get(lightTheme.$light-theme, 'focus');
 }
 
@@ -161,7 +162,7 @@ label {
 .#{variables.$primevue-prefix}-dropdown:not(
         .#{variables.$primevue-prefix}-disabled
     ).#{variables.$primevue-prefix}-focus {
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid map.get(lightTheme.$light-theme, 'background');
     box-shadow: 0 0 0 0.1rem map.get(lightTheme.$light-theme, 'focus');
 }
 
@@ -238,7 +239,7 @@ label {
         .#{variables.$primevue-prefix}-checkbox-disabled
     )
     .#{variables.$primevue-prefix}-checkbox-box.#{variables.$primevue-prefix}-focus {
-    box-shadow: 0 0 0 2px #ffffff,
+    box-shadow: 0 0 0 2px map.get(lightTheme.$light-theme, 'background'),
         0 0 0 4px map.get(lightTheme.$light-theme, 'focus'), 0 1px 2px 0 black;
     border-color: map.get(lightTheme.$light-theme, 'icon-primary');
 }
@@ -272,7 +273,7 @@ label {
     .#{variables.$primevue-prefix}-radiobutton-box:not(
         .#{variables.$primevue-prefix}-disabled
     ).#{variables.$primevue-prefix}-focus {
-    box-shadow: 0 0 0 2px #ffffff,
+    box-shadow: 0 0 0 2px map.get(lightTheme.$light-theme, 'background'),
         0 0 0 4px map.get(lightTheme.$light-theme, 'focus'), 0 1px 2px 0 black;
     border-color: map.get(lightTheme.$light-theme, 'icon-primary');
 }
@@ -304,7 +305,8 @@ label {
     padding: 32px;
 }
 
-.#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-content {
+.#{variables.$primevue-prefix}-card
+    .#{variables.$primevue-prefix}-card-content {
     padding: 0;
     margin: 0;
 }
@@ -316,36 +318,38 @@ label {
     margin-bottom: 0;
 }
 
-.#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-subtitle {
-    color: var(--light-theme-text-text-secondary, #606062);
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.16px;
+.#{variables.$primevue-prefix}-card
+    .#{variables.$primevue-prefix}-card-subtitle {
+    @extend %body-compact-01;
+    color: map.get(lightTheme.$light-theme, 'text-secondary');
 }
 
 .#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-footer {
     padding: 0;
 }
 /* ------------------------------------ primevue table --------------------------------- */
-.#{variables.$primevue-prefix}-datatable .#{variables.$primevue-prefix}-datatable-thead > tr > th {
-    /* Light Theme/Layer accent/$layer-accent-hover-01 */
-    background: #d2d2d4;
+.#{variables.$primevue-prefix}-datatable
+    .#{variables.$primevue-prefix}-datatable-thead
+    > tr
+    > th {
+    @extend %body-compact-01;
+    background: map.get(lightTheme.$light-theme, 'layer-accent-hover-01');
     height: 32px;
     padding: 0 1rem;
-    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.1599999964237213px;
+
     text-align: left;
     border: none;
 }
-.#{variables.$primevue-prefix}-datatable .#{variables.$primevue-prefix}-datatable-tbody > tr > td {
+.#{variables.$primevue-prefix}-datatable
+    .#{variables.$primevue-prefix}-datatable-tbody
+    > tr
+    > td {
+    @extend %body-compact-01;
     text-align: left;
-    border: 1px solid #dee2e6;
-    border-width: 1px 0 0 0;
+    box-shadow: 0px 1px 0px 0px
+        map.get(lightTheme.$light-theme, 'border-subtle-01') inset;
     padding: 0 1rem;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.16px;
+    border: none;
+    background: map.get(lightTheme.$light-theme, 'layer-02');
 }
