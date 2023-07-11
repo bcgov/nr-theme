@@ -5,5 +5,27 @@ $body-compact-01: (
     font-weight: font-family.font-weight('regular'),
     line-height: 1.28572,
     letter-spacing: 0.16px,
-    padding: 12px 13px,
+    padding: 11px 13px,
 ) !default;
+
+$helper-text-01: (
+    font-size: 12px,
+    font-weight: font-family.font-weight('bold'),
+    letter-spacing: 0.32px,
+);
+
+$heading-03: (
+    font-style: normal,
+    font-weight: font-family.font-weight('regular'),
+    font-size: 20px,
+    line-height: 28px,
+);
+
+$label-01: (
+    font-size: 12px,
+    font-style: normal,
+    font-weight: font-family.font-weight('regular'),
+    line-height: 16px,
+    letter-spacing: 0.32px,
+)
+
