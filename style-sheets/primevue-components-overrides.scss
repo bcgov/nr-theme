@@ -4,7 +4,6 @@
 @use '../design-tokens/colors.scss' as colors;
 @use '../design-tokens/light-theme.scss' as lightTheme;
 @use '../design-tokens/light-buttons.scss' as lightButton;
-@use '../design-tokens/type-family.scss' as typeFamily;
 @use '../design-tokens/body-types.scss' as bodyTypes;
 
 %body-compact-01 {
@@ -14,12 +13,25 @@
     padding: map.get(bodyTypes.$body-compact-01, 'padding');
 }
 
-:root {
-    --font-family: map.get(typeFamily.$type-family, 'sans');
+%helper-text-01 {
+    font-size: map.get(bodyTypes.$helper-text-01, 'font-size');
+    font-weight: map.get(bodyTypes.$helper-text-01, 'font-weight');
+    letter-spacing: map.get(bodyTypes.$helper-text-01, 'letter-spacing');
 }
 
-body {
-    font-family: map.get(typeFamily.$type-family, 'sans');
+%heading-03 {
+    font-style: map.get(bodyTypes.$heading-03, 'font-style');
+    font-weight: map.get(bodyTypes.$heading-03, 'font-weight');
+    font-size: map.get(bodyTypes.$heading-03, 'font-size');
+    line-height: map.get(bodyTypes.$heading-03, 'line-height');
+}
+
+%label-01 {
+    font-size: map.get(bodyTypes.$label-01, 'font-size');
+    font-style: map.get(bodyTypes.$label-01, 'font-style');
+    font-weight: map.get(bodyTypes.$label-01, 'font-weight');
+    line-height: map.get(bodyTypes.$label-01, 'line-height');
+    letter-spacing: map.get(bodyTypes.$label-01, 'letter-spacing');
 }
 
 label {
@@ -28,15 +40,27 @@ label {
     font-weight: 400;
     letter-spacing: 0.32px;
     color: map.get(lightTheme.$light-theme, 'text-secondary');
-}
-
-.#{variables.$primevue-prefix}-component,
-.#{variables.$primevue-prefix}-inputtext {
-    font-family: map.get(typeFamily.$type-family, 'sans');
+    padding: 0 !important;
 }
 
 .#{variables.$primevue-prefix}-inputtext {
     padding: map.get(bodyTypes.$body-compact-01, 'padding');
+}
+
+.is-invalid {
+    border: 2px solid map.get(lightTheme.$light-theme, 'support-error') !important;
+    border-color: map.get(lightTheme.$light-theme, 'support-error') !important;
+    padding-right: 16px !important;
+    // margin-right: 16px !important;
+    background-image: url('../assets/svg/warning--filled.svg') !important;
+    background-repeat: no-repeat !important;
+    background-position: right calc(0.375em + 0.1875rem) center !important;
+    background-size: 16px 16px !important;
+}
+
+.invalid-feedback {
+    @extend %label-01;
+    color: map.get(lightTheme.$light-theme, 'text-error');
 }
 
 /* ------------------------------------ primevue button --------------------------------- */
@@ -135,6 +159,7 @@ label {
 /* ------------------------------------ primevue inputtext ----------------------------------- */
 .#{variables.$primevue-prefix}-inputtext {
     border: none;
+    @extend %body-compact-01;
     border-bottom: 1px solid
         map.get(lightTheme.$light-theme, 'border-strong-01');
     border-radius: 4px 4px 0px 0px;
@@ -160,6 +185,17 @@ label {
     .#{variables.$primevue-prefix}-dropdown-label {
     @extend %body-compact-01;
 }
+
+.#{variables.$primevue-prefix}-dropdown
+    .#{variables.$primevue-prefix}-icon {
+    width: 11px;
+    height: 11px;
+
+    .#{variables.$primevue-prefix}-icon .collapse{
+        transform: rotate(180deg);
+    }
+}
+
 .#{variables.$primevue-prefix}-dropdown:not(
         .#{variables.$primevue-prefix}-disabled
     ):hover {
@@ -186,7 +222,6 @@ label {
 .#{variables.$primevue-prefix}-dropdown-panel
     .#{variables.$primevue-prefix}-dropdown-items
     .#{variables.$primevue-prefix}-dropdown-item {
-    @extend %body-compact-01;
     border-bottom: 1px solid
         map.get(lightTheme.$light-theme, 'layer-selected-01');
 }
@@ -268,9 +303,19 @@ label {
 }
 
 /* ------------------------------------ primevue radio--------------------------------- */
+.#{variables.$primevue-prefix}-radiobutton {
+    width: 18px;
+    height: 18px;
+}
+.#{variables.$primevue-prefix}-radiobutton-icon {
+    width: 8px !important;
+    height: 8px !important;
+}
 .#{variables.$primevue-prefix}-radiobutton
     .#{variables.$primevue-prefix}-radiobutton-box {
     border: 1px solid map.get(lightTheme.$light-theme, 'icon-primary');
+    width: 18px;
+    height: 18px;
 }
 .#{variables.$primevue-prefix}-radiobutton
     .#{variables.$primevue-prefix}-radiobutton-box:not(
@@ -330,6 +375,8 @@ label {
 .#{variables.$primevue-prefix}-card
     .#{variables.$primevue-prefix}-card-subtitle {
     @extend %body-compact-01;
+    padding-left: 0px;
+    padding-right: 0px;
     color: map.get(lightTheme.$light-theme, 'text-secondary');
 }
 
@@ -361,4 +408,112 @@ label {
     padding: 0 1rem;
     border: none;
     background: map.get(lightTheme.$light-theme, 'layer-02');
+}
+/* --------------------------------------- sidenav ------------------------------------ */
+.#{variables.$primevue-prefix}-sidenav-logo {
+    img {
+        margin: 0px 0px 16px 3px;
+        width: 140px;
+        height: 32px;
+    }
+}
+
+.#{variables.$primevue-prefix}-sidenav {
+    position: fixed;
+    padding: 16px 0px;
+    width: 256px;
+    height: calc(100vh - 50px);
+    left: 0px;
+    top: 48px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: inset -1px 0px 0px map.get(lightTheme.$light-theme, 'border-subtle-00');
+    .content {
+        position: relative;
+        min-height: auto;
+    }
+    .support-section {
+        position: absolute;
+        bottom: 0px;
+    }
+}
+
+.#{variables.$primevue-prefix}-sidenav ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.#{variables.$primevue-prefix}-sidenav li.header {
+    font-weight: 400;
+}
+
+.#{variables.$primevue-prefix}-sidenav li {
+    @extend %helper-text-01;
+    color: map.get(lightTheme.$light-theme, 'text-secondary');
+    align-items: center;
+    padding: 15px 16px;
+    i {
+        vertical-align: middle;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+.#{variables.$primevue-prefix}-sidenav li.child:hover {
+    background: map.get(lightTheme.$light-theme, 'layer-selected-01');
+    box-shadow: inset 3px 0px 0px map.get(lightTheme.$light-theme, 'border-interactive');
+    color: map.get(lightTheme.$light-theme, 'text-primary');
+    cursor: pointer;
+}
+
+.#{variables.$primevue-prefix}-sidenav-disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.#{variables.$primevue-prefix}-sidenav-selected {
+    background: map.get(lightTheme.$light-theme, 'layer-selected-01');
+    box-shadow: inset 3px 0px 0px map.get(lightTheme.$light-theme, 'border-interactive');
+    color: map.get(lightTheme.$light-theme, 'text-primary') !important;
+    cursor: pointer;
+}
+
+.#{variables.$primevue-prefix}-sidenav li a:hover,
+ul#nav li.active a {
+    color: map.get(lightTheme.$light-theme, 'text-primary');
+    background: map.get(lightTheme.$light-theme, 'layer-selected-01');
+    box-shadow: inset 3px 0px 0px map.get(lightTheme.$light-theme, 'border-interactive');
+}
+
+.#{variables.$primevue-prefix}-sidenav-padding-icon {
+    margin-right: 25px;
+}
+
+.#{variables.$primevue-prefix}-sidenav-color-icon {
+    color: map.get(lightTheme.$light-theme, 'interactive');
+}
+
+/* ---------------------------------- dashboard table ---------------------------------- */
+.#{variables.$primevue-prefix}-table-header {
+    padding: 16px 16px 24px;
+    h3 {
+        @extend %heading-03;
+        margin: 0;
+        padding: 0;
+    }
+
+    span {
+        @extend %body-compact-01;
+        margin: 0;
+        padding: 0;
+        color: map.get(lightTheme.$light-theme, 'text-secondary');
+    }
+}
+
+.#{variables.$primevue-prefix}-access-table {
+    margin-top: 79px;
+    background: transparent;
+    border-radius: 4px 4px 0px 0px;
+    border: 2px solid map.get(lightTheme.$light-theme, 'border-subtle-00');
 }

@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.11](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.10...v1.0.11) (2023-07-11)
+
+
+### Bug Fixes
+
+* Adjust some primevue component for FAM grant access pages ([#56](https://github.com/bcgov/nr-fsa-theme/issues/56)) ([685fb0e](https://github.com/bcgov/nr-fsa-theme/commit/685fb0e5744fb05c4f5cb07e5578ea87c0c9d828))
+* carbon components ([#55](https://github.com/bcgov/nr-fsa-theme/issues/55)) ([0d74039](https://github.com/bcgov/nr-fsa-theme/commit/0d74039c79156e0c407eb3c22bf9985564c877ec))
+* change the prefix for carbon stylesheet ([#50](https://github.com/bcgov/nr-fsa-theme/issues/50)) ([fee3882](https://github.com/bcgov/nr-fsa-theme/commit/fee388218265a88b43d4059f62a1cfb745af5485))
+* update carbon-components-overrides.scss ([#54](https://github.com/bcgov/nr-fsa-theme/issues/54)) ([c18ac06](https://github.com/bcgov/nr-fsa-theme/commit/c18ac06385a67150e3a158a489ca54313faa2f2e))
+
 ## [1.0.10](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.9...v1.0.10) (2023-06-28)
 
 
