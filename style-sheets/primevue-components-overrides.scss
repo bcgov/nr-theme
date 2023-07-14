@@ -4,7 +4,9 @@
 @use '../design-tokens/colors.scss' as colors;
 @use '../design-tokens/light-theme.scss' as lightTheme;
 @use '../design-tokens/light-buttons.scss' as lightButton;
+@use '../design-tokens/dark-buttons.scss' as darkButton;
 @use '../design-tokens/body-types.scss' as bodyTypes;
+@use '../design-tokens/light-notifications.scss' as lightNotifications;
 
 %body-compact-01 {
     font-size: map.get(bodyTypes.$body-compact-01, 'font-size');
@@ -186,12 +188,11 @@ label {
     @extend %body-compact-01;
 }
 
-.#{variables.$primevue-prefix}-dropdown
-    .#{variables.$primevue-prefix}-icon {
+.#{variables.$primevue-prefix}-dropdown .#{variables.$primevue-prefix}-icon {
     width: 11px;
     height: 11px;
 
-    .#{variables.$primevue-prefix}-icon .collapse{
+    .#{variables.$primevue-prefix}-icon .collapse {
         transform: rotate(180deg);
     }
 }
@@ -462,7 +463,8 @@ label {
 
 .#{variables.$primevue-prefix}-sidenav li.child:hover {
     background: map.get(lightTheme.$light-theme, 'layer-selected-01');
-    box-shadow: inset 3px 0px 0px map.get(lightTheme.$light-theme, 'border-interactive');
+    box-shadow: inset 3px 0px 0px
+        map.get(lightTheme.$light-theme, 'border-interactive');
     color: map.get(lightTheme.$light-theme, 'text-primary');
     cursor: pointer;
 }
@@ -474,7 +476,8 @@ label {
 
 .#{variables.$primevue-prefix}-sidenav-selected {
     background: map.get(lightTheme.$light-theme, 'layer-selected-01');
-    box-shadow: inset 3px 0px 0px map.get(lightTheme.$light-theme, 'border-interactive');
+    box-shadow: inset 3px 0px 0px
+        map.get(lightTheme.$light-theme, 'border-interactive');
     color: map.get(lightTheme.$light-theme, 'text-primary') !important;
     cursor: pointer;
 }
@@ -483,7 +486,8 @@ label {
 ul#nav li.active a {
     color: map.get(lightTheme.$light-theme, 'text-primary');
     background: map.get(lightTheme.$light-theme, 'layer-selected-01');
-    box-shadow: inset 3px 0px 0px map.get(lightTheme.$light-theme, 'border-interactive');
+    box-shadow: inset 3px 0px 0px
+        map.get(lightTheme.$light-theme, 'border-interactive');
 }
 
 .#{variables.$primevue-prefix}-sidenav-padding-icon {
@@ -516,4 +520,240 @@ ul#nav li.active a {
     background: transparent;
     border-radius: 4px 4px 0px 0px;
     border: 2px solid map.get(lightTheme.$light-theme, 'border-subtle-00');
+}
+
+/* ------------------------------------ dialog -------------------------- */
+.#{variables.$primevue-prefix}-dialog {
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-dialog-header {
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+
+    .#{variables.$primevue-prefix}-dialog-title {
+        @extend %heading-03;
+    }
+}
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-dialog-footer {
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.#{variables.$primevue-prefix}-dialog-content {
+    @extend %body-compact-01;
+}
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}dialog-header
+    .#{variables.$primevue-prefix}-dialog-header-icon:focus {
+    box-shadow: none;
+}
+
+.#{variables.$primevue-prefix}-dialog-content p:last-child {
+    padding-bottom: 48px;
+    margin: 0;
+}
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-dialog-content:last-of-type {
+    padding-bottom: 120px;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.#{variables.$primevue-prefix}-dialog-footer {
+    padding-bottom: 64px !important;
+}
+
+/* ------------------------------------ dialog confirm header -------------------------- */
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-dialog-header {
+    border-bottom: none;
+
+    padding-bottom: 0;
+}
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-dialog-footer {
+    border-top: none;
+}
+
+.#{variables.$primevue-prefix}-dialog-header-icon
+    .#{variables.$primevue-prefix}-icon {
+    height: 0.6rem;
+
+    width: 0.6rem;
+}
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-confirm-dialog-reject,
+.#{variables.$primevue-prefix}-confirm-dialog-accept {
+    padding: 12px 83px;
+}
+
+/* ------------------------------------ dialog confirm button reject --------------------------         */
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-confirm-dialog-reject,
+.#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:hover,
+.#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:focus {
+    color: colors.$white;
+}
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-confirm-dialog-reject {
+    background-color: map.get(
+        darkButton.$dark-button-token-overrides,
+        'button-danger-primary'
+    );
+}
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:hover {
+    background-color: map.get(
+        darkButton.$dark-button-token-overrides,
+        'button-danger-hover'
+    );
+
+    color: colors.$white;
+}
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:focus {
+    box-shadow: 0 0 0 0.1rem
+        map.get(darkButton.$dark-button-token-overrides, 'button-danger-active');
+}
+
+/* ------------------------------------ dialog confirm button accept -------------------------- */
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-confirm-dialog-accept {
+    background-color: colors.$white !important;
+
+    color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-tertiary'
+    ) !important;
+
+    border: solid 1px
+        map.get(lightButton.$light-button-token-overrides, 'button-tertiary') !important;
+}
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-confirm-dialog-accept:hover {
+    background-color: colors.$blue-10;
+
+    color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-tertiary-hover'
+    ) !important;
+}
+
+/* ------------------------------------ primevue toast --------------------------------- */
+
+.#{variables.$primevue-prefix}-toast {
+    z-index: 99999;
+}
+
+.#{variables.$primevue-prefix}-toast
+    .#{variables.$primevue-prefix}-toast-detail,
+.#{variables.$primevue-prefix}-toast-summary {
+    color: map.get(
+        lightNotifications.$light-notification-token-overrides,
+        'notification-action-tertiary-inverse-text'
+    ) !important;
+
+    display: inline !important;
+}
+
+.#{variables.$primevue-prefix}-toast
+    .#{variables.$primevue-prefix}-toast-summary {
+    margin-right: 0.4rem;
+}
+
+.#{variables.$primevue-prefix}-toast
+    .#{variables.$primevue-prefix}-toast-icon-close {
+    color: map.get(
+        lightNotifications.$light-notification-token-overrides,
+        'notification-action-tertiary-inverse-text'
+    ) !important;
+}
+
+.#{variables.$primevue-prefix}-toast
+    .#{variables.$primevue-prefix}-toast-icon-close
+    svg {
+    color: map.get(
+        lightNotifications.$light-notification-token-overrides,
+        'notification-action-tertiary-inverse-text'
+    ) !important;
+}
+
+.#{variables.$primevue-prefix}-toast
+    .#{variables.$primevue-prefix}-toast-icon-close:focus {
+    box-shadow: 0 0 0 0.1rem map.get(lightTheme.$light-theme, 'support-error') !important;
+}
+
+.#{variables.$primevue-prefix}-toast-message-content .svg {
+    color: map.get(lightTheme.$light-theme, 'support-error');
+}
+
+.#{variables.$primevue-prefix}-toast
+    .#{variables.$primevue-prefix}-toast-message-error {
+    background: map.get(
+        lightNotifications.$light-notification-token-overrides,
+        'notification-background-error'
+    ) !important;
+
+    border: solid 1px map-get(lightTheme.$light-theme, 'support-error') !important;
+
+    border-left: solid 5px map-get(lightTheme.$light-theme, 'support-error') !important;
+}
+
+.#{variables.$primevue-prefix}-toast
+    .#{variables.$primevue-prefix}-toast-message-text {
+    margin: 0.29rem 0 0 1rem !important;
+}
+
+/* ------------------------------------ primevue message --------------------------------- */
+
+.#{variables.$primevue-prefix}-message
+    .#{variables.$primevue-prefix}-message-text {
+    @extend %body-compact-01;
+    padding-left: 4px;
+}
+
+.#{variables.$primevue-prefix}-message
+    .#{variables.$primevue-prefix}-message-wrapper {
+    padding: 0 8px 0 0;
+}
+
+.#{variables.$primevue-prefix}-message-wrapper
+    .#{variables.$primevue-prefix}-message-close {
+    color: colors.$gray-100 !important;
+}
+
+.#{variables.$primevue-prefix}-message
+    .#{variables.$primevue-prefix}-message-close:hover {
+    background: none;
+}
+
+.#{variables.$primevue-prefix}-icon {
+    height: 12px;
+    width: 12px;
+}
+
+.#{variables.$primevue-prefix}-message-wrapper
+    .#{variables.$primevue-prefix}-message-close:focus {
+    box-shadow: 0 0 0 0.1rem map.get(lightTheme.$light-theme, 'support-success') !important;
+}
+
+.#{variables.$primevue-prefix}-message-success {
+    border: solid 1px map.get(lightTheme.$light-theme, 'support-success') !important;
+    border-left: solid 5px map.get(lightTheme.$light-theme, 'support-success') !important;
 }
