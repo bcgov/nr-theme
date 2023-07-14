@@ -3,6 +3,7 @@
 @use '../design-tokens/variables.scss' as variables;
 @use '../design-tokens/colors.scss' as colors;
 @use '../design-tokens/light-theme.scss' as lightTheme;
+@use '../design-tokens/dark-theme.scss' as darkTheme;
 @use '../design-tokens/light-buttons.scss' as lightButton;
 @use '../design-tokens/dark-buttons.scss' as darkButton;
 @use '../design-tokens/body-types.scss' as bodyTypes;
@@ -26,6 +27,13 @@
     font-weight: map.get(bodyTypes.$heading-03, 'font-weight');
     font-size: map.get(bodyTypes.$heading-03, 'font-size');
     line-height: map.get(bodyTypes.$heading-03, 'line-height');
+}
+
+%heading-compact-01 {
+    font-style: map.get(bodyTypes.$heading-compact-01, 'font-style');
+    font-size: map.get(bodyTypes.$heading-compact-01, 'font-size');
+    line-height: map.get(bodyTypes.$heading-compact-01, 'line-height');
+    letter-spacing: map.get(bodyTypes.$heading-compact-01, 'letter-spacing');
 }
 
 %label-01 {
@@ -756,4 +764,39 @@ ul#nav li.active a {
 .#{variables.$primevue-prefix}-message-success {
     border: solid 1px map.get(lightTheme.$light-theme, 'support-success') !important;
     border-left: solid 5px map.get(lightTheme.$light-theme, 'support-success') !important;
+}
+
+/* --------------------------------------- Header --------------------------------------- */
+.#{variables.$primevue-prefix}-header {
+    @extend %heading-compact-01;
+    position: fixed;
+
+    height: 48px;
+    width: 100vw;
+    background: map.get(lightTheme.$light-theme, 'background-brand');
+
+    padding: 0;
+    z-index: 1;
+    color: map.get(darkTheme.$dark-theme, 'text-primary');
+    .header-title {
+        a i {
+            cursor: pointer;
+        }
+        margin: 0;
+    }
+
+    i {
+        vertical-align: middle;
+    }
+
+    .navbar {
+        margin: 0;
+        padding: 0;
+        height: 48px;
+        vertical-align: middle;
+    }
+
+    .navbar-collapse {
+        flex-grow: 0;
+    }
 }
