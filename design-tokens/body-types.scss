@@ -21,11 +21,17 @@ $heading-03: (
     line-height: 28px,
 );
 
+$heading-compact-01: (
+    font-style: normal,
+    font-size: 14px,
+    line-height: 18px,
+    letter-spacing: 0.16px,
+);
+
 $label-01: (
     font-size: 12px,
     font-style: normal,
     font-weight: font-family.font-weight('regular'),
     line-height: 16px,
     letter-spacing: 0.32px,
-)
-
+);
