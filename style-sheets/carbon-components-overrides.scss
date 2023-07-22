@@ -271,32 +271,6 @@ li.#{variables.$bcgov-prefix}--overflow-menu-options__option:last-child {
   color: colors.$gray-100;
 }
 
-.#{variables.$bcgov-prefix}--breadcrumb {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-@media screen and (max-width: 671px) {
-  .#{variables.$bcgov-prefix}--breadcrumb-indicator {
-    flex-direction: column;
-  }
-  .#{variables.$bcgov-prefix}--breadcrumb-step {
-    border-left: solid 0.125rem;
-    flex: none;
-  }
-}
-
-@media screen and (min-width: 672px) {
-  .#{variables.$bcgov-prefix}--breadcrumb-indicator {
-    flex-direction: row;
-  }
-  .#{variables.$bcgov-prefix}--breadcrumb-step {
-    border-top: solid 0.125rem;
-    flex: 1;
-  }
-}
-
 .#{variables.$bcgov-prefix}--header {
   background-color: colors.$blue-60 !important;
   display: relative;
