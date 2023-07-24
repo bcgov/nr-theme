@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/bcgov/nr-fsa-theme/compare/v1.1.0...v1.1.1) (2023-07-24)
+
+
+### Bug Fixes
+
+* improve documentation ([#67](https://github.com/bcgov/nr-fsa-theme/issues/67)) ([87c934a](https://github.com/bcgov/nr-fsa-theme/commit/87c934aa2c1a5fb18c1e6a16ccd34ce3ea109303))
+* remove important and breadcrumb styles ([#66](https://github.com/bcgov/nr-fsa-theme/issues/66)) ([5b8b594](https://github.com/bcgov/nr-fsa-theme/commit/5b8b594332c0b48e5e44eaf2a6b448ea1264fade))
+
 ## [1.1.0](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.11...v1.1.0) (2023-07-18)
 
 
