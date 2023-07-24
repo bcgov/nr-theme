@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/bcgov/nr-fsa-theme/compare/v1.1.1...v1.1.2) (2023-07-24)
+
+
+### Bug Fixes
+
+* remove unnecessary override ([#70](https://github.com/bcgov/nr-fsa-theme/issues/70)) ([3ec62cf](https://github.com/bcgov/nr-fsa-theme/commit/3ec62cf0e6fcf474ff73292486ebe2c4574b40cb))
+
 ## [1.1.1](https://github.com/bcgov/nr-fsa-theme/compare/v1.1.0...v1.1.1) (2023-07-24)
 
 
