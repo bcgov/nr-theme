@@ -1,5 +1,32 @@
 # Changelog
 
+## [1.1.2](https://github.com/bcgov/nr-fsa-theme/compare/v1.1.1...v1.1.2) (2023-07-24)
+
+
+### Bug Fixes
+
+* remove unnecessary override ([#70](https://github.com/bcgov/nr-fsa-theme/issues/70)) ([3ec62cf](https://github.com/bcgov/nr-fsa-theme/commit/3ec62cf0e6fcf474ff73292486ebe2c4574b40cb))
+
+## [1.1.1](https://github.com/bcgov/nr-fsa-theme/compare/v1.1.0...v1.1.1) (2023-07-24)
+
+
+### Bug Fixes
+
+* improve documentation ([#67](https://github.com/bcgov/nr-fsa-theme/issues/67)) ([87c934a](https://github.com/bcgov/nr-fsa-theme/commit/87c934aa2c1a5fb18c1e6a16ccd34ce3ea109303))
+* remove important and breadcrumb styles ([#66](https://github.com/bcgov/nr-fsa-theme/issues/66)) ([5b8b594](https://github.com/bcgov/nr-fsa-theme/commit/5b8b594332c0b48e5e44eaf2a6b448ea1264fade))
+
+## [1.1.0](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.11...v1.1.0) (2023-07-18)
+
+
+### Features
+
+* Adding styling for toasts, dialogs and notifications to primevue ([#57](https://github.com/bcgov/nr-fsa-theme/issues/57)) ([7d07292](https://github.com/bcgov/nr-fsa-theme/commit/7d0729299c79a16f6e87c9c9a650ea9d3ef46faf))
+
+
+### Bug Fixes
+
+* carbon components overrides ([#58](https://github.com/bcgov/nr-fsa-theme/issues/58)) ([aea4777](https://github.com/bcgov/nr-fsa-theme/commit/aea4777c929217b8bf45fd9014bddcc643bd65fa))
+
 ## [1.0.11](https://github.com/bcgov/nr-fsa-theme/compare/v1.0.10...v1.0.11) (2023-07-11)
 
 

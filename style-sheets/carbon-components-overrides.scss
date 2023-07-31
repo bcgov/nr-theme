@@ -87,13 +87,13 @@
 }
 
 .#{variables.$bcgov-prefix}--btn {
-  border-radius: 0.25rem !important;
-  width: 15.188rem !important;
+  border-radius: 0.25rem;
+  width: 15.188rem;
   padding: 0.188rem;
 }
 
 #{variables.$bcgov-prefix}-btn::part(button) {
-  border-radius: 0.25rem !important;
+  border-radius: 0.25rem;
 }
 
 .#{variables.$bcgov-prefix}--btn-header {
@@ -220,21 +220,21 @@ $types: 'error', 'info', 'success', 'warning';
 
 @each $notificationType in $types {
   div.#{variables.$bcgov-prefix}--inline-notification--#{$notificationType} {
-    border-left: 0.25rem solid var(--bcgov-support-#{$notificationType}-inverse);}
+    border-left: 0.25rem solid var(--#{variables.$bcgov-prefix}-support-#{$notificationType}-inverse);}
   div.#{variables.$bcgov-prefix}--inline-notification--low-contrast.#{variables.$bcgov-prefix}--inline-notification--#{$notificationType} {
-    border-left: 0.25rem solid var(--bcgov-support-#{$notificationType});}
+    border-left: 0.25rem solid var(--#{variables.$bcgov-prefix}-support-#{$notificationType});}
   div.#{variables.$bcgov-prefix}--inline-notification--low-contrast.#{variables.$bcgov-prefix}--inline-notification--#{$notificationType}::before{
-    border-color: var(--bcgov-notification-border-#{$notificationType});}
+    border-color: var(--#{variables.$bcgov-prefix}-notification-border-#{$notificationType});}
 }
 
 @each $notificationType in $types {
   div.#{variables.$bcgov-prefix}--toast-notification--#{$notificationType} {
-    border-left: 0.25rem solid var(--bcgov-support-#{$notificationType}-inverse);}
+    border-left: 0.25rem solid var(--#{variables.$bcgov-prefix}-support-#{$notificationType}-inverse);}
   div.#{variables.$bcgov-prefix}--toast-notification--low-contrast.#{variables.$bcgov-prefix}--toast-notification--#{$notificationType} {
-    border-left: 0.25rem solid var(--bcgov-support-#{$notificationType});
-    border-top-color: var(--bcgov-notification-border-#{$notificationType});
-    border-bottom-color: var(--bcgov-notification-border-#{$notificationType});
-    border-right-color: var(--bcgov-notification-border-#{$notificationType})}
+    border-left: 0.25rem solid var(--#{variables.$bcgov-prefix}-support-#{$notificationType});
+    border-top-color: var(--#{variables.$bcgov-prefix}-notification-border-#{$notificationType});
+    border-bottom-color: var(--#{variables.$bcgov-prefix}-notification-border-#{$notificationType});
+    border-right-color: var(--#{variables.$bcgov-prefix}-notification-border-#{$notificationType})}
 }
 
 .#{variables.$bcgov-prefix}--overflow-menu.bcgov--overflow-menu--open {
@@ -269,111 +269,6 @@ li.#{variables.$bcgov-prefix}--overflow-menu-options__option:last-child {
 
 .#{variables.$bcgov-prefix}--description-disabled {
   color: colors.$gray-100;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-@media screen and (max-width: 671px) {
-  .#{variables.$bcgov-prefix}--breadcrumb-indicator {
-    flex-direction: column;
-  }
-  .#{variables.$bcgov-prefix}--breadcrumb-step {
-    border-left: solid 0.125rem;
-    flex: none;
-  }
-}
-
-@media screen and (min-width: 672px) {
-  .#{variables.$bcgov-prefix}--breadcrumb-indicator {
-    flex-direction: row;
-  }
-  .#{variables.$bcgov-prefix}--breadcrumb-step {
-    border-top: solid 0.125rem;
-    flex: 1;
-  }
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-indicator {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 3rem;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-step {
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-  height: 3.625rem;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-step-icon {
-  margin: 0.25rem 0.625rem 0 0;
-  flex-shrink: 0;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-step-text {
-  flex-grow: 1;
-  overflow: hidden;
-}
-.#{variables.$bcgov-prefix}--breadcrumb-step-text p {
-  font-size: 0.875rem;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-step-text a, .#{variables.$bcgov-prefix}--breadcrumb-step-text span {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  display: block;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-step-text p a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-step-text p a:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-step-text span {
-  font-size: 0.75rem;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-step-current {
-  border-color: colors.$blue-60;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-step-queued {
-  border-color: colors.$gray-20;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-step-error {
-  border-color: colors.$red-60;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-step-complete {
-  border-color: colors.$blue-60;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-step-icon-current {
-  color: colors.$blue-60;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-step-icon-error {
-  color: colors.$red-60;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-step-icon-complete {
-  color: colors.$blue-60;
-}
-
-.#{variables.$bcgov-prefix}--breadcrumb-step-icon-queued {
-  color: colors.$gray-20;
 }
 
 .#{variables.$bcgov-prefix}--header {
