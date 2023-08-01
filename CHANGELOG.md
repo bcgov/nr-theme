@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/bcgov/nr-fsa-theme/compare/v1.1.2...v1.1.3) (2023-08-01)
+
+
+### Bug Fixes
+
+* added missing modal overrides ([#72](https://github.com/bcgov/nr-fsa-theme/issues/72)) ([2f066f5](https://github.com/bcgov/nr-fsa-theme/commit/2f066f58e07f04029786dc3fa688a911b96f2630))
+
 ## [1.1.2](https://github.com/bcgov/nr-fsa-theme/compare/v1.1.1...v1.1.2) (2023-07-24)
 
 
