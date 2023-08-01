@@ -285,3 +285,8 @@ li.#{variables.$bcgov-prefix}--overflow-menu-options__option:last-child {
   padding-left: 2rem;
   display: inline-block;
 }
+
+#{variables.$bcgov-prefix}-modal::part(dialog) {
+  background-color: colors.$gray-10;
+  border-radius: 0.5rem;
+}
