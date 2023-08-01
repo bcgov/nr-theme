@@ -290,3 +290,7 @@ li.#{variables.$bcgov-prefix}--overflow-menu-options__option:last-child {
   background-color: colors.$gray-10;
   border-radius: 0.5rem;
 }
+
+#{variables.$bcgov-prefix}-modal-footer {
+  padding: 1rem;
+}
