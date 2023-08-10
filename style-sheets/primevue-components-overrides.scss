@@ -670,6 +670,16 @@ ul#nav li.active a {
 }
 
 .#{variables.$primevue-prefix}-toast
+    .#{variables.$primevue-prefix}-toast-message {
+        color: map-get(lightTheme.$light-theme, 'support-error') !important;
+
+        //toast close icon on focus
+        .#{variables.$primevue-prefix}-toast-icon-close:focus {
+            box-shadow: 0 0 0 0.1rem map.get(lightTheme.$light-theme, 'support-error') !important;
+        }
+}
+
+.#{variables.$primevue-prefix}-toast
     .#{variables.$primevue-prefix}-toast-detail,
 .#{variables.$primevue-prefix}-toast-summary {
     color: map.get(
@@ -696,31 +706,25 @@ ul#nav li.active a {
 .#{variables.$primevue-prefix}-toast
     .#{variables.$primevue-prefix}-toast-icon-close
     svg {
-    color: map.get(
+    fill: map.get(
         lightNotifications.$light-notification-token-overrides,
         'notification-action-tertiary-inverse-text'
     ) !important;
 }
 
 .#{variables.$primevue-prefix}-toast
-    .#{variables.$primevue-prefix}-toast-icon-close:focus {
-    box-shadow: 0 0 0 0.1rem map.get(lightTheme.$light-theme, 'support-error') !important;
-}
+.#{variables.$primevue-prefix}-toast-message-error {
 
-.#{variables.$primevue-prefix}-toast-message-content .svg {
-    color: map.get(lightTheme.$light-theme, 'support-error');
-}
+    color: solid 1px map-get(lightTheme.$light-theme, 'support-error') !important;
 
-.#{variables.$primevue-prefix}-toast
-    .#{variables.$primevue-prefix}-toast-message-error {
     background: map.get(
         lightNotifications.$light-notification-token-overrides,
         'notification-background-error'
-    ) !important;
+        ) !important;
 
-    border: solid 1px map-get(lightTheme.$light-theme, 'support-error') !important;
+        border: solid 1px map-get(lightTheme.$light-theme, 'support-error') !important;
 
-    border-left: solid 5px map-get(lightTheme.$light-theme, 'support-error') !important;
+        border-left: solid 5px map-get(lightTheme.$light-theme, 'support-error') !important;
 }
 
 .#{variables.$primevue-prefix}-toast
@@ -734,6 +738,8 @@ ul#nav li.active a {
     .#{variables.$primevue-prefix}-message-text {
     @extend %body-compact-01;
     padding-left: 4px;
+    display: flex;
+    align-items: center;
 }
 
 .#{variables.$primevue-prefix}-message
@@ -799,4 +805,5 @@ ul#nav li.active a {
     .navbar-collapse {
         flex-grow: 0;
     }
+
 }
