@@ -686,20 +686,12 @@ ul#nav li.active a {
 }
 
 .#{variables.$primevue-prefix}-toast
-    .#{variables.$primevue-prefix}-toast-icon-close {
+    .#{variables.$primevue-prefix}-toast-icon-close svg{
     color: map.get(
         lightNotifications.$light-notification-token-overrides,
         'notification-action-tertiary-inverse-text'
     ) !important;
-}
-
-.#{variables.$primevue-prefix}-toast
-    .#{variables.$primevue-prefix}-toast-icon-close
-    svg {
-    color: map.get(
-        lightNotifications.$light-notification-token-overrides,
-        'notification-action-tertiary-inverse-text'
-    ) !important;
+    margin-top: 0 !important;
 }
 
 .#{variables.$primevue-prefix}-toast
@@ -707,8 +699,10 @@ ul#nav li.active a {
     box-shadow: 0 0 0 0.1rem map.get(lightTheme.$light-theme, 'support-error') !important;
 }
 
-.#{variables.$primevue-prefix}-toast-message-content .svg {
+.#{variables.$primevue-prefix}-toast-message-content svg {
     color: map.get(lightTheme.$light-theme, 'support-error');
+    flex-shrink:0 !important;
+    margin-top: .25rem !important;
 }
 
 .#{variables.$primevue-prefix}-toast
