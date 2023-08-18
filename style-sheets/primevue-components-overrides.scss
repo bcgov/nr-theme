@@ -537,30 +537,8 @@ ul#nav li.active a {
     border: none;
 }
 
-.#{variables.$primevue-prefix}-dialog
-    .#{variables.$primevue-prefix}-dialog-header {
-    border-top-right-radius: 0.5rem;
-    border-top-left-radius: 0.5rem;
-
-    .#{variables.$primevue-prefix}-dialog-title {
-        @extend %heading-03;
-    }
-}
-
-.#{variables.$primevue-prefix}-dialog
-    .#{variables.$primevue-prefix}-dialog-footer {
-    border-bottom-right-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-}
-
 .#{variables.$primevue-prefix}-dialog-content {
     @extend %body-compact-01;
-}
-
-.#{variables.$primevue-prefix}-dialog
-    .#{variables.$primevue-prefix}dialog-header
-    .#{variables.$primevue-prefix}-dialog-header-icon:focus {
-    box-shadow: none;
 }
 
 .#{variables.$primevue-prefix}-dialog-content p:last-child {
@@ -574,8 +552,16 @@ ul#nav li.active a {
     border-bottom-left-radius: 0.5rem;
 }
 
-.#{variables.$primevue-prefix}-dialog-footer {
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-dialog-footer {
+    border-top: none;
     padding-bottom: 64px !important;
+}
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-dialog-footer {
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
 }
 
 /* ------------------------------------ dialog confirm header -------------------------- */
@@ -583,19 +569,32 @@ ul#nav li.active a {
 .#{variables.$primevue-prefix}-dialog
     .#{variables.$primevue-prefix}-dialog-header {
     border-bottom: none;
-
     padding-bottom: 0;
+
+    display: inline;
+
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+
+    .#{variables.$primevue-prefix}-dialog-title {
+        @extend %heading-03;
+    }
 }
 
 .#{variables.$primevue-prefix}-dialog
-    .#{variables.$primevue-prefix}-dialog-footer {
-    border-top: none;
+    .#{variables.$primevue-prefix}-dialog-header-icons {
+    float: right;
+}
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}dialog-header
+    .#{variables.$primevue-prefix}-dialog-header-icon:focus {
+    box-shadow: none;
 }
 
 .#{variables.$primevue-prefix}-dialog-header-icon
     .#{variables.$primevue-prefix}-icon {
     height: 0.6rem;
-
     width: 0.6rem;
 }
 
