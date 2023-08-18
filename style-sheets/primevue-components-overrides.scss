@@ -700,7 +700,6 @@ ul#nav li.active a {
 }
 
 .#{variables.$primevue-prefix}-toast-message-content svg {
-    color: map.get(lightTheme.$light-theme, 'support-error');
     flex-shrink:0 !important;
     margin-top: .25rem !important;
 }
