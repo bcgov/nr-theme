@@ -498,14 +498,6 @@ ul#nav li.active a {
         map.get(lightTheme.$light-theme, 'border-interactive');
 }
 
-.#{variables.$primevue-prefix}-sidenav-padding-icon {
-    margin-right: 25px;
-}
-
-.#{variables.$primevue-prefix}-sidenav-color-icon {
-    color: map.get(lightTheme.$light-theme, 'interactive');
-}
-
 /* ---------------------------------- dashboard table ---------------------------------- */
 .#{variables.$primevue-prefix}-table-header {
     padding: 16px 16px 24px;
