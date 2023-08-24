@@ -183,6 +183,18 @@ label {
     box-shadow: 0 0 0 0.1rem map.get(lightTheme.$light-theme, 'focus');
 }
 
+.#{variables.$primevue-prefix}-input-icon-right {
+    width: 100%;
+    z-index: 1;
+
+    &:deep(.#{variables.$primevue-prefix}-inputtext) {
+        border-bottom: none;
+        width: 100%;
+        height: 2rem;
+        border: none;
+    }
+}
+
 /* -------------------------------------- primevue dropdown ------------------------------------ */
 .#{variables.$primevue-prefix}-dropdown {
     border: none;
@@ -394,36 +406,6 @@ label {
 }
 
 /* ------------------------------------ primevue table --------------------------------- */
-
-.custom-access-table {
-    background: transparent;
-    border-radius: 0.25rem 0.25rem 0 0;
-    border: 0.125rem solid map.get(lightTheme.$light-theme, 'border-subtle-00');
-}
-
-.custom-table-header {
-    padding: 1rem 1rem 1.5rem;
-    h3 {
-        @extend %heading-03;
-        margin: 0;
-        padding: 0;
-    }
-
-    span {
-        @extend %body-compact-01;
-        margin: 0;
-        padding: 0;
-        color: map.get(lightTheme.$light-theme, 'text-secondary');
-    }
-}
-
-.span-icon {
-    margin-left: 0.9375rem;
-}
-
-.remove-action {
-    color: map.get(lightTheme.$light-theme, 'text-error');
-}
 
 .#{variables.$primevue-prefix}-datatable
 .#{variables.$primevue-prefix}-sortable-column
