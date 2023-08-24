@@ -118,6 +118,7 @@ label {
         'button-primary-disabled'
     );
 }
+
 /* ------------------------------------ primevue button outlined--------------------------------- */
 .#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined {
     color: map.get(
@@ -391,7 +392,57 @@ label {
 .#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-footer {
     padding: 0;
 }
+
 /* ------------------------------------ primevue table --------------------------------- */
+
+.custom-access-table {
+    background: transparent;
+    border-radius: 0.25rem 0.25rem 0 0;
+    border: 0.125rem solid map.get(lightTheme.$light-theme, 'border-subtle-00');
+}
+
+.custom-table-header {
+    padding: 1rem 1rem 1.5rem;
+    h3 {
+        @extend %heading-03;
+        margin: 0;
+        padding: 0;
+    }
+
+    span {
+        @extend %body-compact-01;
+        margin: 0;
+        padding: 0;
+        color: map.get(lightTheme.$light-theme, 'text-secondary');
+    }
+}
+
+.span-icon {
+    margin-left: 0.9375rem;
+}
+
+.remove-action {
+    color: map.get(lightTheme.$light-theme, 'text-error');
+}
+
+.#{variables.$primevue-prefix}-datatable
+.#{variables.$primevue-prefix}-sortable-column
+.#{variables.$primevue-prefix}-sortable-column-icon {
+    display: none;
+}
+
+.#{variables.$primevue-prefix}-input-icon-right {
+    width: 100%;
+    z-index: 1;
+
+    &:deep(.#{variables.$primevue-prefix}-inputtext) {
+        border-bottom: none;
+        width: 100%;
+        height: 2rem;
+        border: none;
+    }
+}
+
 .#{variables.$primevue-prefix}-datatable
     .#{variables.$primevue-prefix}-datatable-thead
     > tr
@@ -417,108 +468,14 @@ label {
     border: none;
     background: map.get(lightTheme.$light-theme, 'layer-02');
 }
-/* --------------------------------------- sidenav ------------------------------------ */
-.#{variables.$primevue-prefix}-sidenav-logo {
-    img {
-        margin: 0 0 1rem .1875rem;
-        width: 8.75rem;
-        height: 2rem;
-    }
-}
 
-.#{variables.$primevue-prefix}-sidenav {
-    position: fixed;
-    padding: 1rem 0;
-    width: 16rem;
-    height: calc(100vh - 3.125rem);
-    left: 0;
-    top: 3rem;
-    overflow-x: hidden;
-    overflow-y: auto;
-    box-shadow: inset -0.0625rem 0 0 map.get(lightTheme.$light-theme, 'border-subtle-00');
-    .content {
-        position: relative;
-        min-height: auto;
-    }
-    .support-section {
-        position: absolute;
-        bottom: 0;
-    }
-}
-
-.#{variables.$primevue-prefix}-sidenav ul {
-    padding: 0;
-    list-style-type: none;
-}
-
-.#{variables.$primevue-prefix}-sidenav li.header {
-    font-weight: 400;
-}
-
-.#{variables.$primevue-prefix}-sidenav li {
-    @extend %helper-text-01;
-    color: map.get(lightTheme.$light-theme, 'text-secondary');
-    align-items: center;
-    padding: .9375rem 1rem;
-    i {
-        vertical-align: middle;
-    }
-    a {
-        text-decoration: none;
-    }
-}
-
-.#{variables.$primevue-prefix}-sidenav li.child:hover {
-    background: map.get(lightTheme.$light-theme, 'layer-selected-01');
-    box-shadow: inset .1875rem 0 0
-        map.get(lightTheme.$light-theme, 'border-interactive');
-    color: map.get(lightTheme.$light-theme, 'text-primary');
-    cursor: pointer;
-}
-
-.#{variables.$primevue-prefix}-sidenav-disabled {
-    pointer-events: none;
-    opacity: 0.6;
-}
-
-.#{variables.$primevue-prefix}-sidenav-selected {
-    background: map.get(lightTheme.$light-theme, 'layer-selected-01');
-    box-shadow: inset .1875rem 0 0
-        map.get(lightTheme.$light-theme, 'border-interactive');
-    color: map.get(lightTheme.$light-theme, 'text-primary') !important;
-    cursor: pointer;
-}
-
-.#{variables.$primevue-prefix}-sidenav li a:hover,
-ul#nav li.active a {
-    color: map.get(lightTheme.$light-theme, 'text-primary');
-    background: map.get(lightTheme.$light-theme, 'layer-selected-01');
-    box-shadow: inset .1875rem 0 0
-        map.get(lightTheme.$light-theme, 'border-interactive');
-}
-
-/* ---------------------------------- dashboard table ---------------------------------- */
-.#{variables.$primevue-prefix}-table-header {
-    padding: 1rem 1rem 1.5rem;
-    h3 {
-        @extend %heading-03;
-        margin: 0;
-        padding: 0;
-    }
-
-    span {
-        @extend %body-compact-01;
-        margin: 0;
-        padding: 0;
-        color: map.get(lightTheme.$light-theme, 'text-secondary');
-    }
-}
-
-.#{variables.$primevue-prefix}-access-table {
-    margin-top: 4.9375rem;
-    background: transparent;
-    border-radius: .25rem .25rem 0 0;
-    border: .125rem solid map.get(lightTheme.$light-theme, 'border-subtle-00');
+/*----------------------------- data table pagnition -------------------*/
+.#{variables.$primevue-prefix}-datatable
+    .#{variables.$primevue-prefix}-paginator-bottom
+    .#{variables.$primevue-prefix}-dropdown
+    .#{variables.$primevue-prefix}-dropdown-label
+    .#{variables.$primevue-prefix}-inputtext {
+        padding-top: 0.438rem;
 }
 
 /* ------------------------------------ dialog -------------------------- */
@@ -526,6 +483,16 @@ ul#nav li.active a {
     border-radius: 0.5rem;
     box-shadow: 0 .125rem .375rem 0 rgba(0, 0, 0, 0.3);
     border: none;
+}
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-dialog-header {
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+
+    .#{variables.$primevue-prefix}-dialog-title {
+        @extend %heading-03;
+    }
 }
 
 .#{variables.$primevue-prefix}-dialog-content {
@@ -572,6 +539,12 @@ ul#nav li.active a {
 }
 
 .#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-dialog-footer {
+    border-top: none;
+    padding-bottom: 4rem !important;
+}
+
+.#{variables.$primevue-prefix}-dialog
     .#{variables.$primevue-prefix}-dialog-header-icons {
     float: right;
 }
@@ -590,65 +563,53 @@ ul#nav li.active a {
 
 .#{variables.$primevue-prefix}-dialog
     .#{variables.$primevue-prefix}-confirm-dialog-reject,
-.#{variables.$primevue-prefix}-confirm-dialog-accept {
+    .#{variables.$primevue-prefix}-confirm-dialog-accept {
     padding: .75rem 5.1875rem;
 }
 
 /* ------------------------------------ dialog confirm button reject --------------------------         */
-
 .#{variables.$primevue-prefix}-dialog
     .#{variables.$primevue-prefix}-confirm-dialog-reject,
-.#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:hover,
-.#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:focus {
-    color: colors.$white;
-}
-
-.#{variables.$primevue-prefix}-dialog
-    .#{variables.$primevue-prefix}-confirm-dialog-reject {
-    background-color: map.get(
-        darkButton.$dark-button-token-overrides,
-        'button-danger-primary'
-    );
-}
-
-.#{variables.$primevue-prefix}-dialog
-    .#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:hover {
-    background-color: map.get(
-        darkButton.$dark-button-token-overrides,
-        'button-danger-hover'
-    );
-
-    color: colors.$white;
-}
-
-.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:hover,
     .#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:focus {
-    box-shadow: 0 0 0 0.1rem
-        map.get(darkButton.$dark-button-token-overrides, 'button-danger-active');
+        border: 0.0625rem solid map.get(
+            lightButton.$light-button-token-overrides,
+            'button-tertiary'
+        ) !important;
+
+}
+
+.#{variables.$primevue-prefix}-button
+    .#{variables.$primevue-prefix}-confirm-dialog-reject,
+    .#{variables.$primevue-prefix}-button-text:enabled:hover {
+        background: map.get(
+            lightButton.$light-button-token-overrides,
+            'button-tertiary-hover'
+        )!important;
+        border-color: map.get(
+            lightButton.$light-button-token-overrides,
+            'button-tertiary-hover'
+        )!important;
+        color: map.get(lightTheme.$light-theme, 'text-on-color')!important;
 }
 
 /* ------------------------------------ dialog confirm button accept -------------------------- */
-
 .#{variables.$primevue-prefix}-dialog
     .#{variables.$primevue-prefix}-confirm-dialog-accept {
-    background-color: colors.$white !important;
-
-    color: map.get(
-        lightButton.$light-button-token-overrides,
-        'button-tertiary'
-    ) !important;
-
-    border: solid .0625rem
-        map.get(lightButton.$light-button-token-overrides, 'button-tertiary') !important;
+    color: colors.$white !important;;
+    border: 0.0625rem solid map.get(lightButton.$light-button-token-overrides,'button-danger-primary')!important;
+    background-color: map.get(lightButton.$light-button-token-overrides,'button-danger-primary')!important;
 }
 
 .#{variables.$primevue-prefix}-dialog
     .#{variables.$primevue-prefix}-confirm-dialog-accept:hover {
-    background-color: colors.$blue-10;
-
-    color: map.get(
+    border: 0.0625rem solid map.get(
         lightButton.$light-button-token-overrides,
-        'button-tertiary-hover'
+        'button-danger-hover'
+    ) !important;
+    background-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-danger-hover'
     ) !important;
 }
 
@@ -689,8 +650,9 @@ ul#nav li.active a {
 }
 
 .#{variables.$primevue-prefix}-toast-message-content svg {
+    color: map.get(lightTheme.$light-theme, 'support-error');
     flex-shrink:0 !important;
-    margin-top: .25rem !important;
+    margin-top: 0.25rem !important;
 }
 
 .#{variables.$primevue-prefix}-toast
@@ -700,9 +662,9 @@ ul#nav li.active a {
         'notification-background-error'
     ) !important;
 
-    border: solid .0625rem map-get(lightTheme.$light-theme, 'support-error') !important;
+    border: solid 0.0625rem map-get(lightTheme.$light-theme, 'support-error') !important;
 
-    border-left: solid  .3125rem map-get(lightTheme.$light-theme, 'support-error') !important;
+    border-left: solid 0.3125rem map-get(lightTheme.$light-theme, 'support-error') !important;
 }
 
 .#{variables.$primevue-prefix}-toast
@@ -712,20 +674,46 @@ ul#nav li.active a {
 
 /* ------------------------------------ primevue message --------------------------------- */
 
+
+
+.#{variables.$primevue-prefix}-message {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
 .#{variables.$primevue-prefix}-message
     .#{variables.$primevue-prefix}-message-text {
     @extend %body-compact-01;
-    padding-left: .25rem;
+    padding-left: .5rem;
+    padding-right: 0.3125rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.#{variables.$primevue-prefix}-message-text {
+    strong {
+        text-transform: capitalize;
+    }
+}
+
+.#{variables.$primevue-prefix}-message svg {
+    margin-right: 0.9375rem;
+    margin-left: 1rem;
+    margin-bottom: 0.19rem;
+    vertical-align: middle;
 }
 
 .#{variables.$primevue-prefix}-message
     .#{variables.$primevue-prefix}-message-wrapper {
-    padding: 0 .5rem 0 0;
+    padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
 .#{variables.$primevue-prefix}-message-wrapper
-    .#{variables.$primevue-prefix}-message-close {
+    .#{variables.$primevue-prefix}-message-close svg {
     color: colors.$gray-100 !important;
+    margin: 0;
 }
 
 .#{variables.$primevue-prefix}-message
@@ -744,41 +732,6 @@ ul#nav li.active a {
 }
 
 .#{variables.$primevue-prefix}-message-success {
-    border: solid .0625rem map.get(lightTheme.$light-theme, 'support-success') !important;
-    border-left: solid .3125rem map.get(lightTheme.$light-theme, 'support-success') !important;
-}
-
-/* --------------------------------------- Header --------------------------------------- */
-.#{variables.$primevue-prefix}-header {
-    @extend %heading-compact-01;
-    position: fixed;
-
-    height: 3rem;
-    width: 100vw;
-    background: map.get(lightTheme.$light-theme, 'background-brand');
-
-    padding: 0;
-    z-index: 1;
-    color: map.get(darkTheme.$dark-theme, 'text-primary');
-    .header-title {
-        a i {
-            cursor: pointer;
-        }
-        margin: 0;
-    }
-
-    i {
-        vertical-align: middle;
-    }
-
-    .navbar {
-        margin: 0;
-        padding: 0;
-        height: 3rem;
-        vertical-align: middle;
-    }
-
-    .navbar-collapse {
-        flex-grow: 0;
-    }
+    border: solid 0.0625rem map.get(lightTheme.$light-theme, 'support-success') !important;
+    border-left: solid 0.3125rem map.get(lightTheme.$light-theme, 'support-success') !important;
 }
