@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.5](https://github.com/bcgov/nr-fsa-theme/compare/v1.1.4...v1.1.5) (2023-08-28)
+
+
+### Bug Fixes
+
+* primevue - remove FAM specific change ([#87](https://github.com/bcgov/nr-fsa-theme/issues/87)) ([116f555](https://github.com/bcgov/nr-fsa-theme/commit/116f555ad91d4b6000a48c1c227c07350a55adb2))
+* removed the type import in landing page as we now do font update in each applciation ([e3044f8](https://github.com/bcgov/nr-fsa-theme/commit/e3044f8a153fbd6e73b31fe96c65aae3252eaf88))
+* removed the type import in landing page stylesheet ([#85](https://github.com/bcgov/nr-fsa-theme/issues/85)) ([e3044f8](https://github.com/bcgov/nr-fsa-theme/commit/e3044f8a153fbd6e73b31fe96c65aae3252eaf88))
+
 ## [1.1.4](https://github.com/bcgov/nr-fsa-theme/compare/v1.1.3...v1.1.4) (2023-08-28)
 
 
