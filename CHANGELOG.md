@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.4](https://github.com/bcgov/nr-fsa-theme/compare/v1.1.3...v1.1.4) (2023-08-28)
+
+
+### Bug Fixes
+
+* cleanup primevue stylesheet ([#84](https://github.com/bcgov/nr-fsa-theme/issues/84)) ([4f94a30](https://github.com/bcgov/nr-fsa-theme/commit/4f94a30375da89c1d08675fb07bab5966e2672b6))
+* fix primevue dialog header icon position ([#75](https://github.com/bcgov/nr-fsa-theme/issues/75)) ([2406dcf](https://github.com/bcgov/nr-fsa-theme/commit/2406dcfc767f29ba265926d55f4356f57a65d798))
+* removing unused icon selectors for primevue components ([#80](https://github.com/bcgov/nr-fsa-theme/issues/80)) ([897106f](https://github.com/bcgov/nr-fsa-theme/commit/897106fa452872df0077cdb9336b3b5de1737584))
+* switching from px to rem unit ([#79](https://github.com/bcgov/nr-fsa-theme/issues/79)) ([db68d25](https://github.com/bcgov/nr-fsa-theme/commit/db68d25c73f9c0d061c3a908fbdc21b7c3a0333f))
+* toast broken icon ([#77](https://github.com/bcgov/nr-fsa-theme/issues/77)) ([e269bb1](https://github.com/bcgov/nr-fsa-theme/commit/e269bb1ded0a718eaa9f8aea2e3ab57c967da241))
+
 ## [1.1.3](https://github.com/bcgov/nr-fsa-theme/compare/v1.1.2...v1.1.3) (2023-08-01)
 
 
