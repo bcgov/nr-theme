@@ -191,6 +191,8 @@ label {
         map.get(lightTheme.$light-theme, 'border-strong-01');
     border-radius: 0.25rem 0.25rem 0 0;
     background: map.get(lightTheme.$light-theme, 'field-01');
+    width: 38rem !important;
+    height: 3rem !important;
 }
 .#{variables.$primevue-prefix}-dropdown
     .#{variables.$primevue-prefix}-dropdown-label {
@@ -400,30 +402,36 @@ label {
 
 /* ------------------------------------ primevue table --------------------------------- */
 
+.#{variables.$primevue-prefix}-column-header-content
+    .#{variables.$primevue-prefix}-column-title {
+        padding: 1rem 0 1.4rem
+    }
+
 .#{variables.$primevue-prefix}-datatable
     .#{variables.$primevue-prefix}-datatable-thead
     > tr
     > th {
     @extend %body-compact-01;
     background: map.get(lightTheme.$light-theme, 'layer-accent-hover-01');
-    height: 2rem;
+    height: 3rem;
     padding: 0 1rem;
     font-weight: 700;
 
     text-align: left;
     border: none;
 }
+
 .#{variables.$primevue-prefix}-datatable
     .#{variables.$primevue-prefix}-datatable-tbody
     > tr
     > td {
     @extend %body-compact-01;
+    height: 3rem;
     text-align: left;
     box-shadow: 0 0.0625rem 0 0
         map.get(lightTheme.$light-theme, 'border-subtle-01') inset;
     padding: 0 1rem;
     border: none;
-    background: map.get(lightTheme.$light-theme, 'layer-02');
 }
 
 .#{variables.$primevue-prefix}-datatable
@@ -434,11 +442,55 @@ label {
 }
 
 /*----------------------------- data table pagnition -------------------*/
+
+.#{variables.$primevue-prefix}-paginator {
+    padding: 0 !important;
+    flex-wrap: nowrap;
+}
+
 .#{variables.$primevue-prefix}-datatable
     .#{variables.$primevue-prefix}-paginator-bottom
     .#{variables.$primevue-prefix}-dropdown
     .#{variables.$primevue-prefix}-dropdown-label.#{variables.$primevue-prefix}-inputtext {
-    padding-top: 0.438rem;
+        padding: 0 .2rem 0 1.4rem;
+        align-self: center;
+}
+
+.#{variables.$primevue-prefix}-paginator
+    .#{variables.$primevue-prefix}-inputwrapper,
+    .#{variables.$primevue-prefix}-paginator-current,
+    .#{variables.$primevue-prefix}-paginator-prev,
+    .#{variables.$primevue-prefix}-paginator-next {
+        border: none !important;
+        height: 3.2rem !important;
+        font-size: 0.875rem;
+}
+
+.#{variables.$primevue-prefix}-paginator
+    .#{variables.$primevue-prefix}-paginator-current,
+    .#{variables.$primevue-prefix}-paginator-prev,
+    .#{variables.$primevue-prefix}-paginator-next {
+    color: map.get(lightTheme.$light-theme, 'text-secondary') !important;
+    border-left: solid 0.063rem map.get(lightTheme.$light-theme, 'border-subtle-02') !important;
+}
+
+.#{variables.$primevue-prefix}-paginator
+    .#{variables.$primevue-prefix}-dropdown {
+    width: 5rem !important;
+    background-color: transparent !important;
+}
+
+.#{variables.$primevue-prefix}-datatable
+    .#{variables.$primevue-prefix}-paginator-bottom
+        .#{variables.$primevue-prefix}-dropdown-trigger {
+            padding-right: 1.1rem;
+}
+
+.#{variables.$primevue-prefix}-paginator
+.#{variables.$primevue-prefix}-paginator-current {
+    padding-right: 1rem;
+    margin-right: auto;
+    cursor: auto;
 }
 
 /* ------------------------------------ dialog -------------------------- */
