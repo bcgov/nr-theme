@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/bcgov/nr-fsa-theme/compare/v1.1.5...v1.2.0) (2023-09-18)
+
+
+### Features
+
+* primevue - adjust pagination style for data table and some extra ([#90](https://github.com/bcgov/nr-fsa-theme/issues/90)) ([997b78d](https://github.com/bcgov/nr-fsa-theme/commit/997b78d566b17a16c839d3cde7960c946fd67af1))
+
 ## [1.1.5](https://github.com/bcgov/nr-fsa-theme/compare/v1.1.4...v1.1.5) (2023-08-28)
 
 
