@@ -378,7 +378,6 @@ label {
 .#{variables.$primevue-prefix}-card {
     box-shadow: none;
     border: 0.0625rem solid map.get(lightTheme.$light-theme, 'border-subtle-00');
-    width: 38rem;
 }
 
 .#{variables.$primevue-prefix}-card
