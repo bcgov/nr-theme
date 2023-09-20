@@ -166,6 +166,10 @@ label {
     background-color: transparent;
     border: 0.0625rem solid map.get(lightTheme.$light-theme, 'text-disabled');
 }
+.#{variables.$primevue-prefix}-button-outlined:focus {
+    box-shadow: 0 0 0 2px #ffffff,
+        0 0 0 4px map.get(lightTheme.$light-theme, 'focus'), 0 1px 2px 0 black;
+}
 
 /* ------------------------------------ primevue inputtext ----------------------------------- */
 
