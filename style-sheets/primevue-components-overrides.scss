@@ -189,10 +189,11 @@ label {
 .#{variables.$primevue-prefix}-input-icon-left
     .#{variables.$primevue-prefix}-inputtext {
         width: 100%;
-        height: 2.7rem !important;
+        height: 2.8rem !important;
 }
 
 /* -------------------------------------- primevue dropdown ------------------------------------ */
+
 .#{variables.$primevue-prefix}-dropdown {
     border: none;
     border-bottom: 0.0625rem solid
@@ -377,35 +378,64 @@ label {
 .#{variables.$primevue-prefix}-card {
     box-shadow: none;
     border: 0.0625rem solid map.get(lightTheme.$light-theme, 'border-subtle-00');
-    padding: 2rem;
+    width: 38rem;
 }
-.#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-body {
-    padding: 2rem;
+
+.#{variables.$primevue-prefix}-card
+    .#{variables.$primevue-prefix}-card-header {
+        background-color: map.get(lightTheme.$light-theme, 'layer-01');
+        display: flex;
+        padding: 1.5rem;
+        align-items: center;
+
+        svg {
+            color: map.get(lightTheme.$light-theme, 'support-success');
+        }
+
+        p {
+            display: inline;
+            padding-left: 1rem;
+            margin-bottom: 0;
+            color: map.get(lightTheme.$light-theme, 'text-primary');
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.125rem; /* 128.571% */
+            letter-spacing: 0.01rem;
+        }
+}
+
+.#{variables.$primevue-prefix}-card
+    .#{variables.$primevue-prefix}-card-body {
+        padding: 1.5rem 3.7rem;
 }
 
 .#{variables.$primevue-prefix}-card
     .#{variables.$primevue-prefix}-card-content {
-    padding: 0;
-    margin: 0;
+        display: flex;
+        padding: 0;
+        margin: 0;
 }
 
-.#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-title {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 0;
+.#{variables.$primevue-prefix}-card
+    .#{variables.$primevue-prefix}-card-title {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 0;
 }
 
 .#{variables.$primevue-prefix}-card
     .#{variables.$primevue-prefix}-card-subtitle {
-    @extend %body-compact-01;
-    padding-left: 0;
-    padding-right: 0;
-    color: map.get(lightTheme.$light-theme, 'text-secondary');
+        @extend %body-compact-01;
+        padding-left: 0;
+        padding-right: 0;
+        color: map.get(lightTheme.$light-theme, 'text-secondary');
 }
 
-.#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-footer {
-    padding: 0;
+.#{variables.$primevue-prefix}-card
+    .#{variables.$primevue-prefix}-card-footer {
+        padding: 0;
 }
 
 /* ------------------------------------ primevue table --------------------------------- */
