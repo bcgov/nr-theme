@@ -5,7 +5,7 @@
 [![MIT License](https://img.shields.io/github/license/bcgov/nr-theme.svg)](/LICENSE)
 [![Lifecycle](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
-# **NR-FSA-Theme**
+# **NR-Theme**
 
 ## Description
 
