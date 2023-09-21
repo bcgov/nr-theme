@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.0](https://github.com/bcgov/nr-theme/compare/v1.2.0...v1.3.0) (2023-09-21)
+
+
+### Features
+
+* primevue - card styling ([#92](https://github.com/bcgov/nr-theme/issues/92)) ([d5a99ca](https://github.com/bcgov/nr-theme/commit/d5a99ca69d125429d36b8cb82e011b509419e51f))
+* rename project ([#95](https://github.com/bcgov/nr-theme/issues/95)) ([95a55e9](https://github.com/bcgov/nr-theme/commit/95a55e93f7bd10094a7e8191ee3dcb60157be064))
+
+
+### Bug Fixes
+
+* primevue button style on focus condition ([#93](https://github.com/bcgov/nr-theme/issues/93)) ([b3ea611](https://github.com/bcgov/nr-theme/commit/b3ea611199409d2ba6d02d6a98623c791afff751))
+
 ## [1.2.0](https://github.com/bcgov/nr-fsa-theme/compare/v1.1.5...v1.2.0) (2023-09-18)
 
 
