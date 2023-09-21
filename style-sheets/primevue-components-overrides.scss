@@ -124,7 +124,7 @@ label {
         lightButton.$light-button-token-overrides,
         'button-primary'
     );
-    outline: 0.125rem solid #ffffff;
+    outline: 0.125rem solid #ffffff !important;
     outline-offset: -0.25rem;
     box-shadow: unset;
 }
