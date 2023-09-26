@@ -124,7 +124,7 @@ label {
         lightButton.$light-button-token-overrides,
         'button-primary'
     );
-    outline: 0.125rem solid #ffffff;
+    outline: 0.125rem solid #ffffff !important;
     outline-offset: -0.25rem;
     box-shadow: unset;
 }
@@ -183,10 +183,7 @@ label {
 
 .#{variables.$primevue-prefix}-inputtext {
     padding: map.get(bodyTypes.$body-compact-01, 'padding');
-}
-
-.#{variables.$primevue-prefix}-inputtext {
-    border: none;
+    border: 0.125rem solid transparent;
     @extend %body-compact-01;
     border-bottom: 0.0625rem solid
         map.get(lightTheme.$light-theme, 'border-strong-01');
@@ -195,18 +192,20 @@ label {
 }
 
 .#{variables.$primevue-prefix}-inputtext:enabled:hover {
-    border-color: map.get(lightTheme.$light-theme, 'border-strong-01');
-}
-.#{variables.$primevue-prefix}-inputtext:enabled:focus {
+    border: 0.125rem solid transparent;
     border-bottom: 0.0625rem solid
-        map.get(lightTheme.$light-theme, 'background');
-    box-shadow: 0 0 0 0.1rem map.get(lightTheme.$light-theme, 'focus');
+        map.get(lightTheme.$light-theme, 'border-strong-01');
+}
+
+.#{variables.$primevue-prefix}-inputtext:enabled:focus {
+    border: 0.125rem solid map.get(lightTheme.$light-theme, 'focus') !important;
+    box-shadow: 0 0 0 0;
 }
 
 .#{variables.$primevue-prefix}-input-icon-left
     .#{variables.$primevue-prefix}-inputtext {
     width: 100%;
-    height: 2.8rem !important;
+    height: 100%;
 }
 
 /* -------------------------------------- primevue dropdown ------------------------------------ */
