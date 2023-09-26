@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.0](https://github.com/bcgov/nr-theme/compare/v1.3.0...v1.4.0) (2023-09-26)
+
+
+### Features
+
+* changing labels color ([#101](https://github.com/bcgov/nr-theme/issues/101)) ([5807619](https://github.com/bcgov/nr-theme/commit/58076197b932565ffd36bbcce41acfacd0d4200e))
+
+
+### Bug Fixes
+
+* fix documentation to use the new project name ([#96](https://github.com/bcgov/nr-theme/issues/96)) ([c68de2e](https://github.com/bcgov/nr-theme/commit/c68de2eeddf736c5c0e6edd43fa3fd16d49c385d))
+
 ## [1.3.0](https://github.com/bcgov/nr-theme/compare/v1.2.0...v1.3.0) (2023-09-21)
 
 
