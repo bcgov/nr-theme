@@ -294,3 +294,7 @@ li.#{variables.$bcgov-prefix}--overflow-menu-options__option:last-child {
 #{variables.$bcgov-prefix}-modal-footer {
   padding: 1rem;
 }
+
+.#{variables.$bcgov-prefix}--label {
+  color: var(--#{variables.$bcgov-prefix}-text-primary);
+}
