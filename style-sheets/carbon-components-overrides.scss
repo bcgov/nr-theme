@@ -295,6 +295,7 @@ li.#{variables.$bcgov-prefix}--overflow-menu-options__option:last-child {
   padding: 1rem;
 }
 
-.#{variables.$bcgov-prefix}--label {
+label.#{variables.$bcgov-prefix}--label,
+legend.#{variables.$bcgov-prefix}--label {
   color: var(--#{variables.$bcgov-prefix}-text-primary);
 }
