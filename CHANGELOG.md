@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.1](https://github.com/bcgov/nr-theme/compare/v1.4.0...v1.4.1) (2023-09-28)
+
+
+### Bug Fixes
+
+* change identifiers for the style rule ([#105](https://github.com/bcgov/nr-theme/issues/105)) ([ee91389](https://github.com/bcgov/nr-theme/commit/ee9138920e8e43d86586e1828341b889266f1b51))
+* fix primevue button on focus effect to add important ([#99](https://github.com/bcgov/nr-theme/issues/99)) ([3629a0e](https://github.com/bcgov/nr-theme/commit/3629a0e5409eedb285d60538991e53ff10f1aaf9))
+
 ## [1.4.0](https://github.com/bcgov/nr-theme/compare/v1.3.0...v1.4.0) (2023-09-26)
 
 
