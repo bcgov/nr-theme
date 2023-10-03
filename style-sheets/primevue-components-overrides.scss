@@ -541,10 +541,20 @@ label {
         map.get(lightTheme.$light-theme, 'border-subtle-02') !important;
 }
 
+.#{variables.$primevue-prefix}-paginator-prev:focus,
+.#{variables.$primevue-prefix}-paginator-next:focus {
+    border-color: map.get(lightTheme.$light-theme, 'focus') !important;
+    border: 0.125rem solid map.get(lightTheme.$light-theme, 'focus') !important;
+    box-shadow: unset;
+}
+
 .#{variables.$primevue-prefix}-paginator
     .#{variables.$primevue-prefix}-dropdown {
     width: 5rem !important;
     background-color: transparent !important;
+    margin-left: 0;
+    margin-right: 0.144rem;
+    border-radius: 0;
 }
 
 .#{variables.$primevue-prefix}-datatable
