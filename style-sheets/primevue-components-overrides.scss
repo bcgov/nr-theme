@@ -688,7 +688,7 @@ outline: 0.125rem solid #ffffff;
 /* ------------------------------------ primevue toast --------------------------------- */
 
 .#{variables.$primevue-prefix}-toast {
-    z-index: 99999;
+    z-index: 9999 !important;
 }
 
 .#{variables.$primevue-prefix}-toast
@@ -839,7 +839,7 @@ outline: 0.125rem solid #ffffff;
 
 }
 
-@media (min-device-width: 1366px) {
+@media (min-device-width: 1024px) {
 
     .#{variables.$primevue-prefix}-sidebar-mask,
     .#{variables.$primevue-prefix}-sidebar-left
