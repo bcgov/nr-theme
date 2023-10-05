@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/bcgov/nr-theme/compare/v1.4.1...v1.4.2) (2023-10-03)
+
+
+### Bug Fixes
+
+* primevue card header and content position, tag general styles ([#102](https://github.com/bcgov/nr-theme/issues/102)) ([7a8354d](https://github.com/bcgov/nr-theme/commit/7a8354d34e921c4c3fdcf6f7f04aee99fd4c751d))
+
 ## [1.4.1](https://github.com/bcgov/nr-theme/compare/v1.4.0...v1.4.1) (2023-09-28)
 
 

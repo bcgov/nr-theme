@@ -3,6 +3,7 @@
 @use '../design-tokens/variables.scss' as variables;
 @use '../design-tokens/colors.scss' as colors;
 @use '../design-tokens/light-theme.scss' as lightTheme;
+@use '../design-tokens/light-tags.scss' as lightTags;
 @use '../design-tokens/dark-theme.scss' as darkTheme;
 @use '../design-tokens/light-buttons.scss' as lightButton;
 @use '../design-tokens/dark-buttons.scss' as darkButton;
@@ -126,7 +127,7 @@ label {
     );
     outline: 0.125rem solid #ffffff !important;
     outline-offset: -0.25rem;
-    box-shadow: unset;
+    box-shadow: unset !important;
 }
 
 /* ------------------------------------ primevue button outlined--------------------------------- */
@@ -217,7 +218,7 @@ outline: 0.125rem solid #ffffff;
     border-radius: 0.25rem 0.25rem 0 0;
     background: map.get(lightTheme.$light-theme, 'field-01');
     width: 38rem !important;
-    height: 3rem !important;
+    // height: 3rem !important;
 }
 .#{variables.$primevue-prefix}-dropdown
     .#{variables.$primevue-prefix}-dropdown-label {
@@ -404,11 +405,13 @@ outline: 0.125rem solid #ffffff;
 
     svg {
         color: map.get(lightTheme.$light-theme, 'support-success');
+        margin-bottom: 0.1rem;
     }
 
     p {
-        display: inline;
-        padding-left: 1rem;
+        margin: 0;
+        padding: 0 0 0 1rem !important;
+        display: inline-flex;
         margin-bottom: 0;
         color: map.get(lightTheme.$light-theme, 'text-primary');
         font-size: 0.875rem;
@@ -419,15 +422,29 @@ outline: 0.125rem solid #ffffff;
     }
 }
 
-.#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-body {
-    padding: 1.5rem 3.7rem;
-}
-
 .#{variables.$primevue-prefix}-card
     .#{variables.$primevue-prefix}-card-content {
     display: flex;
     padding: 0;
     margin: 0;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    label {
+        color: map.get(lightTheme.$light-theme, 'text-primary');
+        margin: 0 0 0.75rem !important;
+    }
+
+    span {
+        margin: 0 !important;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        letter-spacing: 0.01rem;
+    }
 }
 
 .#{variables.$primevue-prefix}-card
@@ -526,10 +543,20 @@ outline: 0.125rem solid #ffffff;
         map.get(lightTheme.$light-theme, 'border-subtle-02') !important;
 }
 
+.#{variables.$primevue-prefix}-paginator-prev:focus,
+.#{variables.$primevue-prefix}-paginator-next:focus {
+    border-color: map.get(lightTheme.$light-theme, 'focus') !important;
+    border: 0.125rem solid map.get(lightTheme.$light-theme, 'focus') !important;
+    box-shadow: unset;
+}
+
 .#{variables.$primevue-prefix}-paginator
 .#{variables.$primevue-prefix}-dropdown {
     width: 5rem !important;
     background-color: transparent !important;
+    margin-left: 0;
+    margin-right: 0.144rem;
+    border-radius: 0;
 }
 
 .#{variables.$primevue-prefix}-datatable
@@ -855,3 +882,36 @@ outline: 0.125rem solid #ffffff;
     }
 }
 
+/* ------------------------------------ Tag --------------------------------- */
+
+.#{variables.$primevue-prefix}-tag-success {
+    font-size: 0.75rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.02rem !important;
+    color: map-get(
+        lightTags.$light-tag-token-overrides,
+        'tag-color-green'
+    ) !important;
+    background-color: map-get(
+        lightTags.$light-tag-token-overrides,
+        'tag-background-green'
+    ) !important;
+    padding-top: 0.1rem;
+    border-radius: 62.5rem;
+}
+
+.#{variables.$primevue-prefix}-tag-danger {
+    font-size: 0.75rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.02rem !important;
+    color: map-get(
+        lightTags.$light-tag-token-overrides,
+        'tag-color-red'
+    ) !important;
+    background-color: map-get(
+        lightTags.$light-tag-token-overrides,
+        'tag-background-red'
+    ) !important;
+    padding-top: 0.1rem;
+    border-radius: 62.5rem;
+}
