@@ -833,6 +833,27 @@ label {
     border: solid 0.0625rem map.get(lightTheme.$light-theme, 'support-success') !important;
     border-left: solid 0.3125rem
         map.get(lightTheme.$light-theme, 'support-success') !important;
+    svg {
+        color: map.get(lightTheme.$light-theme, 'support-success') !important;
+    }
+}
+
+.#{variables.$primevue-prefix}-message-error {
+    border: solid 0.0625rem map.get(lightTheme.$light-theme, 'support-error') !important;
+    border-left: solid 0.3125rem
+        map.get(lightTheme.$light-theme, 'support-error') !important;
+    svg {
+        color: map.get(lightTheme.$light-theme, 'support-error') !important;
+    }
+}
+
+.#{variables.$primevue-prefix}-message-warn {
+    border: solid 0.0625rem map.get(lightTheme.$light-theme, 'support-warning') !important;
+    border-left: solid 0.3125rem
+        map.get(lightTheme.$light-theme, 'support-warning') !important;
+    svg {
+        color: map.get(lightTheme.$light-theme, 'support-warning') !important;
+    }
 }
 
 /* ------------------------------------ Sidebar --------------------------------- */
