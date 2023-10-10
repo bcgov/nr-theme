@@ -878,14 +878,14 @@ label {
         map.get(lightTheme.$light-theme, 'layer-selected-01');
 }
 
-@media (min-device-width: 768px) {
+@media (min-width: 768px) {
     .#{variables.$primevue-prefix}-sidebar-left
         .#{variables.$primevue-prefix}-sidebar {
         width: 33.3% !important;
     }
 }
 
-@media (min-device-width: 1024px) {
+@media (min-width: 1024px) {
     .#{variables.$primevue-prefix}-sidebar-mask,
     .#{variables.$primevue-prefix}-sidebar-left
         .#{variables.$primevue-prefix}-sidebar {
