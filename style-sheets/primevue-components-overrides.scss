@@ -140,6 +140,7 @@ label {
         lightButton.$light-button-token-overrides,
         'button-tertiary'
     );
+    background-color: transparent;
 }
 .#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined:enabled:hover {
     background: map.get(
@@ -609,12 +610,15 @@ label {
 .#{variables.$primevue-prefix}-dialog-footer {
     border-top: none;
     padding-bottom: 4rem !important;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
 }
 
 .#{variables.$primevue-prefix}-dialog
-    .#{variables.$primevue-prefix}-dialog-footer {
-    border-bottom-right-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
+    .#{variables.$primevue-prefix}-dialog-footer
+    button {
+    margin: 0 0.5rem 0 0;
+    width: auto;
 }
 
 /* ------------------------------------ dialog confirm header -------------------------- */
@@ -632,12 +636,6 @@ label {
     .#{variables.$primevue-prefix}-dialog-title {
         @extend %heading-03;
     }
-}
-
-.#{variables.$primevue-prefix}-dialog
-    .#{variables.$primevue-prefix}-dialog-footer {
-    border-top: none;
-    padding-bottom: 4rem !important;
 }
 
 .#{variables.$primevue-prefix}-dialog
@@ -670,6 +668,11 @@ label {
 .#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:focus {
     border: 0.0625rem solid
         map.get(lightButton.$light-button-token-overrides, 'button-tertiary') !important;
+}
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-confirm-dialog-reject {
+    background: transparent;
 }
 
 .#{variables.$primevue-prefix}-button
@@ -777,10 +780,20 @@ label {
 
 /* ------------------------------------ primevue message --------------------------------- */
 
+.#{variables.$primevue-prefix}-icon {
+    height: 0.75rem;
+    width: 0.75rem;
+}
+
 .#{variables.$primevue-prefix}-message {
     position: absolute;
     left: 0;
     right: 0;
+}
+
+.#{variables.$primevue-prefix}-message
+    .#{variables.$primevue-prefix}-message-wrapper {
+    padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
 .#{variables.$primevue-prefix}-message
@@ -806,9 +819,10 @@ label {
     vertical-align: middle;
 }
 
-.#{variables.$primevue-prefix}-message
-    .#{variables.$primevue-prefix}-message-wrapper {
-    padding: 0.5rem 0.5rem 0.5rem 0;
+.#{variables.$primevue-prefix}-message-close.#{variables.$primevue-prefix}-link {
+    margin-left: auto;
+    overflow: hidden;
+    position: relative;
 }
 
 .#{variables.$primevue-prefix}-message-wrapper
@@ -821,11 +835,6 @@ label {
 .#{variables.$primevue-prefix}-message
     .#{variables.$primevue-prefix}-message-close:hover {
     background: none;
-}
-
-.#{variables.$primevue-prefix}-icon {
-    height: 0.75rem;
-    width: 0.75rem;
 }
 
 .#{variables.$primevue-prefix}-message-wrapper
