@@ -207,6 +207,7 @@ label {
     .#{variables.$primevue-prefix}-inputtext {
     width: 100%;
     height: 100%;
+    padding-left: 2.5rem;
 }
 
 /* -------------------------------------- primevue dropdown ------------------------------------ */
@@ -223,6 +224,8 @@ label {
 .#{variables.$primevue-prefix}-dropdown
     .#{variables.$primevue-prefix}-dropdown-label {
     @extend %body-compact-01;
+    border: 0 none;
+    background: transparent;
 }
 
 .#{variables.$primevue-prefix}-dropdown .#{variables.$primevue-prefix}-icon {
@@ -258,6 +261,7 @@ label {
 .#{variables.$primevue-prefix}-dropdown-panel
     .#{variables.$primevue-prefix}-dropdown-items {
     padding: 0;
+    margin: 0;
 }
 .#{variables.$primevue-prefix}-dropdown-panel
     .#{variables.$primevue-prefix}-dropdown-items
