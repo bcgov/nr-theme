@@ -125,8 +125,8 @@ label {
         lightButton.$light-button-token-overrides,
         'button-primary'
     );
-    outline: 0.125rem solid #ffffff !important;
-    outline-offset: -0.25rem;
+    outline: 0.075rem solid #ffffff !important;
+    outline-offset: -0.2rem;
     box-shadow: unset !important;
 }
 
@@ -170,8 +170,8 @@ label {
         'button-tertiary-active'
     ) !important;
     color: map.get(lightTheme.$light-theme, 'text-on-color');
-    outline: 0.125rem solid #ffffff;
-    outline-offset: -0.25rem;
+    outline: 0.075rem solid #ffffff;
+    outline-offset: -0.2rem;
     box-shadow: unset;
 }
 .#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined:disabled {
