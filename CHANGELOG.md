@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.5.0](https://github.com/bcgov/nr-theme/compare/v1.4.2...v1.5.0) (2023-10-10)
+
+
+### Features
+
+* adding style for error and warning notification messages ([#109](https://github.com/bcgov/nr-theme/issues/109)) ([57533b2](https://github.com/bcgov/nr-theme/commit/57533b29238d7258f584f7515b850ff22ae79d15))
+
+
+### Bug Fixes
+
+* primevue sidebar media query refactor ([#110](https://github.com/bcgov/nr-theme/issues/110)) ([63ef8bc](https://github.com/bcgov/nr-theme/commit/63ef8bc549334a9f9daa7e5d0b963e51ab1aefd7))
+* sidebar and some responsive styling ([#106](https://github.com/bcgov/nr-theme/issues/106)) ([22dd132](https://github.com/bcgov/nr-theme/commit/22dd132b6baa43e97867ca34a686e78336ddac62))
+
 ## [1.4.2](https://github.com/bcgov/nr-theme/compare/v1.4.1...v1.4.2) (2023-10-03)
 
 
