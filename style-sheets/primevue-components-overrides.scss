@@ -944,6 +944,7 @@ label {
     margin: 0.5rem 0 0;
     padding: 0;
     border-radius: 0;
+    display: none;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
@@ -1017,9 +1018,9 @@ li.#{variables.$primevue-prefix}-menuitem-separator svg {
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .#{variables.$primevue-prefix}-breadcrumb {
-        display: none;
+        display: block;
     }
 }
 
