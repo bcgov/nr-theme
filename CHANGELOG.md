@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/bcgov/nr-theme/compare/v1.5.0...v1.6.0) (2023-10-19)
+
+
+### Features
+
+* primevue breadcrumb component styling ([#112](https://github.com/bcgov/nr-theme/issues/112)) ([3a29122](https://github.com/bcgov/nr-theme/commit/3a291224b8078fc4552c1f2120d9f9bc246279cf))
+
 ## [1.5.0](https://github.com/bcgov/nr-theme/compare/v1.4.2...v1.5.0) (2023-10-10)
 
 
