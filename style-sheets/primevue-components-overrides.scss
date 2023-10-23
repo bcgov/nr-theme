@@ -608,7 +608,7 @@ label {
 }
 
 .#{variables.$primevue-prefix}-dialog-footer {
-    border-top: none;
+    border-top: none !important;
     padding-bottom: 4rem !important;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
