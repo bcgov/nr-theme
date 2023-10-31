@@ -129,7 +129,61 @@ label {
     outline-offset: -0.25rem;
     box-shadow: unset !important;
 }
+/* ------------------------------------ primevue button secondary --------------------------------- */
+.#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-secondary {
+    border-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-secondary'
+    );
+    background-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-secondary'
+    );
+}
+.#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-secondary:enabled:hover {
+    border-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-secondary-hover'
+    );
+    background: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-secondary-hover'
+    );
+}
+.#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-secondary:enabled:active {
+    border-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-secondary-active'
+    );
+    background: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-secondary-active'
+    );
+}
+.#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-secondary:disabled {
+    background: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-disabled'
+    );
+    opacity: 1;
+    color: map.get(lightTheme.$light-theme, 'text-disabled');
+    border-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-disabled'
+    );
+}
 
+.#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-secondary:focus {
+    border-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-secondary'
+    );
+    background-color: map.get(
+        lightButton.$light-button-token-overrides,
+        'button-secondary'
+    );
+    box-shadow: 0 0 0 0.125rem map.get(lightTheme.$light-theme, 'focus') inset !important;
+}
 /* ------------------------------------ primevue button outlined--------------------------------- */
 .#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined {
     color: map.get(
@@ -948,73 +1002,65 @@ label {
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
-.#{variables.$primevue-prefix}-breadcrumb-list
-.#{variables.$primevue-prefix}-menuitem {
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    .#{variables.$primevue-prefix}-menuitem {
     display: inline-flex !important;
     align-items: center;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
-.#{variables.$primevue-prefix}-breadcrumb-list
-.#{variables.$primevue-prefix}-menuitem
-.#{variables.$primevue-prefix}-menuitem-link {
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    .#{variables.$primevue-prefix}-menuitem
+    .#{variables.$primevue-prefix}-menuitem-link {
     padding: 0.2rem;
     border-radius: 0;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
-.#{variables.$primevue-prefix}-breadcrumb-list
-.#{variables.$primevue-prefix}-menuitem
-.#{variables.$primevue-prefix}-menuitem-link:focus {
-    box-shadow: inset 0 0px 0px 1px map.get(
-        lightTheme.$light-theme,
-        'focus'
-    ) !important;
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    .#{variables.$primevue-prefix}-menuitem
+    .#{variables.$primevue-prefix}-menuitem-link:focus {
+    box-shadow: inset 0 0px 0px 0.063rem
+        map.get(lightTheme.$light-theme, 'focus') !important;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
-.#{variables.$primevue-prefix}-breadcrumb-list
-.#{variables.$primevue-prefix}-menuitem
-.#{variables.$primevue-prefix}-menuitem-link
-.#{variables.$primevue-prefix}-menuitem-text:hover {
-    color: map.get(
-        lightTheme.$light-theme,
-        'link-primary-hover'
-    ) !important;
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    .#{variables.$primevue-prefix}-menuitem
+    .#{variables.$primevue-prefix}-menuitem-link
+    .#{variables.$primevue-prefix}-menuitem-text:hover {
+    color: map.get(lightTheme.$light-theme, 'link-primary-hover') !important;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
-.#{variables.$primevue-prefix}-breadcrumb-list
-.#{variables.$primevue-prefix}-menuitem::after {
-    color: map.get(
-        lightTheme.$light-theme,
-        'text-primary'
-    );
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    .#{variables.$primevue-prefix}-menuitem::after {
+    color: map.get(lightTheme.$light-theme, 'text-primary');
     content: '/';
     margin: 0 0.5rem;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
-.#{variables.$primevue-prefix}-breadcrumb-list li
-.#{variables.$primevue-prefix}-menuitem-text,
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    li
+    .#{variables.$primevue-prefix}-menuitem-text,
 .#{variables.$primevue-prefix}-breadcrumb
-.#{variables.$primevue-prefix}-breadcrumb-list li:last-child
-.#{variables.$primevue-prefix}-menuitem-text {
-    color: map.get(
-        lightTheme.$light-theme,
-        'link-primary'
-    ) !important;
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    li:last-child
+    .#{variables.$primevue-prefix}-menuitem-text {
+    color: map.get(lightTheme.$light-theme, 'link-primary') !important;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
-.#{variables.$primevue-prefix}-breadcrumb-list
-li.#{variables.$primevue-prefix}-menuitem-separator {
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    li.#{variables.$primevue-prefix}-menuitem-separator {
     margin: 0;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
-.#{variables.$primevue-prefix}-breadcrumb-list
-li.#{variables.$primevue-prefix}-menuitem-separator svg {
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    li.#{variables.$primevue-prefix}-menuitem-separator
+    svg {
     display: none;
 }
 
