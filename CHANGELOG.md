@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.7.0](https://github.com/bcgov/nr-theme/compare/v1.6.0...v1.7.0) (2023-11-01)
+
+
+### Features
+
+* adding secondary button styling ([#117](https://github.com/bcgov/nr-theme/issues/117)) ([a231aff](https://github.com/bcgov/nr-theme/commit/a231aff2517da7f8607b47acc1b88368327719de))
+* steps primevue component ([#116](https://github.com/bcgov/nr-theme/issues/116)) ([8fa76c5](https://github.com/bcgov/nr-theme/commit/8fa76c5053028df17f597ff89e38362012fde5c6))
+
+
+### Bug Fixes
+
+* media quary not including 768px ([#114](https://github.com/bcgov/nr-theme/issues/114)) ([232ab9d](https://github.com/bcgov/nr-theme/commit/232ab9decc6bd4867bb667394cb2f511a22a4258))
+
 ## [1.6.0](https://github.com/bcgov/nr-theme/compare/v1.5.0...v1.6.0) (2023-10-19)
 
 
