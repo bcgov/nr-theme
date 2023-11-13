@@ -910,6 +910,12 @@ label {
     }
 }
 
+@media (max-width: 610px) {
+    .#{variables.$primevue-prefix}-message {
+        display: none;
+    }
+}
+
 /* ------------------------------------ Sidebar --------------------------------- */
 
 .#{variables.$primevue-prefix}-sidebar-left
