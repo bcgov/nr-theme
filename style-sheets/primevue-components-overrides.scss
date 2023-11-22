@@ -838,7 +838,8 @@ label {
     @extend %body-compact-01;
     padding-left: 0.5rem;
     padding-right: 0.3125rem;
-    position: absolute;
+    position: relative;
+    display: flex;
     left: 0;
     right: 0;
 }
@@ -854,18 +855,28 @@ label {
     margin-left: 1rem;
     margin-bottom: 0.19rem;
     vertical-align: middle;
+    flex-shrink: 0;
 }
 
 .#{variables.$primevue-prefix}-message
     .#{variables.$primevue-prefix}-message-wrapper {
-    padding: 0.5rem 0.5rem 0.5rem 0;
+        display: flex;
+        align-items: baseline;
+        padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.#{variables.$primevue-prefix}-message-wrapper
+    .#{variables.$primevue-prefix}-message-close {
+        align-self: flex-start;
+        margin-top: 0.5rem;
 }
 
 .#{variables.$primevue-prefix}-message-wrapper
     .#{variables.$primevue-prefix}-message-close
     svg {
-    color: colors.$gray-100 !important;
-    margin: 0;
+        color: colors.$gray-100 !important;
+        margin: 0.55rem 0 0;
+        align-self: baseline !important;
 }
 
 .#{variables.$primevue-prefix}-message
