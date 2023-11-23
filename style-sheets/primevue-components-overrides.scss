@@ -836,7 +836,6 @@ label {
 .#{variables.$primevue-prefix}-message
     .#{variables.$primevue-prefix}-message-text {
     @extend %body-compact-01;
-    padding-left: 0.5rem;
     padding-right: 0.3125rem;
     position: relative;
     display: flex;
@@ -852,7 +851,7 @@ label {
 
 .#{variables.$primevue-prefix}-message svg {
     margin-right: 0.9375rem;
-    margin-left: 1rem;
+    margin-left: 0.2rem;
     margin-bottom: 0.19rem;
     vertical-align: middle;
     flex-shrink: 0;
@@ -862,7 +861,7 @@ label {
     .#{variables.$primevue-prefix}-message-wrapper {
         display: flex;
         align-items: baseline;
-        padding: 0.5rem 0.5rem 0.5rem 0;
+        padding: 0 0.5rem 0 0;
 }
 
 .#{variables.$primevue-prefix}-message-wrapper
