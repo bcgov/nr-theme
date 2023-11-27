@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.7.1](https://github.com/bcgov/nr-theme/compare/v1.7.0...v1.7.1) (2023-11-27)
+
+
+### Bug Fixes
+
+* notification message primevue componente wrapping ([#121](https://github.com/bcgov/nr-theme/issues/121)) ([e96337d](https://github.com/bcgov/nr-theme/commit/e96337d928c5d6ee54fd95cd64f48af2f4a546fe))
+* primevue breadcrum styling for current route ([#118](https://github.com/bcgov/nr-theme/issues/118)) ([e31de69](https://github.com/bcgov/nr-theme/commit/e31de6931c48c9944b7cbf648d0f25e05fdc2a0e))
+* step component text partially hidden ([#119](https://github.com/bcgov/nr-theme/issues/119)) ([812cd97](https://github.com/bcgov/nr-theme/commit/812cd97a951c85b1622a46e64484232128cf7d73))
+
 ## [1.7.0](https://github.com/bcgov/nr-theme/compare/v1.6.0...v1.7.0) (2023-11-01)
 
 
