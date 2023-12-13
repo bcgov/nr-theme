@@ -1144,23 +1144,17 @@ label {
 
 /* ------------------------------------ tabView ----------------------------- */
 
-.#{variables.$primevue-prefix}-tabview {
-    margin-top: 1.5rem;
-}
-
 .#{variables.$primevue-prefix}-tabview
 .#{variables.$primevue-prefix}-tabview-panels {
     padding: 0;
     background-color: transparent;
     z-index: 1;
-    margin-top: 2.62rem;
 }
 
 .#{variables.$primevue-prefix}-tabview
 .#{variables.$primevue-prefix}-tabview-nav {
     border: none;
     position: absolute;
-    margin: 0.112rem 2.55rem 0rem;
 }
 
 .#{variables.$primevue-prefix}-tabview
