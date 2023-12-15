@@ -1141,3 +1141,104 @@ label {
         margin-top: 1.5rem;
     }
 }
+
+/* ------------------------------------ tabView ----------------------------- */
+
+.#{variables.$primevue-prefix}-tabview
+.#{variables.$primevue-prefix}-tabview-panels {
+    padding: 0;
+    background-color: transparent;
+}
+
+.#{variables.$primevue-prefix}-tabview
+.#{variables.$primevue-prefix}-tabview-nav {
+    border: none;
+}
+
+.#{variables.$primevue-prefix}-tabview
+.#{variables.$primevue-prefix}-tabview-nav
+.#{variables.$primevue-prefix}-tabview-header
+.#{variables.$primevue-prefix}-tabview-nav-link {
+    justify-content: space-between;
+    min-width: 11.16rem;
+    font-weight: 400;
+    background-color: map.get(lightTheme.$light-theme, 'border-subtle-00');
+    border-color: map.get(lightTheme.$light-theme, 'border-subtle-00');
+    border-radius: 0;
+    border: none;
+    border-top: 0.125rem solid transparent;
+    border-bottom: 0.125rem solid transparent;
+}
+
+.#{variables.$primevue-prefix}-tabview
+.#{variables.$primevue-prefix}-tabview-nav-link
+.#{variables.$primevue-prefix}-tabview-title {
+    font-size: 0.875rem;
+}
+
+.#{variables.$primevue-prefix}-tabview
+.#{variables.$primevue-prefix}-tabview-nav
+.#{variables.$primevue-prefix}-tabview-header:nth-last-child(2)
+.#{variables.$primevue-prefix}-tabview-nav-link {
+    border-top-right-radius: 0.25rem;
+    border-right: solid 0.0625rem map.get(lightTheme.$light-theme, 'border-subtle-00');
+}
+
+.#{variables.$primevue-prefix}-tabview
+.#{variables.$primevue-prefix}-tabview-nav
+.#{variables.$primevue-prefix}-tabview-header:first-child
+.#{variables.$primevue-prefix}-tabview-nav-link {
+    border-top-left-radius: 0.25rem;
+    border-left: solid 0.0625rem map.get(lightTheme.$light-theme, 'border-subtle-00');
+}
+
+.#{variables.$primevue-prefix}-tabview
+.#{variables.$primevue-prefix}-tabview-nav
+.#{variables.$primevue-prefix}-tabview-header.#{variables.$primevue-prefix}-highlight
+.#{variables.$primevue-prefix}-tabview-nav-link {
+    font-weight: 700;
+    border-top: solid 0.125rem map.get(
+        lightTheme.$light-theme,
+        'border-interactive'
+    ) !important;
+}
+
+.#{variables.$primevue-prefix}-tabview
+.#{variables.$primevue-prefix}-tabview-nav
+.#{variables.$primevue-prefix}-tabview-header:not(:nth-last-child(2)):not(.#{variables.$primevue-prefix}-highlight)
+.#{variables.$primevue-prefix}-tabview-nav-link {
+    border-right: solid 0.0625rem map.get(lightTheme.$light-theme, 'border-strong-01');
+}
+
+.#{variables.$primevue-prefix}-tabview
+.#{variables.$primevue-prefix}-tabview-nav
+.#{variables.$primevue-prefix}-tabview-header:not(.#{variables.$primevue-prefix}-highlight)
+.#{variables.$primevue-prefix}-tabview-nav-link:hover {
+    background-color: map.get(lightTheme.$light-theme, 'layer-accent-hover-01') !important;
+}
+
+.#{variables.$primevue-prefix}-tabview
+.#{variables.$primevue-prefix}-tabview-nav
+.#{variables.$primevue-prefix}-tabview-header
+.#{variables.$primevue-prefix}-tabview-nav-link:focus {
+    box-shadow: none !important;
+    outline: 0.125rem solid map.get(
+             lightTheme.$light-theme,
+             'border-interactive'
+         ) !important;
+    outline-offset: -0.12rem !important;
+}
+
+@media (min-width: 500px) {
+    .#{variables.$primevue-prefix}-tabview
+    .#{variables.$primevue-prefix}-tabview-nav-link {
+        min-width: 14.5rem !important;
+    }
+}
+
+@media (max-width: 390px) {
+    .#{variables.$primevue-prefix}-tabview
+    .#{variables.$primevue-prefix}-tabview-nav {
+        display: none;
+    }
+}
