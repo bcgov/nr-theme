@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/bcgov/nr-theme/compare/v1.7.1...v1.8.0) (2023-12-15)
+
+
+### Features
+
+* primevue tab component general styles ([#126](https://github.com/bcgov/nr-theme/issues/126)) ([f37c43a](https://github.com/bcgov/nr-theme/commit/f37c43aeadf5736b76b8e1be90468b96269169fe))
+
 ## [1.7.1](https://github.com/bcgov/nr-theme/compare/v1.7.0...v1.7.1) (2023-11-27)
 
 
