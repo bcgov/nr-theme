@@ -1148,27 +1148,23 @@ label {
 .#{variables.$primevue-prefix}-tabview-panels {
     padding: 0;
     background-color: transparent;
-    z-index: 1;
 }
 
 .#{variables.$primevue-prefix}-tabview
 .#{variables.$primevue-prefix}-tabview-nav {
     border: none;
-    position: absolute;
 }
 
 .#{variables.$primevue-prefix}-tabview
 .#{variables.$primevue-prefix}-tabview-nav
 .#{variables.$primevue-prefix}-tabview-header {
     border-bottom: #ffffff;
-    display: flex;
 }
 
 .#{variables.$primevue-prefix}-tabview
 .#{variables.$primevue-prefix}-tabview-nav
 .#{variables.$primevue-prefix}-tabview-header
 .#{variables.$primevue-prefix}-tabview-nav-link {
-    display: flex;
     justify-content: space-between;
     min-width: 11.16rem;
     font-weight: 400;
@@ -1188,19 +1184,20 @@ label {
 
 .#{variables.$primevue-prefix}-tabview
 .#{variables.$primevue-prefix}-tabview-nav
-.#{variables.$primevue-prefix}-tabview-header:first-child
-.#{variables.$primevue-prefix}-tabview-nav-link {
-    border-top-left-radius: 0.25rem;
-}
-
-.#{variables.$primevue-prefix}-tabview
-.#{variables.$primevue-prefix}-tabview-nav
 .#{variables.$primevue-prefix}-tabview-header:nth-last-child(2)
 .#{variables.$primevue-prefix}-tabview-nav-link {
     border-top-right-radius: 0.25rem;
     border-top-left-radius: 0;
     border-right: solid 0.0625rem map.get(lightTheme.$light-theme, 'border-subtle-00');
     border-left: none;
+}
+
+.#{variables.$primevue-prefix}-tabview
+.#{variables.$primevue-prefix}-tabview-nav
+.#{variables.$primevue-prefix}-tabview-header:first-child
+.#{variables.$primevue-prefix}-tabview-nav-link {
+    border-top-left-radius: 0.25rem;
+    border-left: solid 0.0625rem map.get(lightTheme.$light-theme, 'border-subtle-00');
 }
 
 .#{variables.$primevue-prefix}-tabview
@@ -1212,22 +1209,6 @@ label {
         lightTheme.$light-theme,
         'border-interactive'
     ) !important;
-}
-
-.#{variables.$primevue-prefix}-tabview
-.#{variables.$primevue-prefix}-tabview-nav
-.#{variables.$primevue-prefix}-tabview-header:last-child.#{variables.$primevue-prefix}-highlight
-.#{variables.$primevue-prefix}-tabview-nav-link {
-    border-left: 0.0625rem solid map.get(lightTheme.$light-theme, 'text-secondary') !important;
-    border-right: 0.0625rem solid map.get(lightTheme.$light-theme, 'text-secondary') !important;
-    background-color: blue($color: #000000) !important;
-}
-
-.#{variables.$primevue-prefix}-tabview
-.#{variables.$primevue-prefix}-tabview-nav
-.#{variables.$primevue-prefix}-tabview-header:not(:first-child):not(:nth-last-child(2)).#{variables.$primevue-prefix}-highlight
-.#{variables.$primevue-prefix}-tabview-nav-link{
-    border-right: 0.0625rem solid map.get(lightTheme.$light-theme, 'border-strong-01') !important;
 }
 
 .#{variables.$primevue-prefix}-tabview
