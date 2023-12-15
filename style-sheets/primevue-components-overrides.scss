@@ -1205,9 +1205,9 @@ label {
 
 .#{variables.$primevue-prefix}-tabview
 .#{variables.$primevue-prefix}-tabview-nav
-.#{variables.$primevue-prefix}-tabview-header:not(:first-child).#{variables.$primevue-prefix}-highlight
+.#{variables.$primevue-prefix}-tabview-header:not(:nth-last-child(2)):not(.#{variables.$primevue-prefix}-highlight)
 .#{variables.$primevue-prefix}-tabview-nav-link {
-    border-left: solid 0.0625rem map.get(lightTheme.$light-theme, 'border-strong-01');
+    border-right: solid 0.0625rem map.get(lightTheme.$light-theme, 'border-strong-01');
 }
 
 .#{variables.$primevue-prefix}-tabview
