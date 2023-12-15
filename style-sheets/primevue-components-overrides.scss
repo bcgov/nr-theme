@@ -1157,12 +1157,6 @@ label {
 
 .#{variables.$primevue-prefix}-tabview
 .#{variables.$primevue-prefix}-tabview-nav
-.#{variables.$primevue-prefix}-tabview-header {
-    border-bottom: #ffffff;
-}
-
-.#{variables.$primevue-prefix}-tabview
-.#{variables.$primevue-prefix}-tabview-nav
 .#{variables.$primevue-prefix}-tabview-header
 .#{variables.$primevue-prefix}-tabview-nav-link {
     justify-content: space-between;
@@ -1170,10 +1164,10 @@ label {
     font-weight: 400;
     background-color: map.get(lightTheme.$light-theme, 'border-subtle-00');
     border-color: map.get(lightTheme.$light-theme, 'border-subtle-00');
-    padding-bottom: 0.6875rem;
     border-radius: 0;
-    border-bottom: none;
-    border-right: none;
+    border: none;
+    border-top: 0.125rem solid transparent;
+    border-bottom: 0.125rem solid transparent;
 }
 
 .#{variables.$primevue-prefix}-tabview
@@ -1187,9 +1181,7 @@ label {
 .#{variables.$primevue-prefix}-tabview-header:nth-last-child(2)
 .#{variables.$primevue-prefix}-tabview-nav-link {
     border-top-right-radius: 0.25rem;
-    border-top-left-radius: 0;
     border-right: solid 0.0625rem map.get(lightTheme.$light-theme, 'border-subtle-00');
-    border-left: none;
 }
 
 .#{variables.$primevue-prefix}-tabview
@@ -1223,7 +1215,6 @@ label {
 .#{variables.$primevue-prefix}-tabview-header:not(.#{variables.$primevue-prefix}-highlight)
 .#{variables.$primevue-prefix}-tabview-nav-link:hover {
     background-color: map.get(lightTheme.$light-theme, 'layer-accent-hover-01') !important;
-    border-color: map.get(lightTheme.$light-theme, 'layer-accent-hover-01') !important;
 }
 
 .#{variables.$primevue-prefix}-tabview
