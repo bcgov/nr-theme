@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.8.0](https://github.com/bcgov/nr-theme/compare/v1.7.1...v1.8.0) (2023-12-15)
+
+
+### Features
+
+* primevue tab component general styles ([#126](https://github.com/bcgov/nr-theme/issues/126)) ([f37c43a](https://github.com/bcgov/nr-theme/commit/f37c43aeadf5736b76b8e1be90468b96269169fe))
+
+## [1.7.1](https://github.com/bcgov/nr-theme/compare/v1.7.0...v1.7.1) (2023-11-27)
+
+
+### Bug Fixes
+
+* notification message primevue componente wrapping ([#121](https://github.com/bcgov/nr-theme/issues/121)) ([e96337d](https://github.com/bcgov/nr-theme/commit/e96337d928c5d6ee54fd95cd64f48af2f4a546fe))
+* primevue breadcrum styling for current route ([#118](https://github.com/bcgov/nr-theme/issues/118)) ([e31de69](https://github.com/bcgov/nr-theme/commit/e31de6931c48c9944b7cbf648d0f25e05fdc2a0e))
+* step component text partially hidden ([#119](https://github.com/bcgov/nr-theme/issues/119)) ([812cd97](https://github.com/bcgov/nr-theme/commit/812cd97a951c85b1622a46e64484232128cf7d73))
+
+## [1.7.0](https://github.com/bcgov/nr-theme/compare/v1.6.0...v1.7.0) (2023-11-01)
+
+
+### Features
+
+* adding secondary button styling ([#117](https://github.com/bcgov/nr-theme/issues/117)) ([a231aff](https://github.com/bcgov/nr-theme/commit/a231aff2517da7f8607b47acc1b88368327719de))
+* steps primevue component ([#116](https://github.com/bcgov/nr-theme/issues/116)) ([8fa76c5](https://github.com/bcgov/nr-theme/commit/8fa76c5053028df17f597ff89e38362012fde5c6))
+
+
+### Bug Fixes
+
+* media quary not including 768px ([#114](https://github.com/bcgov/nr-theme/issues/114)) ([232ab9d](https://github.com/bcgov/nr-theme/commit/232ab9decc6bd4867bb667394cb2f511a22a4258))
+
 ## [1.6.0](https://github.com/bcgov/nr-theme/compare/v1.5.0...v1.6.0) (2023-10-19)
 
 
