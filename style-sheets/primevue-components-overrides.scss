@@ -1155,12 +1155,13 @@ label {
 .#{variables.$primevue-prefix}-tabview
     .#{variables.$primevue-prefix}-tabview-panels {
     padding: 0;
-    background-color: transparent;
 }
 
 .#{variables.$primevue-prefix}-tabview
     .#{variables.$primevue-prefix}-tabview-nav {
     border: none;
+    padding: 0;
+    margin: 0;
 }
 
 .#{variables.$primevue-prefix}-tabview
@@ -1175,7 +1176,9 @@ label {
     border-radius: 0;
     border: none;
     border-top: 0.125rem solid transparent;
-    border-bottom: 0.125rem solid transparent;
+    border-bottom: 0.0625rem solid transparent;
+    text-decoration: none;
+    color: map.get(lightTheme.$light-theme, 'text-primary')
 }
 
 .#{variables.$primevue-prefix}-tabview
@@ -1209,6 +1212,7 @@ label {
     font-weight: 700;
     border-top: solid 0.125rem
         map.get(lightTheme.$light-theme, 'border-interactive') !important;
+    background-color: #ffffff;
 }
 
 .#{variables.$primevue-prefix}-tabview
@@ -1240,7 +1244,7 @@ label {
     box-shadow: none !important;
     outline: 0.125rem solid
         map.get(lightTheme.$light-theme, 'border-interactive') !important;
-    outline-offset: -0.12rem !important;
+    outline-offset: -0.125rem !important;
 }
 
 @media (min-width: 500px) {
