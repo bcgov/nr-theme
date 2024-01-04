@@ -125,8 +125,8 @@ label {
         lightButton.$light-button-token-overrides,
         'button-primary'
     );
-    outline: 0.125rem solid #ffffff !important;
-    outline-offset: -0.25rem;
+    outline: 0.075rem solid #ffffff !important;
+    outline-offset: -0.2rem;
     box-shadow: unset !important;
 }
 /* ------------------------------------ primevue button secondary --------------------------------- */
@@ -194,6 +194,7 @@ label {
         lightButton.$light-button-token-overrides,
         'button-tertiary'
     );
+    background-color: transparent;
 }
 .#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined:enabled:hover {
     background: map.get(
@@ -223,8 +224,8 @@ label {
         'button-tertiary-active'
     ) !important;
     color: map.get(lightTheme.$light-theme, 'text-on-color');
-    outline: 0.125rem solid #ffffff;
-    outline-offset: -0.25rem;
+    outline: 0.075rem solid #ffffff;
+    outline-offset: -0.2rem;
     box-shadow: unset;
 }
 .#{variables.$primevue-prefix}-button.#{variables.$primevue-prefix}-button-outlined:disabled {
@@ -261,6 +262,7 @@ label {
     .#{variables.$primevue-prefix}-inputtext {
     width: 100%;
     height: 100%;
+    padding-left: 2.5rem;
 }
 
 /* -------------------------------------- primevue dropdown ------------------------------------ */
@@ -277,6 +279,8 @@ label {
 .#{variables.$primevue-prefix}-dropdown
     .#{variables.$primevue-prefix}-dropdown-label {
     @extend %body-compact-01;
+    border: 0 none;
+    background: transparent;
 }
 
 .#{variables.$primevue-prefix}-dropdown .#{variables.$primevue-prefix}-icon {
@@ -312,6 +316,7 @@ label {
 .#{variables.$primevue-prefix}-dropdown-panel
     .#{variables.$primevue-prefix}-dropdown-items {
     padding: 0;
+    margin: 0;
 }
 .#{variables.$primevue-prefix}-dropdown-panel
     .#{variables.$primevue-prefix}-dropdown-items
@@ -657,14 +662,17 @@ label {
 }
 
 .#{variables.$primevue-prefix}-dialog-footer {
-    border-top: none;
+    border-top: none !important;
     padding-bottom: 4rem !important;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
 }
 
 .#{variables.$primevue-prefix}-dialog
-    .#{variables.$primevue-prefix}-dialog-footer {
-    border-bottom-right-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
+    .#{variables.$primevue-prefix}-dialog-footer
+    button {
+    margin: 0 0.5rem 0 0;
+    width: auto;
 }
 
 /* ------------------------------------ dialog confirm header -------------------------- */
@@ -682,12 +690,6 @@ label {
     .#{variables.$primevue-prefix}-dialog-title {
         @extend %heading-03;
     }
-}
-
-.#{variables.$primevue-prefix}-dialog
-    .#{variables.$primevue-prefix}-dialog-footer {
-    border-top: none;
-    padding-bottom: 4rem !important;
 }
 
 .#{variables.$primevue-prefix}-dialog
@@ -720,6 +722,11 @@ label {
 .#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:focus {
     border: 0.0625rem solid
         map.get(lightButton.$light-button-token-overrides, 'button-tertiary') !important;
+}
+
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-confirm-dialog-reject {
+    background: transparent;
 }
 
 .#{variables.$primevue-prefix}-button
@@ -827,10 +834,22 @@ label {
 
 /* ------------------------------------ primevue message --------------------------------- */
 
+.#{variables.$primevue-prefix}-icon {
+    height: 0.75rem;
+    width: 0.75rem;
+}
+
 .#{variables.$primevue-prefix}-message {
     position: absolute;
     left: 0;
     right: 0;
+}
+
+.#{variables.$primevue-prefix}-message
+    .#{variables.$primevue-prefix}-message-wrapper {
+    display: flex;
+    align-items: baseline;
+    padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
 .#{variables.$primevue-prefix}-message
@@ -857,35 +876,29 @@ label {
     flex-shrink: 0;
 }
 
-.#{variables.$primevue-prefix}-message
-    .#{variables.$primevue-prefix}-message-wrapper {
-        display: flex;
-        align-items: baseline;
-        padding: 0 0.5rem 0 0;
+.#{variables.$primevue-prefix}-message-close.#{variables.$primevue-prefix}-link {
+    margin-left: auto;
+    overflow: hidden;
+    position: relative;
 }
 
 .#{variables.$primevue-prefix}-message-wrapper
     .#{variables.$primevue-prefix}-message-close {
-        align-self: flex-start;
-        margin-top: 0.5rem;
+    align-self: flex-start;
+    margin-top: 0.5rem;
 }
 
 .#{variables.$primevue-prefix}-message-wrapper
     .#{variables.$primevue-prefix}-message-close
     svg {
-        color: colors.$gray-100 !important;
-        margin: 0.55rem 0 0;
-        align-self: baseline !important;
+    color: colors.$gray-100 !important;
+    margin: 0.55rem 0 0;
+    align-self: baseline !important;
 }
 
 .#{variables.$primevue-prefix}-message
     .#{variables.$primevue-prefix}-message-close:hover {
     background: none;
-}
-
-.#{variables.$primevue-prefix}-icon {
-    height: 0.75rem;
-    width: 0.75rem;
 }
 
 .#{variables.$primevue-prefix}-message-wrapper
@@ -1014,32 +1027,32 @@ label {
 .#{variables.$primevue-prefix}-breadcrumb
     .#{variables.$primevue-prefix}-breadcrumb-list
     .#{variables.$primevue-prefix}-menuitem {
-        display: inline-flex !important;
-        align-items: center;
+    display: inline-flex !important;
+    align-items: center;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
     .#{variables.$primevue-prefix}-breadcrumb-list
     .#{variables.$primevue-prefix}-menuitem
     .#{variables.$primevue-prefix}-menuitem-link {
-        padding: 0.2rem;
-        border-radius: 0;
+    padding: 0.2rem;
+    border-radius: 0;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
     .#{variables.$primevue-prefix}-breadcrumb-list
     .#{variables.$primevue-prefix}-menuitem
     .#{variables.$primevue-prefix}-menuitem-link:focus {
-        box-shadow: inset 0 0px 0px 0.063rem
-            map.get(lightTheme.$light-theme,'focus') !important;
+    box-shadow: inset 0 0px 0px 0.063rem
+        map.get(lightTheme.$light-theme, 'focus') !important;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
     .#{variables.$primevue-prefix}-breadcrumb-list
     .#{variables.$primevue-prefix}-menuitem:last-child
     .#{variables.$primevue-prefix}-menuitem-link {
-        box-shadow:none !important;
-        pointer-events: none;
+    box-shadow: none !important;
+    pointer-events: none;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
@@ -1047,40 +1060,42 @@ label {
     .#{variables.$primevue-prefix}-menuitem
     .#{variables.$primevue-prefix}-menuitem-link
     .#{variables.$primevue-prefix}-menuitem-text:hover {
-        color: map.get(lightTheme.$light-theme, 'link-primary-hover') !important;
+    color: map.get(lightTheme.$light-theme, 'link-primary-hover') !important;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
     .#{variables.$primevue-prefix}-breadcrumb-list
     .#{variables.$primevue-prefix}-menuitem:not(:last-child)::after {
-        color: map.get(lightTheme.$light-theme, 'text-primary');
-        content: '/';
-        margin: 0 0.5rem;
+    color: map.get(lightTheme.$light-theme, 'text-primary');
+    content: '/';
+    margin: 0 0.5rem;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
-    .#{variables.$primevue-prefix}-breadcrumb-list li
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    li
     .#{variables.$primevue-prefix}-menuitem-text {
-        color: map.get(lightTheme.$light-theme, 'link-primary') !important;
+    color: map.get(lightTheme.$light-theme, 'link-primary') !important;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
-    .#{variables.$primevue-prefix}-breadcrumb-list li:last-child
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    li:last-child
     .#{variables.$primevue-prefix}-menuitem-text {
-        color: map.get(lightTheme.$light-theme, 'text-primary') !important;
+    color: map.get(lightTheme.$light-theme, 'text-primary') !important;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
     .#{variables.$primevue-prefix}-breadcrumb-list
     li.#{variables.$primevue-prefix}-menuitem-separator {
-        margin: 0;
+    margin: 0;
 }
 
 .#{variables.$primevue-prefix}-breadcrumb
     .#{variables.$primevue-prefix}-breadcrumb-list
     li.#{variables.$primevue-prefix}-menuitem-separator
     svg {
-        display: none;
+    display: none;
 }
 
 @media (min-width: 768px) {
@@ -1103,34 +1118,27 @@ label {
 }
 
 .#{variables.$primevue-prefix}-steps-item {
-    border-top: 0.125rem solid map.get(
-        lightTheme.$light-theme,
-        'field-01'
-    ) !important;
+    border-top: 0.125rem solid map.get(lightTheme.$light-theme, 'field-01') !important;
     margin: auto;
 }
 
 .#{variables.$primevue-prefix}-steps-item
-.#{variables.$primevue-prefix}-highlight,
+    .#{variables.$primevue-prefix}-highlight,
 .#{variables.$primevue-prefix}-steps-current {
-    border-top: 0.125rem solid map.get(
-        lightTheme.$light-theme,
-        'interactive'
-    ) !important;
+    border-top: 0.125rem solid map.get(lightTheme.$light-theme, 'interactive') !important;
 }
 
 .#{variables.$primevue-prefix}-steps
-.#{variables.$primevue-prefix}-steps-item:before {
+    .#{variables.$primevue-prefix}-steps-item:before {
     display: none;
 }
 
-.#{variables.$primevue-prefix}-steps
-.#{variables.$primevue-prefix}-steps-list {
+.#{variables.$primevue-prefix}-steps .#{variables.$primevue-prefix}-steps-list {
     height: 3rem;
 }
 
 .#{variables.$primevue-prefix}-steps-list
-.#{variables.$primevue-prefix}-steps-item {
+    .#{variables.$primevue-prefix}-steps-item {
     flex-direction: column;
     justify-content: flex-start;
 }
@@ -1145,20 +1153,21 @@ label {
 /* ------------------------------------ tabView ----------------------------- */
 
 .#{variables.$primevue-prefix}-tabview
-.#{variables.$primevue-prefix}-tabview-panels {
+    .#{variables.$primevue-prefix}-tabview-panels {
     padding: 0;
-    background-color: transparent;
 }
 
 .#{variables.$primevue-prefix}-tabview
-.#{variables.$primevue-prefix}-tabview-nav {
+    .#{variables.$primevue-prefix}-tabview-nav {
     border: none;
+    padding: 0;
+    margin: 0;
 }
 
 .#{variables.$primevue-prefix}-tabview
-.#{variables.$primevue-prefix}-tabview-nav
-.#{variables.$primevue-prefix}-tabview-header
-.#{variables.$primevue-prefix}-tabview-nav-link {
+    .#{variables.$primevue-prefix}-tabview-nav
+    .#{variables.$primevue-prefix}-tabview-header
+    .#{variables.$primevue-prefix}-tabview-nav-link {
     justify-content: space-between;
     min-width: 11.16rem;
     font-weight: 400;
@@ -1167,78 +1176,87 @@ label {
     border-radius: 0;
     border: none;
     border-top: 0.125rem solid transparent;
-    border-bottom: 0.125rem solid transparent;
+    border-bottom: 0.0625rem solid transparent;
+    text-decoration: none;
+    color: map.get(lightTheme.$light-theme, 'text-primary')
 }
 
 .#{variables.$primevue-prefix}-tabview
-.#{variables.$primevue-prefix}-tabview-nav-link
-.#{variables.$primevue-prefix}-tabview-title {
+    .#{variables.$primevue-prefix}-tabview-nav-link
+    .#{variables.$primevue-prefix}-tabview-title {
     font-size: 0.875rem;
 }
 
 .#{variables.$primevue-prefix}-tabview
-.#{variables.$primevue-prefix}-tabview-nav
-.#{variables.$primevue-prefix}-tabview-header:nth-last-child(2)
-.#{variables.$primevue-prefix}-tabview-nav-link {
+    .#{variables.$primevue-prefix}-tabview-nav
+    .#{variables.$primevue-prefix}-tabview-header:nth-last-child(2)
+    .#{variables.$primevue-prefix}-tabview-nav-link {
     border-top-right-radius: 0.25rem;
-    border-right: solid 0.0625rem map.get(lightTheme.$light-theme, 'border-subtle-00');
+    border-right: solid 0.0625rem
+        map.get(lightTheme.$light-theme, 'border-subtle-00');
 }
 
 .#{variables.$primevue-prefix}-tabview
-.#{variables.$primevue-prefix}-tabview-nav
-.#{variables.$primevue-prefix}-tabview-header:first-child
-.#{variables.$primevue-prefix}-tabview-nav-link {
+    .#{variables.$primevue-prefix}-tabview-nav
+    .#{variables.$primevue-prefix}-tabview-header:first-child
+    .#{variables.$primevue-prefix}-tabview-nav-link {
     border-top-left-radius: 0.25rem;
-    border-left: solid 0.0625rem map.get(lightTheme.$light-theme, 'border-subtle-00');
+    border-left: solid 0.0625rem
+        map.get(lightTheme.$light-theme, 'border-subtle-00');
 }
 
 .#{variables.$primevue-prefix}-tabview
-.#{variables.$primevue-prefix}-tabview-nav
-.#{variables.$primevue-prefix}-tabview-header.#{variables.$primevue-prefix}-highlight
-.#{variables.$primevue-prefix}-tabview-nav-link {
+    .#{variables.$primevue-prefix}-tabview-nav
+    .#{variables.$primevue-prefix}-tabview-header.#{variables.$primevue-prefix}-highlight
+    .#{variables.$primevue-prefix}-tabview-nav-link {
     font-weight: 700;
-    border-top: solid 0.125rem map.get(
+    border-top: solid 0.125rem
+        map.get(lightTheme.$light-theme, 'border-interactive') !important;
+    background-color: #ffffff;
+}
+
+.#{variables.$primevue-prefix}-tabview
+    .#{variables.$primevue-prefix}-tabview-nav
+    .#{variables.$primevue-prefix}-tabview-header:not(:nth-last-child(2)):not(
+        .#{variables.$primevue-prefix}-highlight
+    )
+    .#{variables.$primevue-prefix}-tabview-nav-link {
+    border-right: solid 0.0625rem
+        map.get(lightTheme.$light-theme, 'border-strong-01');
+}
+
+.#{variables.$primevue-prefix}-tabview
+    .#{variables.$primevue-prefix}-tabview-nav
+    .#{variables.$primevue-prefix}-tabview-header:not(
+        .#{variables.$primevue-prefix}-highlight
+    )
+    .#{variables.$primevue-prefix}-tabview-nav-link:hover {
+    background-color: map.get(
         lightTheme.$light-theme,
-        'border-interactive'
+        'layer-accent-hover-01'
     ) !important;
 }
 
 .#{variables.$primevue-prefix}-tabview
-.#{variables.$primevue-prefix}-tabview-nav
-.#{variables.$primevue-prefix}-tabview-header:not(:nth-last-child(2)):not(.#{variables.$primevue-prefix}-highlight)
-.#{variables.$primevue-prefix}-tabview-nav-link {
-    border-right: solid 0.0625rem map.get(lightTheme.$light-theme, 'border-strong-01');
-}
-
-.#{variables.$primevue-prefix}-tabview
-.#{variables.$primevue-prefix}-tabview-nav
-.#{variables.$primevue-prefix}-tabview-header:not(.#{variables.$primevue-prefix}-highlight)
-.#{variables.$primevue-prefix}-tabview-nav-link:hover {
-    background-color: map.get(lightTheme.$light-theme, 'layer-accent-hover-01') !important;
-}
-
-.#{variables.$primevue-prefix}-tabview
-.#{variables.$primevue-prefix}-tabview-nav
-.#{variables.$primevue-prefix}-tabview-header
-.#{variables.$primevue-prefix}-tabview-nav-link:focus {
+    .#{variables.$primevue-prefix}-tabview-nav
+    .#{variables.$primevue-prefix}-tabview-header
+    .#{variables.$primevue-prefix}-tabview-nav-link:focus {
     box-shadow: none !important;
-    outline: 0.125rem solid map.get(
-             lightTheme.$light-theme,
-             'border-interactive'
-         ) !important;
-    outline-offset: -0.12rem !important;
+    outline: 0.125rem solid
+        map.get(lightTheme.$light-theme, 'border-interactive') !important;
+    outline-offset: -0.125rem !important;
 }
 
 @media (min-width: 500px) {
     .#{variables.$primevue-prefix}-tabview
-    .#{variables.$primevue-prefix}-tabview-nav-link {
+        .#{variables.$primevue-prefix}-tabview-nav-link {
         min-width: 14.5rem !important;
     }
 }
 
 @media (max-width: 390px) {
     .#{variables.$primevue-prefix}-tabview
-    .#{variables.$primevue-prefix}-tabview-nav {
+        .#{variables.$primevue-prefix}-tabview-nav {
         display: none;
     }
 }
