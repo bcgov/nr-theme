@@ -846,6 +846,13 @@ label {
 }
 
 .#{variables.$primevue-prefix}-message
+    .#{variables.$primevue-prefix}-message-wrapper {
+    display: flex;
+    align-items: baseline;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.#{variables.$primevue-prefix}-message
     .#{variables.$primevue-prefix}-message-text {
     @extend %body-compact-01;
     padding-right: 0.3125rem;
@@ -869,25 +876,24 @@ label {
     flex-shrink: 0;
 }
 
-.#{variables.$primevue-prefix}-message
-    .#{variables.$primevue-prefix}-message-wrapper {
-        display: flex;
-        align-items: baseline;
-        padding: 0 0.5rem 0 0;
+.#{variables.$primevue-prefix}-message-close.#{variables.$primevue-prefix}-link {
+    margin-left: auto;
+    overflow: hidden;
+    position: relative;
 }
 
 .#{variables.$primevue-prefix}-message-wrapper
     .#{variables.$primevue-prefix}-message-close {
-        align-self: flex-start;
-        margin-top: 0.5rem;
+    align-self: flex-start;
+    margin-top: 0.5rem;
 }
 
 .#{variables.$primevue-prefix}-message-wrapper
     .#{variables.$primevue-prefix}-message-close
     svg {
-        color: colors.$gray-100 !important;
-        margin: 0.55rem 0 0;
-        align-self: baseline !important;
+    color: colors.$gray-100 !important;
+    margin: 0.55rem 0 0;
+    align-self: baseline !important;
 }
 
 .#{variables.$primevue-prefix}-message-close.#{variables.$primevue-prefix}-link {
