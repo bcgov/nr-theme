@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.2](https://github.com/bcgov/nr-theme/compare/v1.8.1...v1.8.2) (2024-01-05)
+
+
+### Bug Fixes
+
+* primevue, fix style for primevue message for version v3.36+ ([#145](https://github.com/bcgov/nr-theme/issues/145)) ([79afe76](https://github.com/bcgov/nr-theme/commit/79afe7691d7fef7d31b459fbaedb9a6f26a6dd65))
+
 ## [1.8.1](https://github.com/bcgov/nr-theme/compare/v1.8.0...v1.8.1) (2024-01-04)
 
 
