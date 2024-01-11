@@ -458,52 +458,6 @@ label {
 
 .#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-header {
     background-color: map.get(lightTheme.$light-theme, 'layer-01');
-    display: flex;
-    padding: 1.5rem;
-    align-items: center;
-
-    svg {
-        color: map.get(lightTheme.$light-theme, 'support-success');
-        margin-bottom: 0.1rem;
-    }
-
-    p {
-        margin: 0;
-        padding: 0 0 0 1rem !important;
-        display: inline-flex;
-        margin-bottom: 0;
-        color: map.get(lightTheme.$light-theme, 'text-primary');
-        font-size: 0.875rem;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 1.125rem; /* 128.571% */
-        letter-spacing: 0.01rem;
-    }
-}
-
-.#{variables.$primevue-prefix}-card
-    .#{variables.$primevue-prefix}-card-content {
-    display: flex;
-    padding: 0;
-    margin: 0;
-
-    div {
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-    }
-
-    label {
-        color: map.get(lightTheme.$light-theme, 'text-primary');
-        margin: 0 0 0.75rem !important;
-    }
-
-    span {
-        margin: 0 !important;
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        letter-spacing: 0.01rem;
-    }
 }
 
 .#{variables.$primevue-prefix}-card .#{variables.$primevue-prefix}-card-title {
