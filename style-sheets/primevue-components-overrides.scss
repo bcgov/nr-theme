@@ -520,6 +520,11 @@ label {
     box-shadow: 0 -0.0625rem 0 0 #dfdfe1 inset;
 }
 
+.#{variables.$primevue-prefix}-sortable-column-icon {
+    margin-bottom: 0.5rem !important;
+}
+
+
 /*----------------------------- data table pagnition -------------------*/
 
 .#{variables.$primevue-prefix}-paginator {
