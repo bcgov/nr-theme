@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.3](https://github.com/bcgov/nr-theme/compare/v1.8.2...v1.8.3) (2024-01-16)
+
+
+### Bug Fixes
+
+* **primevue:** datatable component sortable icon ([#149](https://github.com/bcgov/nr-theme/issues/149)) ([3719939](https://github.com/bcgov/nr-theme/commit/3719939d4e25a1a5544c2a07ef9e984e298da836))
+* **primevue:** remove custom card header and content style ([#147](https://github.com/bcgov/nr-theme/issues/147)) ([ec4d1ac](https://github.com/bcgov/nr-theme/commit/ec4d1ac20bae09addac6b3ff03596bf2cc22af92))
+
 ## [1.8.2](https://github.com/bcgov/nr-theme/compare/v1.8.1...v1.8.2) (2024-01-05)
 
 
