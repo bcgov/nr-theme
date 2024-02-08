@@ -1007,7 +1007,7 @@ label {
 .#{variables.$primevue-prefix}-breadcrumb
     .#{variables.$primevue-prefix}-breadcrumb-list
     .#{variables.$primevue-prefix}-menuitem
-    a {
+    a:focus {
     box-shadow: inset 0 0px 0px 0.063rem
         map.get(lightTheme.$light-theme, 'focus') !important;
 }
