@@ -997,12 +997,58 @@ label {
 
 .#{variables.$primevue-prefix}-breadcrumb
     .#{variables.$primevue-prefix}-breadcrumb-list
+    .#{variables.$primevue-prefix}-menuitem
+    a {
+    padding: 0.2rem;
+    border-radius: 0;
+    text-decoration: none;
+}
+
+.#{variables.$primevue-prefix}-breadcrumb
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    .#{variables.$primevue-prefix}-menuitem
+    a {
+    box-shadow: inset 0 0px 0px 0.063rem
+        map.get(lightTheme.$light-theme, 'focus') !important;
+}
+
+.#{variables.$primevue-prefix}-breadcrumb
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    .#{variables.$primevue-prefix}-menuitem:last-child
+    a {
+    box-shadow: none !important;
+    pointer-events: none;
+}
+
+.#{variables.$primevue-prefix}-breadcrumb
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    .#{variables.$primevue-prefix}-menuitem
+    a
+    span:hover {
+    color: map.get(lightTheme.$light-theme, 'link-primary-hover') !important;
+}
+
+.#{variables.$primevue-prefix}-breadcrumb
+    .#{variables.$primevue-prefix}-breadcrumb-list
     .#{variables.$primevue-prefix}-menuitem:not(:last-child)::after {
     color: map.get(lightTheme.$light-theme, 'text-primary');
     content: '/';
     margin: 0 0.5rem;
 }
 
+.#{variables.$primevue-prefix}-breadcrumb
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    li
+    span {
+    color: map.get(lightTheme.$light-theme, 'link-primary') !important;
+}
+
+.#{variables.$primevue-prefix}-breadcrumb
+    .#{variables.$primevue-prefix}-breadcrumb-list
+    li:last-child
+    span {
+    color: map.get(lightTheme.$light-theme, 'text-primary') !important;
+}
 
 .#{variables.$primevue-prefix}-breadcrumb
     .#{variables.$primevue-prefix}-breadcrumb-list
