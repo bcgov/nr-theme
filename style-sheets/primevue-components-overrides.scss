@@ -675,45 +675,39 @@ label {
 
 /* ------------------------------------ dialog confirm button reject --------------------------         */
 .#{variables.$primevue-prefix}-dialog
-    .#{variables.$primevue-prefix}-confirm-dialog-reject,
-.#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:hover,
-.#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:focus {
-    border: 0.0625rem solid
-        map.get(lightButton.$light-button-token-overrides, 'button-tertiary') !important;
-}
-
-.#{variables.$primevue-prefix}-dialog
     .#{variables.$primevue-prefix}-confirm-dialog-reject {
+    border: 0.0625rem solid
+        map.get(lightButton.$light-button-token-overrides, 'button-tertiary');
     background: transparent;
 }
 
-.#{variables.$primevue-prefix}-button
-    .#{variables.$primevue-prefix}-confirm-dialog-reject,
-.#{variables.$primevue-prefix}-button-text:enabled:hover {
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:hover,
+.#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:focus {
     background: map.get(
         lightButton.$light-button-token-overrides,
         'button-tertiary-hover'
-    ) !important;
+    );
     border-color: map.get(
         lightButton.$light-button-token-overrides,
         'button-tertiary-hover'
-    ) !important;
-    color: map.get(lightTheme.$light-theme, 'text-on-color') !important;
+    );
+    color: map.get(lightTheme.$light-theme, 'text-on-color');
 }
 
 /* ------------------------------------ dialog confirm button accept -------------------------- */
 .#{variables.$primevue-prefix}-dialog
     .#{variables.$primevue-prefix}-confirm-dialog-accept {
-    color: colors.$white !important;
+    color: colors.$white;
     border: 0.0625rem solid
         map.get(
             lightButton.$light-button-token-overrides,
             'button-danger-primary'
-        ) !important;
+        );
     background-color: map.get(
         lightButton.$light-button-token-overrides,
         'button-danger-primary'
-    ) !important;
+    );
 }
 
 .#{variables.$primevue-prefix}-dialog
@@ -722,11 +716,11 @@ label {
         map.get(
             lightButton.$light-button-token-overrides,
             'button-danger-hover'
-        ) !important;
+        );
     background-color: map.get(
         lightButton.$light-button-token-overrides,
         'button-danger-hover'
-    ) !important;
+    );
 }
 
 /* ------------------------------------ primevue toast --------------------------------- */
