@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.4](https://github.com/bcgov/nr-theme/compare/v1.8.3...v1.8.4) (2024-02-08)
+
+
+### Bug Fixes
+
+* **primevue:** Breadcrumb component ([#155](https://github.com/bcgov/nr-theme/issues/155)) ([6a97017](https://github.com/bcgov/nr-theme/commit/6a9701772d1be660d1c06a93402c9d79c65753f2))
+
 ## [1.8.3](https://github.com/bcgov/nr-theme/compare/v1.8.2...v1.8.3) (2024-01-16)
 
 
