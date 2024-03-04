@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.5](https://github.com/bcgov/nr-theme/compare/v1.8.4...v1.8.5) (2024-03-04)
+
+
+### Bug Fixes
+
+* primevue dialog button style ([#162](https://github.com/bcgov/nr-theme/issues/162)) ([fe9801f](https://github.com/bcgov/nr-theme/commit/fe9801fe53c1b81993969568e5911f14133fd047))
+* **primevue:** breadcrumb component spacing ([#158](https://github.com/bcgov/nr-theme/issues/158)) ([9d1b25c](https://github.com/bcgov/nr-theme/commit/9d1b25cbaf7bc07bd6ee20c571121a526525812f))
+
 ## [1.8.4](https://github.com/bcgov/nr-theme/compare/v1.8.3...v1.8.4) (2024-02-08)
 
 
