@@ -675,21 +675,15 @@ label {
 
 /* ------------------------------------ dialog confirm button reject --------------------------         */
 .#{variables.$primevue-prefix}-dialog
-    .#{variables.$primevue-prefix}-confirm-dialog-reject,
-.#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:hover,
-.#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:focus {
+    .#{variables.$primevue-prefix}-confirm-dialog-reject {
     border: 0.0625rem solid
         map.get(lightButton.$light-button-token-overrides, 'button-tertiary');
-}
-
-.#{variables.$primevue-prefix}-dialog
-    .#{variables.$primevue-prefix}-confirm-dialog-reject {
     background: transparent;
 }
 
-.#{variables.$primevue-prefix}-button
-    .#{variables.$primevue-prefix}-confirm-dialog-reject,
-.#{variables.$primevue-prefix}-button-text:enabled:hover {
+.#{variables.$primevue-prefix}-dialog
+    .#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:hover,
+.#{variables.$primevue-prefix}-confirm-dialog-reject:enabled:focus {
     background: map.get(
         lightButton.$light-button-token-overrides,
         'button-tertiary-hover'
