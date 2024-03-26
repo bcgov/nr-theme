@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.6](https://github.com/bcgov/nr-theme/compare/v1.8.5...v1.8.6) (2024-03-26)
+
+
+### Bug Fixes
+
+* **primevue:** design on confirm pop up ([#163](https://github.com/bcgov/nr-theme/issues/163)) ([7ae364b](https://github.com/bcgov/nr-theme/commit/7ae364b56bd596440a553aa9826001a5e4c78328))
+
 ## [1.8.5](https://github.com/bcgov/nr-theme/compare/v1.8.4...v1.8.5) (2024-03-04)
 
 
