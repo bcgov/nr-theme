@@ -592,6 +592,7 @@ label {
     border-radius: 0.5rem;
     box-shadow: 0 0.125rem 0.375rem 0 rgba(0, 0, 0, 0.3);
     border: none;
+    max-width: 50%;
 }
 
 .#{variables.$primevue-prefix}-dialog
@@ -600,17 +601,20 @@ label {
     border-top-left-radius: 0.5rem;
 
     .#{variables.$primevue-prefix}-dialog-title {
-        @extend %heading-03;
+        @extend %label-01;
     }
 }
 
 .#{variables.$primevue-prefix}-dialog-content {
     @extend %body-compact-01;
+    padding: 0 1rem;
 }
 
 .#{variables.$primevue-prefix}-dialog-content p:last-child {
+    @extend %heading-03;
     padding-bottom: 3rem;
     margin: 0;
+    width: 85%;
 }
 .#{variables.$primevue-prefix}-dialog
     .#{variables.$primevue-prefix}-dialog-content:last-of-type {
@@ -620,17 +624,18 @@ label {
 }
 
 .#{variables.$primevue-prefix}-dialog-footer {
+    display: flex;
     border-top: none !important;
-    padding-bottom: 4rem !important;
+    padding-bottom: 1rem;
+    padding-top: 0;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
 }
 
 .#{variables.$primevue-prefix}-dialog
-    .#{variables.$primevue-prefix}-dialog-footer
-    button {
-    margin: 0 0.5rem 0 0;
-    width: auto;
+.#{variables.$primevue-prefix}-button {
+    flex-basis: 100%;
+    padding: 0.75rem;
 }
 
 /* ------------------------------------ dialog confirm header -------------------------- */
@@ -667,18 +672,13 @@ label {
     width: 0.6rem;
 }
 
-.#{variables.$primevue-prefix}-dialog
-    .#{variables.$primevue-prefix}-confirm-dialog-reject,
-.#{variables.$primevue-prefix}-confirm-dialog-accept {
-    padding: 0.75rem 5.1875rem;
-}
-
 /* ------------------------------------ dialog confirm button reject --------------------------         */
 .#{variables.$primevue-prefix}-dialog
     .#{variables.$primevue-prefix}-confirm-dialog-reject {
     border: 0.0625rem solid
         map.get(lightButton.$light-button-token-overrides, 'button-tertiary');
     background: transparent;
+    margin-right: 0.5rem;
 }
 
 .#{variables.$primevue-prefix}-dialog
