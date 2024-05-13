@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.7](https://github.com/bcgov/nr-theme/compare/v1.8.6...v1.8.7) (2024-05-13)
+
+
+### Bug Fixes
+
+* **primevue:** tab component styling on mobile ([#172](https://github.com/bcgov/nr-theme/issues/172)) ([1498826](https://github.com/bcgov/nr-theme/commit/149882692ff7ed853ff9e1a4f985437b93cb977f))
+
 ## [1.8.6](https://github.com/bcgov/nr-theme/compare/v1.8.5...v1.8.6) (2024-03-26)
 
 
