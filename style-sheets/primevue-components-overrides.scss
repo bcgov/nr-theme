@@ -632,8 +632,7 @@ label {
     border-bottom-left-radius: 0.5rem;
 }
 
-.#{variables.$primevue-prefix}-dialog
-.#{variables.$primevue-prefix}-button {
+.#{variables.$primevue-prefix}-dialog .#{variables.$primevue-prefix}-button {
     flex-basis: 100%;
     padding: 0.75rem;
 }
@@ -1196,16 +1195,6 @@ label {
     ) !important;
 }
 
-.#{variables.$primevue-prefix}-tabview
-    .#{variables.$primevue-prefix}-tabview-nav
-    .#{variables.$primevue-prefix}-tabview-header
-    .#{variables.$primevue-prefix}-tabview-nav-link:focus {
-    box-shadow: none !important;
-    outline: 0.125rem solid
-        map.get(lightTheme.$light-theme, 'border-interactive') !important;
-    outline-offset: -0.125rem !important;
-}
-
 @media (min-width: 500px) {
     .#{variables.$primevue-prefix}-tabview
         .#{variables.$primevue-prefix}-tabview-nav-link {
@@ -1220,6 +1209,6 @@ label {
     }
     .#{variables.$primevue-prefix}-tabview
         .#{variables.$primevue-prefix}-tabview-title {
-            padding-right: 0.625rem;
+        padding-right: 0.625rem;
     }
 }
