@@ -807,10 +807,6 @@ label {
     right: 0;
 }
 
-.#{variables.$primevue-prefix}-message-icon {
-    display: none !important;
-}
-
 .#{variables.$primevue-prefix}-message
     .#{variables.$primevue-prefix}-message-text {
     @extend %body-compact-01;
