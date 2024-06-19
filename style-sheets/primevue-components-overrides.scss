@@ -522,12 +522,7 @@ label {
 .#{variables.$primevue-prefix}-datatable
     .#{variables.$primevue-prefix}-datatable-tbody
     > tr:hover {
-    box-shadow: inset 0 0 0 0.063rem
-        map.get(lightTheme.$light-theme, 'highlight');
-    background-color: map.get(
-        lightNotifications.$light-notification-token-overrides,
-        'notification-background-info'
-    );
+    background-color: map.get(lightTheme.$light-theme, 'layer-hover-01');
 }
 
 .#{variables.$primevue-prefix}-sortable-column-icon {
