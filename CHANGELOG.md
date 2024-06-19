@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.8](https://github.com/bcgov/nr-theme/compare/v1.8.7...v1.8.8) (2024-06-19)
+
+
+### Bug Fixes
+
+* **primevue:** primevue styling for data table hover effect ([#174](https://github.com/bcgov/nr-theme/issues/174)) ([c1bc1a7](https://github.com/bcgov/nr-theme/commit/c1bc1a7560029b95c05bd325fb0e1a5cbb290e7c))
+* **primevue:** removing tab style when focus ([#175](https://github.com/bcgov/nr-theme/issues/175)) ([0cbf844](https://github.com/bcgov/nr-theme/commit/0cbf844dc91b9e708aa21a006b68c2b8372ab32d))
+
 ## [1.8.7](https://github.com/bcgov/nr-theme/compare/v1.8.6...v1.8.7) (2024-05-13)
 
 
