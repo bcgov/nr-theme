@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.9](https://github.com/bcgov/nr-theme/compare/v1.8.8...v1.8.9) (2024-06-28)
+
+
+### Bug Fixes
+
+* **primevue:** dialog styling ([#177](https://github.com/bcgov/nr-theme/issues/177)) ([8a63394](https://github.com/bcgov/nr-theme/commit/8a63394a6db78ece96e8c05b0c1cea3d9fc5344d))
+
 ## [1.8.8](https://github.com/bcgov/nr-theme/compare/v1.8.7...v1.8.8) (2024-06-19)
 
 
