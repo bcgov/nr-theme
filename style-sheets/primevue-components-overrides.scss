@@ -522,10 +522,7 @@ label {
 .#{variables.$primevue-prefix}-datatable
     .#{variables.$primevue-prefix}-datatable-tbody
     > tr:hover {
-    background-color: map.get(
-        lightTheme.$light-theme,
-        'layer-hover-01'
-    );
+    background-color: map.get(lightTheme.$light-theme, 'layer-hover-01');
 }
 
 .#{variables.$primevue-prefix}-sortable-column-icon {
@@ -623,9 +620,10 @@ label {
     margin: 0;
     width: 85%;
 }
+
 .#{variables.$primevue-prefix}-dialog
     .#{variables.$primevue-prefix}-dialog-content:last-of-type {
-    padding-bottom: 6.5rem;
+    padding-bottom: 3rem;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
 }
@@ -639,16 +637,10 @@ label {
     border-bottom-left-radius: 0.5rem;
 }
 
-.#{variables.$primevue-prefix}-dialog
-.#{variables.$primevue-prefix}-button {
+.#{variables.$primevue-prefix}-dialog .#{variables.$primevue-prefix}-button {
     flex-basis: 100%;
     padding: 0.75rem;
 }
-
-.#{variables.$primevue-prefix}-dialog-mask {
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
 
 /* ------------------------------------ dialog confirm header -------------------------- */
 
@@ -896,7 +888,6 @@ label {
         color: map.get(lightTheme.$light-theme, 'support-warning') !important;
     }
 }
-
 
 /* ------------------------------------ Sidebar --------------------------------- */
 
@@ -1209,16 +1200,6 @@ label {
     ) !important;
 }
 
-.#{variables.$primevue-prefix}-tabview
-    .#{variables.$primevue-prefix}-tabview-nav
-    .#{variables.$primevue-prefix}-tabview-header
-    .#{variables.$primevue-prefix}-tabview-nav-link:focus {
-    box-shadow: none !important;
-    outline: 0.125rem solid
-        map.get(lightTheme.$light-theme, 'border-interactive') !important;
-    outline-offset: -0.125rem !important;
-}
-
 @media (min-width: 500px) {
     .#{variables.$primevue-prefix}-tabview
         .#{variables.$primevue-prefix}-tabview-nav-link {
@@ -1236,5 +1217,3 @@ label {
         padding-right: 0.625rem;
     }
 }
-
-
