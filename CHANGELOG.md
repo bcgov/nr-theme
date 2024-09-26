@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/bcgov/nr-theme/compare/v1.8.9...v1.9.0) (2024-09-26)
+
+
+### Features
+
+* **ci:** renovate.json ([#179](https://github.com/bcgov/nr-theme/issues/179)) ([008a019](https://github.com/bcgov/nr-theme/commit/008a01935f51b4f1d8eb199d9691582c8e8f7e6c))
+
 ## [1.8.9](https://github.com/bcgov/nr-theme/compare/v1.8.8...v1.8.9) (2024-06-28)
 
 
