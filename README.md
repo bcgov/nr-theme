@@ -19,7 +19,84 @@ This repository provides the custom design tokens and custom stylesheets for [Ca
 
 Your project needs to have Sass configured to load `.scss` files
 
-### Installation
+### Usage (React + Carbon, 2025)
+Please check the sample `main.tsx` file for a React application:
+- In your project, create a new folder called `styles` under `src`
+- Copy the `assets/font` folder to the `styles` folder
+- Copy the `design-tokens` folder to the `styles` folder
+- Copy the `style-sheets/overrides.scss` folder to the `styles` folder
+- Import the `overrides.scss` file into your `main.tsx`
+- Config the theme in `main.tsx` and use "SideNav" and "Content" component to apply the layout
+```
+import { StrictMode, useState } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.tsx";
+import "@carbon/styles/css/styles.css";
+import "./styles/overrides.scss";
+
+import { Theme } from "@carbon/react";
+import {
+  Header,
+  HeaderName,
+  SideNav,
+  SideNavItems,
+  SideNavLink,
+  Content,
+  Toggle,
+} from "@carbon/react";
+import { Home, Information } from "@carbon/icons-react";
+
+const RootComponent = () => {
+  const [theme, setTheme] = useState<"g10" | "g100">("g10");
+
+  const handleToggle = (checked: boolean) => {
+    setTheme(checked ? "g100" : "g10");
+  };
+
+  return (
+    <StrictMode>
+      <Theme theme={theme}>
+        <Header aria-label="Carbon UI Shell Example">
+          <HeaderName href="#" prefix="IBM">
+            MyApp
+          </HeaderName>
+
+          <div style={{ marginLeft: "auto", marginRight: "1rem" }}>
+            <Toggle
+              id="theme-toggle"
+              labelA="Light"
+              labelB="Dark"
+              toggled={theme === "g100"}
+              onToggle={handleToggle}
+            />
+          </div>
+        </Header>
+
+        <SideNav isFixedNav expanded isChildOfHeader={false}>
+          <SideNavItems>
+            <SideNavLink href="#" renderIcon={Home}>
+              Home
+            </SideNavLink>
+
+            <SideNavLink href="/about" renderIcon={Information} isActive>
+              About
+            </SideNavLink>
+          </SideNavItems>
+        </SideNav>
+
+        <Content>
+          <App />
+        </Content>
+      </Theme>
+    </StrictMode>
+  );
+};
+
+createRoot(document.getElementById("root")!).render(<RootComponent />);
+
+```
+
+### Use npm package (deprecated)
 
 -   NPM
     -   use `npm i @bcgov-nr/nr-theme`
