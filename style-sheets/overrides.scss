@@ -99,6 +99,7 @@
 /* ------------------ Number Input ----------------------
 - Border-radius: 4px top corners
 - Control Button: border-radius 4px all corners (this is mistach with Figma, but is documented)
+- Update input font family to use code-01
 ------------------------------------------------------- */
 .#{variables.$bcgov-prefix}--number
   .#{variables.$bcgov-prefix}--number__input-wrapper
@@ -258,7 +259,7 @@ $types: "error", "info", "success", "warning";
 
 .#{variables.$bcgov-prefix}--table-header-label {
   font-weight: bold;
-} // TODO: use a typography class, var token instead
+}
 
 .#{variables.$bcgov-prefix}--table-expand__button {
   border-radius: 0.25rem;
