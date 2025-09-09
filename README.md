@@ -24,7 +24,7 @@ Please check the sample `main.tsx` file for a React application:
 - In your project, create a new folder called `styles` under `src`
 - Copy the `assets/font` folder to the `styles` folder
 - Copy the `design-tokens` folder to the `styles` folder
-- Copy the `style-sheets/overrides.scss` folder to the `styles` folder
+- Copy the `style-sheets/overrides.scss` file to the `styles` folder. The `styles` folder should look like ![styles folder image](./assets/images/react-styles-folder-sample.png)
 - Import the `overrides.scss` file into your `main.tsx`
 - Config the theme in `main.tsx` and use "SideNav" and "Content" component to apply the layout
 ```

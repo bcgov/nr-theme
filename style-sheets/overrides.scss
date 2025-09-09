@@ -59,7 +59,6 @@
 }
 
 .cds--g10 {
-  // Note: this is no longer [data-carbon-theme="g10"]
   $button-tokens: utilities.merge(
     button-tokens.$button-tokens,
     light-button-overrides.$light-button-token-overrides
@@ -98,7 +97,7 @@
 
 /* ------------------ Number Input ----------------------
 - Border-radius: 4px top corners
-- Control Button: border-radius 4px all corners (this is mistach with Figma, but is documented)
+- Control Button: border-radius 4px all corners
 - Update input font family to use code-01
 ------------------------------------------------------- */
 .#{variables.$bcgov-prefix}--number
@@ -123,7 +122,7 @@
 
 /* ------------------ Dropdown ---------------------------
 - Input field (list-box): border-radius 4px top corners
-- Dropdown menu: border-radius 4px all corners (this is mistach with Figma, but is documented)
+- Dropdown menu: border-radius 4px all corners
 --------------------------------------------- */
 .#{variables.$bcgov-prefix}--list-box__field,
 .#{variables.$bcgov-prefix}--list-box {
@@ -363,6 +362,42 @@ li.#{variables.$bcgov-prefix}--overflow-menu-options__option:last-child {
   border-radius: 0.5rem;
 }
 
+.#{variables.$bcgov-prefix}--modal-container {
+  border-radius: 0.5rem;
+}
+
+.#{variables.$bcgov-prefix}--modal-close {
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.#{variables.$bcgov-prefix}--modal-footer {
+  height: auto;
+  margin: 0 1rem 1rem;
+}
+
+.#{variables.$bcgov-prefix}--modal-footer .#{variables.$bcgov-prefix}--btn {
+  max-width: none;
+  height: 3rem;
+  padding-bottom: 1rem;
+}
+
+.#{variables.$bcgov-prefix}--modal-footer
+  .#{variables.$bcgov-prefix}--btn:not(
+    .#{variables.$bcgov-prefix}--btn--primary
+  ) {
+  margin-right: 0.25rem;
+}
+
+#{variables.$bcgov-prefix}-modal::part(dialog) {
+  background-color: var(--#{variables.$bcgov-prefix}-layer-01);
+  border-radius: 0.5rem;
+}
+
+#{variables.$bcgov-prefix}-modal-footer {
+  padding: 1rem;
+}
+
 /* ------------ Label ---------------
 - Update text color from text-secondary to text-primary
 This will apply to Checkbox, Data Picker, Dropdown, RadioButton, Select, Slider, Text Input, Password Input, Text Area label
@@ -385,7 +420,6 @@ button.#{variables.$bcgov-prefix}--side-nav__submenu,
   height: 3rem;
 }
 
-// Note: this changed to link-primary, previous it is using color secondary
 div.#{variables.$bcgov-prefix}--side-nav__icon > svg {
   fill: var(--#{variables.$bcgov-prefix}-link-primary);
 }
@@ -404,13 +438,11 @@ nav.#{variables.$bcgov-prefix}--side-nav {
   height: 3.5rem;
 }
 
-// Note: this is new added for the side nav layout
 .#{variables.$bcgov-prefix}--header ~ .#{variables.$bcgov-prefix}--side-nav {
   inset-block-start: 3.5rem;
 }
 
 a.#{variables.$bcgov-prefix}--header__name {
-  // Note: previously this classname was .#{variables.$bcgov-prefix}--header-site-name
   font-family: "BCSans", "Noto Sans", Verdana, Arial, sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
