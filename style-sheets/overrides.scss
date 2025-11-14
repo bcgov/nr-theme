@@ -1,15 +1,15 @@
 @use "sass:map";
 
-@use "./design-tokens/type-family.scss" as types;
-@use "@carbon/type/scss/font-family.scss" with (
+@use "../design-tokens/type-family.scss" as types;
+@use "@carbon/type/scss/font-family" with (
   $font-families: types.$type-family,
   $font-weights: types.$font-weights
 );
 
 @use "@carbon/themes/scss/utilities";
-@use "./design-tokens/variables.scss" as variables;
-@use "./design-tokens/light-theme.scss" as light;
-@use "./design-tokens/dark-theme.scss" as dark;
+@use "../design-tokens/variables.scss" as variables;
+@use "../design-tokens/light-theme.scss" as light;
+@use "../design-tokens/dark-theme.scss" as dark;
 
 @use "@carbon/react/scss/themes";
 @use "@carbon/react/scss/theme" with (
@@ -18,16 +18,16 @@
 );
 
 @use "@carbon/react/scss/components/button/tokens" as button-tokens;
-@use "./design-tokens/light-buttons.scss" as light-button-overrides;
-@use "./design-tokens/dark-buttons.scss" as dark-button-overrides;
+@use "../design-tokens/light-buttons.scss" as light-button-overrides;
+@use "../design-tokens/dark-buttons.scss" as dark-button-overrides;
 
 @use "@carbon/react/scss/components/tag/tokens" as tag-tokens;
-@use "./design-tokens/light-tags.scss" as light-tag-overrides;
-@use "./design-tokens/dark-tags.scss" as dark-tag-overrides;
+@use "../design-tokens/light-tags.scss" as light-tag-overrides;
+@use "../design-tokens/dark-tags.scss" as dark-tag-overrides;
 
 @use "@carbon/react/scss/components/notification/tokens" as notification-tokens;
-@use "./design-tokens/light-notifications.scss" as light-notification-overrides;
-@use "./design-tokens/dark-notifications.scss" as dark-notification-overrides;
+@use "../design-tokens/light-notifications.scss" as light-notification-overrides;
+@use "../design-tokens/dark-notifications.scss" as dark-notification-overrides;
 
 @use "@carbon/react";
 @use "@carbon/styles/scss/grid";

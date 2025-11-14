@@ -32,7 +32,7 @@ import { StrictMode, useState } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "@carbon/styles/css/styles.css";
-import "./styles/overrides.scss";
+import "./styles/style-sheets/overrides.scss";
 
 import { Theme } from "@carbon/react";
 import {
