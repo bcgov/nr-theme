@@ -19,7 +19,21 @@ This repository provides the custom design tokens and custom stylesheets for [Ca
 
 Your project needs to have Sass configured to load `.scss` files
 
-### Usage (React + Carbon, 2025)
+### Install from npm (for React + Carbon project)
+1. Install the package:
+```
+npm i @bcgov-nr/nr-theme
+```
+2. Create a `styles.scss` file in your project, and add the following code to the file:
+```
+@use "@bcgov-nr/nr-theme/style-sheets/overrides.scss";
+```
+3. Import the `styles.scss` file in your application entry file (e.g., `main.tsx`):
+```
+import "./styles.scss";
+```
+
+### Use your own copy of the stylesheet (for React + Carbon project)
 Please check the sample `main.tsx` file for a React application:
 - In your project, create a new folder called `styles` under `src`
 - Copy the `assets/font` folder to the `styles` folder
@@ -95,13 +109,6 @@ const RootComponent = () => {
 createRoot(document.getElementById("root")!).render(<RootComponent />);
 
 ```
-
-### Use npm package (deprecated)
-
--   NPM
-    -   use `npm i @bcgov-nr/nr-theme`
--   Yarn
-    -   use `yarn add @bcgov-nr/nr-theme`
 
 ### Usage (React)
 
