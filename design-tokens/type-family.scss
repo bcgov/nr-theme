@@ -2,9 +2,9 @@
 
 @font-face {
     font-family: 'BC Sans';
-    src: url('../assets/font/BCSans-Regular.woff')
+    src: url('../assets/font/BCSans-Regular_2f.woff')
             format('woff'),
-        url('../assets/font/BCSans-Regular.woff2')
+        url('../assets/font/BCSans-Regular_2f.woff2')
             format('woff2');
     font-style: normal;
     font-weight: normal;
@@ -12,9 +12,9 @@
 
 @font-face {
     font-family: 'BC Sans';
-    src: url('../assets/font/BCSans-Italic.woff')
+    src: url('../assets/font/BCSans-Italic_2f.woff')
             format('woff'),
-        url('../assets/font/BCSans-Italic.woff2')
+        url('../assets/font/BCSans-Italic_2f.woff2')
             format('woff2');
     font-style: italic;
     font-weight: normal;
@@ -22,9 +22,9 @@
 
 @font-face {
     font-family: 'BC Sans';
-    src: url('../assets/font/BCSans-Bold.woff')
+    src: url('../assets/font/BCSans-Bold_2f.woff')
             format('woff'),
-        url('../assets/font/BCSans-Bold.woff2')
+        url('../assets/font/BCSans-Bold_2f.woff2')
             format('woff2');
     font-style: normal;
     font-weight: bold;
@@ -32,13 +32,34 @@
 
 @font-face {
     font-family: 'BC Sans';
-    src: url('../assets/font/BCSans-BoldItalic.woff')
+    src: url('../assets/font/BCSans-BoldItalic_2f.woff')
             format('woff'),
-        url('../assets/font/BCSans-BoldItalic.woff2')
+        url('../assets/font/BCSans-BoldItalic_2f.woff2')
             format('woff2');
     font-style: italic;
     font-weight: bold;
 }
+
+@font-face {
+    font-family: 'BC Sans';
+    src: url('../assets/font/BCSans-Light_2g.woff')
+            format('woff'),
+        url('../assets/font/BCSans-Light_2g.woff2')
+            format('woff2');
+    font-style: normal;
+    font-weight: light;
+}
+
+@font-face {
+    font-family: 'BC Sans';
+    src: url('../assets/font/BCSans-LightItalic_2f.woff')
+            format('woff'),
+        url('../assets/font/BCSans-LightItalic_2f.woff2')
+            format('woff2');
+    font-style: italic;
+    font-weight: light;
+}
+
 
 $type-family: (
     'mono':
@@ -51,11 +72,10 @@ $type-family: (
         ),
 );
 
-// Light and regular have the same value because we don't have a light value
-// for font-weight, so we use only the regular value whenever is intend to use
-// the ligth value
+// Light and regular used to have the same value because we don't have a light value
+// for font-weight, bc sans 2 has a light font now so we can differentiate them
 $font-weights: (
-    'light': 400,
+    'light': 300,
     'regular': 400,
     'bold': 700,
 );

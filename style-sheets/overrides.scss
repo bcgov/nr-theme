@@ -1,0 +1,447 @@
+@use "sass:map";
+
+@use "../design-tokens/type-family.scss" as types;
+@use "@carbon/type/scss/font-family" with (
+  $font-families: types.$type-family,
+  $font-weights: types.$font-weights
+);
+
+@use "@carbon/themes/scss/utilities";
+@use "../design-tokens/variables.scss" as variables;
+@use "../design-tokens/light-theme.scss" as light;
+@use "../design-tokens/dark-theme.scss" as dark;
+
+@use "@carbon/react/scss/themes";
+@use "@carbon/react/scss/theme" with (
+  $fallback: themes.$white,
+  $theme: light.$light-theme
+);
+
+@use "@carbon/react/scss/components/button/tokens" as button-tokens;
+@use "../design-tokens/light-buttons.scss" as light-button-overrides;
+@use "../design-tokens/dark-buttons.scss" as dark-button-overrides;
+
+@use "@carbon/react/scss/components/tag/tokens" as tag-tokens;
+@use "../design-tokens/light-tags.scss" as light-tag-overrides;
+@use "../design-tokens/dark-tags.scss" as dark-tag-overrides;
+
+@use "@carbon/react/scss/components/notification/tokens" as notification-tokens;
+@use "../design-tokens/light-notifications.scss" as light-notification-overrides;
+@use "../design-tokens/dark-notifications.scss" as dark-notification-overrides;
+
+@use "@carbon/react";
+@use "@carbon/styles/scss/grid";
+
+@include grid.flex-grid();
+
+:root {
+  @include theme.theme();
+}
+
+.cds--g100 {
+  $button-tokens: utilities.merge(
+    button-tokens.$button-tokens,
+    dark-button-overrides.$dark-button-token-overrides
+  );
+  $tag-tokens: utilities.merge(
+    tag-tokens.$tag-tokens,
+    dark-tag-overrides.$dark-tag-token-overrides
+  );
+  $notification-tokens: utilities.merge(
+    notification-tokens.$notification-tokens,
+    dark-notification-overrides.$dark-notification-token-overrides
+  );
+
+  @include theme.add-component-tokens($button-tokens);
+  @include theme.add-component-tokens($tag-tokens);
+  @include theme.add-component-tokens($notification-tokens);
+  @include react.theme(dark.$dark-theme);
+}
+
+.cds--g10 {
+  $button-tokens: utilities.merge(
+    button-tokens.$button-tokens,
+    light-button-overrides.$light-button-token-overrides
+  );
+  $tag-tokens: utilities.merge(
+    tag-tokens.$tag-tokens,
+    light-tag-overrides.$light-tag-token-overrides
+  );
+
+  $notification-tokens: utilities.merge(
+    notification-tokens.$notification-tokens,
+    light-notification-overrides.$light-notification-token-overrides
+  );
+
+  @include theme.add-component-tokens($button-tokens);
+  @include theme.add-component-tokens($tag-tokens);
+  @include theme.add-component-tokens($notification-tokens);
+  @include react.theme(light.$light-theme);
+}
+
+/* --------------------- Buttons --------------------- 
+- Border-radius: 4px all corners         
+---------------------------------------------------- */
+.#{variables.$bcgov-prefix}--btn {
+  border-radius: 0.25rem;
+}
+
+/* ------- Text Input / Text Area / Password Input -------
+- Border-radius: 4px top corners
+-------------------------------------------------------- */
+.#{variables.$bcgov-prefix}--text-input,
+.#{variables.$bcgov-prefix}--text-area {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+/* ------------------ Number Input ----------------------
+- Border-radius: 4px top corners
+- Control Button: border-radius 4px all corners
+- Update input font family to use code-01
+------------------------------------------------------- */
+.#{variables.$bcgov-prefix}--number
+  .#{variables.$bcgov-prefix}--number__input-wrapper
+  input[type="number"] {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  font-family: var(--cds-code-01-font-family);
+}
+
+.#{variables.$bcgov-prefix}--number__control-btn {
+  border-radius: 0.25rem;
+}
+
+/* ------------------ Select ---------------------------
+- Input field: border-radius 4px top corners
+------------------------------------------------------ */
+.#{variables.$bcgov-prefix}--select-input {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+/* ------------------ Dropdown ---------------------------
+- Input field (list-box): border-radius 4px top corners
+- Dropdown menu: border-radius 4px all corners
+--------------------------------------------- */
+.#{variables.$bcgov-prefix}--list-box__field,
+.#{variables.$bcgov-prefix}--list-box {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.#{variables.$bcgov-prefix}--list-box__menu {
+  border-radius: 0.25rem;
+}
+
+/* ------------------ Date Picker ---------------------------
+- Input field: border-radius 4px top corners
+- Calender picker and control buttons: border-radius 4px all corners
+--------------------------------------------- */
+.#{variables.$bcgov-prefix}--date-picker__input {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.flatpickr-calendar,
+.flatpickr-prev-month,
+.flatpickr-next-month {
+  border-radius: 0.25rem;
+}
+
+/* ------------------ Time Picker ---------------------------
+- Border-radius: 4px on left top corner and right top corners, no border-radius in the middle
+----------------------------------------------------------------- */
+.#{variables.$bcgov-prefix}--time-picker__input
+  > .#{variables.$bcgov-prefix}--text-input {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0;
+}
+
+.#{variables.$bcgov-prefix}--time-picker__select
+  > .#{variables.$bcgov-prefix}--select-input {
+  border-radius: 0;
+}
+
+.#{variables.$bcgov-prefix}--time-picker
+  :last-child
+  > .#{variables.$bcgov-prefix}--select-input {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0.25rem;
+}
+
+/* --------------- Search ------------------------------
+- Border-radius: 4px top corners
+--------------------------------------------- */
+.#{variables.$bcgov-prefix}--search-input {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+/* --------------- Notification ------------------------------
+- Border-radius: 4px all corners
+- Update border color for inline notification
+- Add border for toast notification
+--------------------------------------------- */
+// Dark mode
+.#{variables.$bcgov-prefix}--inline-notification,
+.#{variables.$bcgov-prefix}--toast-notification {
+  border-radius: 0.25rem;
+}
+
+// Light mode
+div.#{variables.$bcgov-prefix}--inline-notification--low-contrast::before {
+  border-radius: 0 0.25rem 0.25rem 0;
+  filter: none;
+}
+
+$types: "error", "info", "success", "warning";
+@each $notificationType in $types {
+  div.#{variables.$bcgov-prefix}--inline-notification--#{$notificationType} {
+    border-left: 0.25rem
+      solid
+      var(--#{variables.$bcgov-prefix}-support-#{$notificationType}-inverse);
+  }
+  div.#{variables.$bcgov-prefix}--inline-notification--low-contrast.#{variables.$bcgov-prefix}--inline-notification--#{$notificationType} {
+    border-left: 0.25rem
+      solid
+      var(--#{variables.$bcgov-prefix}-support-#{$notificationType});
+  }
+  div.#{variables.$bcgov-prefix}--inline-notification--low-contrast.#{variables.$bcgov-prefix}--inline-notification--#{$notificationType}::before {
+    border-color: var(
+      --#{variables.$bcgov-prefix}-notification-border-#{$notificationType}
+    );
+  }
+}
+
+.#{variables.$bcgov-prefix}--toast-notification--low-contrast {
+  border-width: 0.063rem 0.063rem 0.063rem 0;
+  border-style: solid;
+}
+@each $notificationType in $types {
+  div.#{variables.$bcgov-prefix}--toast-notification--#{$notificationType} {
+    border-left: 0.25rem
+      solid
+      var(--#{variables.$bcgov-prefix}-support-#{$notificationType}-inverse);
+  }
+  div.#{variables.$bcgov-prefix}--toast-notification--low-contrast.#{variables.$bcgov-prefix}--toast-notification--#{$notificationType} {
+    border-left: 0.25rem
+      solid
+      var(--#{variables.$bcgov-prefix}-support-#{$notificationType});
+    border-top-color: var(
+      --#{variables.$bcgov-prefix}-notification-border-#{$notificationType}
+    );
+    border-bottom-color: var(
+      --#{variables.$bcgov-prefix}-notification-border-#{$notificationType}
+    );
+    border-right-color: var(
+      --#{variables.$bcgov-prefix}-notification-border-#{$notificationType}
+    );
+  }
+}
+
+/* ----------------- Tile ----------------------------
+- Border-radius: 4px all corners
+----------------------------------------------------- */
+.#{variables.$bcgov-prefix}--tile {
+  border-radius: 0.25rem;
+}
+
+/* ------------------ Data Table ---------------------------
+- Header: border-radius 4px top corners
+- Table column header: font-weight bold
+- Table row expand button: border-radius 4px all corners
+------------------------------------------------------ */
+.#{variables.$bcgov-prefix}--data-table-header {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.#{variables.$bcgov-prefix}--table-header-label {
+  font-weight: bold;
+}
+
+.#{variables.$bcgov-prefix}--table-expand__button {
+  border-radius: 0.25rem;
+}
+
+/* -------------------- Pagination -------------------------
+- Border-radius: 4px bottom corners
+- Set height of small (2.5rem), medium (3rem) and large (3.5rem) size
+- Set border-radius of the previous and next button, item per page and page select to 4px all corners
+--------------------------------------------- */
+.#{variables.$bcgov-prefix}--pagination {
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.#{variables.$bcgov-prefix}--pagination--sm,
+.#{variables.$bcgov-prefix}--pagination--sm
+  .#{variables.$bcgov-prefix}--pagination__control-buttons
+  .#{variables.$bcgov-prefix}--popover-container {
+  height: 2.5rem;
+}
+
+.#{variables.$bcgov-prefix}--pagination--md,
+.#{variables.$bcgov-prefix}--pagination--md
+  .#{variables.$bcgov-prefix}--pagination__control-buttons
+  .#{variables.$bcgov-prefix}--popover-container {
+  height: 3rem;
+}
+
+.#{variables.$bcgov-prefix}--pagination--lg,
+.#{variables.$bcgov-prefix}--pagination--lg
+  .#{variables.$bcgov-prefix}--pagination__control-buttons
+  .#{variables.$bcgov-prefix}--popover-container {
+  height: 3.5rem;
+}
+
+.#{variables.$bcgov-prefix}--pagination
+  .#{variables.$bcgov-prefix}--select__item-count
+  .#{variables.$bcgov-prefix}--select-input__wrapper
+  select.#{variables.$bcgov-prefix}--select-input,
+.#{variables.$bcgov-prefix}--pagination
+  .#{variables.$bcgov-prefix}--select__page-number
+  .#{variables.$bcgov-prefix}--select-input__wrapper
+  select.#{variables.$bcgov-prefix}--select-input {
+  border-radius: 0.25rem;
+  border: 0;
+}
+
+.#{variables.$bcgov-prefix}--pagination
+  .#{variables.$bcgov-prefix}--select__item-count
+  .#{variables.$bcgov-prefix}--select-input__wrapper,
+.#{variables.$bcgov-prefix}--pagination
+  .#{variables.$bcgov-prefix}--select__page-number
+  .#{variables.$bcgov-prefix}--select-input__wrapper {
+  margin: 0.25rem;
+}
+
+.#{variables.$bcgov-prefix}--pagination
+  .#{variables.$bcgov-prefix}--select__item-count
+  .#{variables.$bcgov-prefix}--select-input--inline__wrapper {
+  border-right: 0.063rem solid var(--#{variables.$bcgov-prefix}-border-subtle);
+}
+
+.#{variables.$bcgov-prefix}--pagination__control-buttons
+  .#{variables.$bcgov-prefix}--popover-container {
+  border-left: 0.063rem solid var(--#{variables.$bcgov-prefix}-border-subtle);
+}
+
+.#{variables.$bcgov-prefix}--pagination__control-buttons
+  .#{variables.$bcgov-prefix}--pagination__button {
+  margin: 0.25rem;
+  border: 0;
+}
+
+/* ------------------ Overflow Menu ---------------------------
+- Closed trigger button: border-radius 4px on all corners
+- Opened trigger button: border-radius 4px top corners
+- First menu item: border-radius 4px top corners
+- Last menu item: border-radius 4px bottom corners
+------------------------------------------------------------- */
+.#{variables.$bcgov-prefix}--overflow-menu.bcgov--overflow-menu--open {
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.#{variables.$bcgov-prefix}--overflow-menu-options {
+  border-radius: 0 0.25rem 0.25rem 0.25rem;
+}
+
+li.#{variables.$bcgov-prefix}--overflow-menu-options__option:first-child {
+  border-radius: 0 0.25rem 0 0;
+}
+
+li.#{variables.$bcgov-prefix}--overflow-menu-options__option:last-child {
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+/* ------------------  Modal ---------------------------
+- Border-radius: 8px on all corners
+------------------------------------------------------ */
+.#{variables.$bcgov-prefix}--modal-container {
+  border-radius: 0.5rem;
+}
+
+.#{variables.$bcgov-prefix}--modal-close {
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.#{variables.$bcgov-prefix}--modal-footer {
+  height: auto;
+  margin: 0 1rem 1rem;
+}
+
+.#{variables.$bcgov-prefix}--modal-footer .#{variables.$bcgov-prefix}--btn {
+  max-width: none;
+  height: 3rem;
+  padding-bottom: 1rem;
+}
+
+.#{variables.$bcgov-prefix}--modal-footer
+  .#{variables.$bcgov-prefix}--btn:not(
+    .#{variables.$bcgov-prefix}--btn--primary
+  ) {
+  margin-right: 0.25rem;
+}
+
+#{variables.$bcgov-prefix}-modal::part(dialog) {
+  background-color: var(--#{variables.$bcgov-prefix}-layer-01);
+  border-radius: 0.5rem;
+}
+
+#{variables.$bcgov-prefix}-modal-footer {
+  padding: 1rem;
+}
+
+/* ------------ Label ---------------
+- Update text color from text-secondary to text-primary
+This will apply to Checkbox, Data Picker, Dropdown, RadioButton, Select, Slider, Text Input, Password Input, Text Area label
+------------------------------- */
+label.#{variables.$bcgov-prefix}--label,
+legend.#{variables.$bcgov-prefix}--label {
+  color: var(--#{variables.$bcgov-prefix}-text-primary);
+}
+
+/* ------------------  Left Panel ---------------------------
+- List item height: 48px
+- Left icons use "link-primary" color
+- Add a right border for the panel
+------------------------------------------------------ */
+.#{variables.$bcgov-prefix}--side-nav__menu
+  .#{variables.$bcgov-prefix}--side-nav__menu-item
+  a.#{variables.$bcgov-prefix}--side-nav__link,
+button.#{variables.$bcgov-prefix}--side-nav__submenu,
+.#{variables.$bcgov-prefix}--side-nav__link {
+  height: 3rem;
+}
+
+div.#{variables.$bcgov-prefix}--side-nav__icon > svg {
+  fill: var(--#{variables.$bcgov-prefix}-link-primary);
+}
+
+nav.#{variables.$bcgov-prefix}--side-nav {
+  border-right: 0.063rem solid var(--#{variables.$bcgov-prefix}-border-subtle);
+}
+
+/* ------------------ Header ---------------------------
+- Update the background color
+- Set the height
+- Adjust the side nav position for the new header height
+------------------------------------------------------ */
+.#{variables.$bcgov-prefix}--header {
+  background-color: var(--#{variables.$bcgov-prefix}-background-brand);
+  height: 3.5rem;
+}
+
+.#{variables.$bcgov-prefix}--header ~ .#{variables.$bcgov-prefix}--side-nav {
+  inset-block-start: 3.5rem;
+}
+
+a.#{variables.$bcgov-prefix}--header__name {
+  font-family: "BCSans", "Noto Sans", Verdana, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #f3f3f5;
+  padding-left: 2rem;
+}
