@@ -38,7 +38,7 @@
   @include theme.theme();
 }
 
-.cds--g100 {
+.#{variables.$bcgov-prefix}--g100 {
   $button-tokens: utilities.merge(
     button-tokens.$button-tokens,
     dark-button-overrides.$dark-button-token-overrides
@@ -58,7 +58,7 @@
   @include react.theme(dark.$dark-theme);
 }
 
-.cds--g10 {
+.#{variables.$bcgov-prefix}--g10 {
   $button-tokens: utilities.merge(
     button-tokens.$button-tokens,
     light-button-overrides.$light-button-token-overrides
