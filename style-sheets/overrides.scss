@@ -38,7 +38,7 @@
   @include theme.theme();
 }
 
-.#{variables.$bcgov-prefix}--g100 {
+.#{variables.$default-prefix}--g100 {
   $button-tokens: utilities.merge(
     button-tokens.$button-tokens,
     dark-button-overrides.$dark-button-token-overrides
@@ -58,7 +58,7 @@
   @include react.theme(dark.$dark-theme);
 }
 
-.#{variables.$bcgov-prefix}--g10 {
+.#{variables.$default-prefix}--g10 {
   $button-tokens: utilities.merge(
     button-tokens.$button-tokens,
     light-button-overrides.$light-button-token-overrides
@@ -82,15 +82,15 @@
 /* --------------------- Buttons --------------------- 
 - Border-radius: 4px all corners         
 ---------------------------------------------------- */
-.#{variables.$bcgov-prefix}--btn {
+.#{variables.$default-prefix}--btn {
   border-radius: 0.25rem;
 }
 
 /* ------- Text Input / Text Area / Password Input -------
 - Border-radius: 4px top corners
 -------------------------------------------------------- */
-.#{variables.$bcgov-prefix}--text-input,
-.#{variables.$bcgov-prefix}--text-area {
+.#{variables.$default-prefix}--text-input,
+.#{variables.$default-prefix}--text-area {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
@@ -100,22 +100,22 @@
 - Control Button: border-radius 4px all corners
 - Update input font family to use code-01
 ------------------------------------------------------- */
-.#{variables.$bcgov-prefix}--number
-  .#{variables.$bcgov-prefix}--number__input-wrapper
+.#{variables.$default-prefix}--number
+  .#{variables.$default-prefix}--number__input-wrapper
   input[type="number"] {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-  font-family: var(--#{variables.$bcgov-prefix}-code-01-font-family);
+  font-family: var(--#{variables.$default-prefix}-code-01-font-family);
 }
 
-.#{variables.$bcgov-prefix}--number__control-btn {
+.#{variables.$default-prefix}--number__control-btn {
   border-radius: 0.25rem;
 }
 
 /* ------------------ Select ---------------------------
 - Input field: border-radius 4px top corners
 ------------------------------------------------------ */
-.#{variables.$bcgov-prefix}--select-input {
+.#{variables.$default-prefix}--select-input {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
@@ -124,12 +124,12 @@
 - Input field (list-box): border-radius 4px top corners
 - Dropdown menu: border-radius 4px all corners
 --------------------------------------------- */
-.#{variables.$bcgov-prefix}--list-box__field,
-.#{variables.$bcgov-prefix}--list-box {
+.#{variables.$default-prefix}--list-box__field,
+.#{variables.$default-prefix}--list-box {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
-.#{variables.$bcgov-prefix}--list-box__menu {
+.#{variables.$default-prefix}--list-box__menu {
   border-radius: 0.25rem;
 }
 
@@ -137,7 +137,7 @@
 - Input field: border-radius 4px top corners
 - Calender picker and control buttons: border-radius 4px all corners
 --------------------------------------------- */
-.#{variables.$bcgov-prefix}--date-picker__input {
+.#{variables.$default-prefix}--date-picker__input {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
@@ -151,20 +151,20 @@
 /* ------------------ Time Picker ---------------------------
 - Border-radius: 4px on left top corner and right top corners, no border-radius in the middle
 ----------------------------------------------------------------- */
-.#{variables.$bcgov-prefix}--time-picker__input
-  > .#{variables.$bcgov-prefix}--text-input {
+.#{variables.$default-prefix}--time-picker__input
+  > .#{variables.$default-prefix}--text-input {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0;
 }
 
-.#{variables.$bcgov-prefix}--time-picker__select
-  > .#{variables.$bcgov-prefix}--select-input {
+.#{variables.$default-prefix}--time-picker__select
+  > .#{variables.$default-prefix}--select-input {
   border-radius: 0;
 }
 
-.#{variables.$bcgov-prefix}--time-picker
+.#{variables.$default-prefix}--time-picker
   :last-child
-  > .#{variables.$bcgov-prefix}--select-input {
+  > .#{variables.$default-prefix}--select-input {
   border-top-left-radius: 0;
   border-top-right-radius: 0.25rem;
 }
@@ -172,7 +172,7 @@
 /* --------------- Search ------------------------------
 - Border-radius: 4px top corners
 --------------------------------------------- */
-.#{variables.$bcgov-prefix}--search-input {
+.#{variables.$default-prefix}--search-input {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
@@ -183,58 +183,58 @@
 - Add border for toast notification
 --------------------------------------------- */
 // Dark mode
-.#{variables.$bcgov-prefix}--inline-notification,
-.#{variables.$bcgov-prefix}--toast-notification {
+.#{variables.$default-prefix}--inline-notification,
+.#{variables.$default-prefix}--toast-notification {
   border-radius: 0.25rem;
 }
 
 // Light mode
-div.#{variables.$bcgov-prefix}--inline-notification--low-contrast::before {
+div.#{variables.$default-prefix}--inline-notification--low-contrast::before {
   border-radius: 0 0.25rem 0.25rem 0;
   filter: none;
 }
 
 $types: "error", "info", "success", "warning";
 @each $notificationType in $types {
-  div.#{variables.$bcgov-prefix}--inline-notification--#{$notificationType} {
+  div.#{variables.$default-prefix}--inline-notification--#{$notificationType} {
     border-left: 0.25rem
       solid
-      var(--#{variables.$bcgov-prefix}-support-#{$notificationType}-inverse);
+      var(--#{variables.$default-prefix}-support-#{$notificationType}-inverse);
   }
-  div.#{variables.$bcgov-prefix}--inline-notification--low-contrast.#{variables.$bcgov-prefix}--inline-notification--#{$notificationType} {
+  div.#{variables.$default-prefix}--inline-notification--low-contrast.#{variables.$default-prefix}--inline-notification--#{$notificationType} {
     border-left: 0.25rem
       solid
-      var(--#{variables.$bcgov-prefix}-support-#{$notificationType});
+      var(--#{variables.$default-prefix}-support-#{$notificationType});
   }
-  div.#{variables.$bcgov-prefix}--inline-notification--low-contrast.#{variables.$bcgov-prefix}--inline-notification--#{$notificationType}::before {
+  div.#{variables.$default-prefix}--inline-notification--low-contrast.#{variables.$default-prefix}--inline-notification--#{$notificationType}::before {
     border-color: var(
-      --#{variables.$bcgov-prefix}-notification-border-#{$notificationType}
+      --#{variables.$default-prefix}-notification-border-#{$notificationType}
     );
   }
 }
 
-.#{variables.$bcgov-prefix}--toast-notification--low-contrast {
+.#{variables.$default-prefix}--toast-notification--low-contrast {
   border-width: 0.063rem 0.063rem 0.063rem 0;
   border-style: solid;
 }
 @each $notificationType in $types {
-  div.#{variables.$bcgov-prefix}--toast-notification--#{$notificationType} {
+  div.#{variables.$default-prefix}--toast-notification--#{$notificationType} {
     border-left: 0.25rem
       solid
-      var(--#{variables.$bcgov-prefix}-support-#{$notificationType}-inverse);
+      var(--#{variables.$default-prefix}-support-#{$notificationType}-inverse);
   }
-  div.#{variables.$bcgov-prefix}--toast-notification--low-contrast.#{variables.$bcgov-prefix}--toast-notification--#{$notificationType} {
+  div.#{variables.$default-prefix}--toast-notification--low-contrast.#{variables.$default-prefix}--toast-notification--#{$notificationType} {
     border-left: 0.25rem
       solid
-      var(--#{variables.$bcgov-prefix}-support-#{$notificationType});
+      var(--#{variables.$default-prefix}-support-#{$notificationType});
     border-top-color: var(
-      --#{variables.$bcgov-prefix}-notification-border-#{$notificationType}
+      --#{variables.$default-prefix}-notification-border-#{$notificationType}
     );
     border-bottom-color: var(
-      --#{variables.$bcgov-prefix}-notification-border-#{$notificationType}
+      --#{variables.$default-prefix}-notification-border-#{$notificationType}
     );
     border-right-color: var(
-      --#{variables.$bcgov-prefix}-notification-border-#{$notificationType}
+      --#{variables.$default-prefix}-notification-border-#{$notificationType}
     );
   }
 }
@@ -242,7 +242,7 @@ $types: "error", "info", "success", "warning";
 /* ----------------- Tile ----------------------------
 - Border-radius: 4px all corners
 ----------------------------------------------------- */
-.#{variables.$bcgov-prefix}--tile {
+.#{variables.$default-prefix}--tile {
   border-radius: 0.25rem;
 }
 
@@ -251,16 +251,16 @@ $types: "error", "info", "success", "warning";
 - Table column header: font-weight bold
 - Table row expand button: border-radius 4px all corners
 ------------------------------------------------------ */
-.#{variables.$bcgov-prefix}--data-table-header {
+.#{variables.$default-prefix}--data-table-header {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
 
-.#{variables.$bcgov-prefix}--table-header-label {
+.#{variables.$default-prefix}--table-header-label {
   font-weight: bold;
 }
 
-.#{variables.$bcgov-prefix}--table-expand__button {
+.#{variables.$default-prefix}--table-expand__button {
   border-radius: 0.25rem;
 }
 
@@ -269,66 +269,66 @@ $types: "error", "info", "success", "warning";
 - Set height of small (2.5rem), medium (3rem) and large (3.5rem) size
 - Set border-radius of the previous and next button, item per page and page select to 4px all corners
 --------------------------------------------- */
-.#{variables.$bcgov-prefix}--pagination {
+.#{variables.$default-prefix}--pagination {
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
 
-.#{variables.$bcgov-prefix}--pagination--sm,
-.#{variables.$bcgov-prefix}--pagination--sm
-  .#{variables.$bcgov-prefix}--pagination__control-buttons
-  .#{variables.$bcgov-prefix}--popover-container {
+.#{variables.$default-prefix}--pagination--sm,
+.#{variables.$default-prefix}--pagination--sm
+  .#{variables.$default-prefix}--pagination__control-buttons
+  .#{variables.$default-prefix}--popover-container {
   height: 2.5rem;
 }
 
-.#{variables.$bcgov-prefix}--pagination--md,
-.#{variables.$bcgov-prefix}--pagination--md
-  .#{variables.$bcgov-prefix}--pagination__control-buttons
-  .#{variables.$bcgov-prefix}--popover-container {
+.#{variables.$default-prefix}--pagination--md,
+.#{variables.$default-prefix}--pagination--md
+  .#{variables.$default-prefix}--pagination__control-buttons
+  .#{variables.$default-prefix}--popover-container {
   height: 3rem;
 }
 
-.#{variables.$bcgov-prefix}--pagination--lg,
-.#{variables.$bcgov-prefix}--pagination--lg
-  .#{variables.$bcgov-prefix}--pagination__control-buttons
-  .#{variables.$bcgov-prefix}--popover-container {
+.#{variables.$default-prefix}--pagination--lg,
+.#{variables.$default-prefix}--pagination--lg
+  .#{variables.$default-prefix}--pagination__control-buttons
+  .#{variables.$default-prefix}--popover-container {
   height: 3.5rem;
 }
 
-.#{variables.$bcgov-prefix}--pagination
-  .#{variables.$bcgov-prefix}--select__item-count
-  .#{variables.$bcgov-prefix}--select-input__wrapper
-  select.#{variables.$bcgov-prefix}--select-input,
-.#{variables.$bcgov-prefix}--pagination
-  .#{variables.$bcgov-prefix}--select__page-number
-  .#{variables.$bcgov-prefix}--select-input__wrapper
-  select.#{variables.$bcgov-prefix}--select-input {
+.#{variables.$default-prefix}--pagination
+  .#{variables.$default-prefix}--select__item-count
+  .#{variables.$default-prefix}--select-input__wrapper
+  select.#{variables.$default-prefix}--select-input,
+.#{variables.$default-prefix}--pagination
+  .#{variables.$default-prefix}--select__page-number
+  .#{variables.$default-prefix}--select-input__wrapper
+  select.#{variables.$default-prefix}--select-input {
   border-radius: 0.25rem;
   border: 0;
 }
 
-.#{variables.$bcgov-prefix}--pagination
-  .#{variables.$bcgov-prefix}--select__item-count
-  .#{variables.$bcgov-prefix}--select-input__wrapper,
-.#{variables.$bcgov-prefix}--pagination
-  .#{variables.$bcgov-prefix}--select__page-number
-  .#{variables.$bcgov-prefix}--select-input__wrapper {
+.#{variables.$default-prefix}--pagination
+  .#{variables.$default-prefix}--select__item-count
+  .#{variables.$default-prefix}--select-input__wrapper,
+.#{variables.$default-prefix}--pagination
+  .#{variables.$default-prefix}--select__page-number
+  .#{variables.$default-prefix}--select-input__wrapper {
   margin: 0.25rem;
 }
 
-.#{variables.$bcgov-prefix}--pagination
-  .#{variables.$bcgov-prefix}--select__item-count
-  .#{variables.$bcgov-prefix}--select-input--inline__wrapper {
-  border-right: 0.063rem solid var(--#{variables.$bcgov-prefix}-border-subtle);
+.#{variables.$default-prefix}--pagination
+  .#{variables.$default-prefix}--select__item-count
+  .#{variables.$default-prefix}--select-input--inline__wrapper {
+  border-right: 0.063rem solid var(--#{variables.$default-prefix}-border-subtle);
 }
 
-.#{variables.$bcgov-prefix}--pagination__control-buttons
-  .#{variables.$bcgov-prefix}--popover-container {
-  border-left: 0.063rem solid var(--#{variables.$bcgov-prefix}-border-subtle);
+.#{variables.$default-prefix}--pagination__control-buttons
+  .#{variables.$default-prefix}--popover-container {
+  border-left: 0.063rem solid var(--#{variables.$default-prefix}-border-subtle);
 }
 
-.#{variables.$bcgov-prefix}--pagination__control-buttons
-  .#{variables.$bcgov-prefix}--pagination__button {
+.#{variables.$default-prefix}--pagination__control-buttons
+  .#{variables.$default-prefix}--pagination__button {
   margin: 0.25rem;
   border: 0;
 }
@@ -339,58 +339,58 @@ $types: "error", "info", "success", "warning";
 - First menu item: border-radius 4px top corners
 - Last menu item: border-radius 4px bottom corners
 ------------------------------------------------------------- */
-.#{variables.$bcgov-prefix}--overflow-menu.bcgov--overflow-menu--open {
+.#{variables.$default-prefix}--overflow-menu.bcgov--overflow-menu--open {
   border-radius: 0.25rem 0.25rem 0 0;
 }
 
-.#{variables.$bcgov-prefix}--overflow-menu-options {
+.#{variables.$default-prefix}--overflow-menu-options {
   border-radius: 0 0.25rem 0.25rem 0.25rem;
 }
 
-li.#{variables.$bcgov-prefix}--overflow-menu-options__option:first-child {
+li.#{variables.$default-prefix}--overflow-menu-options__option:first-child {
   border-radius: 0 0.25rem 0 0;
 }
 
-li.#{variables.$bcgov-prefix}--overflow-menu-options__option:last-child {
+li.#{variables.$default-prefix}--overflow-menu-options__option:last-child {
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
 /* ------------------  Modal ---------------------------
 - Border-radius: 8px on all corners
 ------------------------------------------------------ */
-.#{variables.$bcgov-prefix}--modal-container {
+.#{variables.$default-prefix}--modal-container {
   border-radius: 0.5rem;
 }
 
-.#{variables.$bcgov-prefix}--modal-close {
+.#{variables.$default-prefix}--modal-close {
   margin-right: 1rem;
   margin-top: 1rem;
 }
 
-.#{variables.$bcgov-prefix}--modal-footer {
+.#{variables.$default-prefix}--modal-footer {
   height: auto;
   margin: 0 1rem 1rem;
 }
 
-.#{variables.$bcgov-prefix}--modal-footer .#{variables.$bcgov-prefix}--btn {
+.#{variables.$default-prefix}--modal-footer .#{variables.$default-prefix}--btn {
   max-width: none;
   height: 3rem;
   padding-bottom: 1rem;
 }
 
-.#{variables.$bcgov-prefix}--modal-footer
-  .#{variables.$bcgov-prefix}--btn:not(
-    .#{variables.$bcgov-prefix}--btn--primary
+.#{variables.$default-prefix}--modal-footer
+  .#{variables.$default-prefix}--btn:not(
+    .#{variables.$default-prefix}--btn--primary
   ) {
   margin-right: 0.25rem;
 }
 
-#{variables.$bcgov-prefix}-modal::part(dialog) {
-  background-color: var(--#{variables.$bcgov-prefix}-layer-01);
+#{variables.$default-prefix}-modal::part(dialog) {
+  background-color: var(--#{variables.$default-prefix}-layer-01);
   border-radius: 0.5rem;
 }
 
-#{variables.$bcgov-prefix}-modal-footer {
+#{variables.$default-prefix}-modal-footer {
   padding: 1rem;
 }
 
@@ -398,9 +398,9 @@ li.#{variables.$bcgov-prefix}--overflow-menu-options__option:last-child {
 - Update text color from text-secondary to text-primary
 This will apply to Checkbox, Data Picker, Dropdown, RadioButton, Select, Slider, Text Input, Password Input, Text Area label
 ------------------------------- */
-label.#{variables.$bcgov-prefix}--label,
-legend.#{variables.$bcgov-prefix}--label {
-  color: var(--#{variables.$bcgov-prefix}-text-primary);
+label.#{variables.$default-prefix}--label,
+legend.#{variables.$default-prefix}--label {
+  color: var(--#{variables.$default-prefix}-text-primary);
 }
 
 /* ------------------  Left Panel ---------------------------
@@ -408,20 +408,20 @@ legend.#{variables.$bcgov-prefix}--label {
 - Left icons use "link-primary" color
 - Add a right border for the panel
 ------------------------------------------------------ */
-.#{variables.$bcgov-prefix}--side-nav__menu
-  .#{variables.$bcgov-prefix}--side-nav__menu-item
-  a.#{variables.$bcgov-prefix}--side-nav__link,
-button.#{variables.$bcgov-prefix}--side-nav__submenu,
-.#{variables.$bcgov-prefix}--side-nav__link {
+.#{variables.$default-prefix}--side-nav__menu
+  .#{variables.$default-prefix}--side-nav__menu-item
+  a.#{variables.$default-prefix}--side-nav__link,
+button.#{variables.$default-prefix}--side-nav__submenu,
+.#{variables.$default-prefix}--side-nav__link {
   height: 3rem;
 }
 
-div.#{variables.$bcgov-prefix}--side-nav__icon > svg {
-  fill: var(--#{variables.$bcgov-prefix}-link-primary);
+div.#{variables.$default-prefix}--side-nav__icon > svg {
+  fill: var(--#{variables.$default-prefix}-link-primary);
 }
 
-nav.#{variables.$bcgov-prefix}--side-nav {
-  border-right: 0.063rem solid var(--#{variables.$bcgov-prefix}-border-subtle);
+nav.#{variables.$default-prefix}--side-nav {
+  border-right: 0.063rem solid var(--#{variables.$default-prefix}-border-subtle);
 }
 
 /* ------------------ Header ---------------------------
@@ -429,16 +429,16 @@ nav.#{variables.$bcgov-prefix}--side-nav {
 - Set the height
 - Adjust the side nav position for the new header height
 ------------------------------------------------------ */
-.#{variables.$bcgov-prefix}--header {
-  background-color: var(--#{variables.$bcgov-prefix}-background-brand);
+.#{variables.$default-prefix}--header {
+  background-color: var(--#{variables.$default-prefix}-background-brand);
   height: 3.5rem;
 }
 
-.#{variables.$bcgov-prefix}--header ~ .#{variables.$bcgov-prefix}--side-nav {
+.#{variables.$default-prefix}--header ~ .#{variables.$default-prefix}--side-nav {
   inset-block-start: 3.5rem;
 }
 
-a.#{variables.$bcgov-prefix}--header__name {
+a.#{variables.$default-prefix}--header__name {
   font-family: "BCSans", "Noto Sans", Verdana, Arial, sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
