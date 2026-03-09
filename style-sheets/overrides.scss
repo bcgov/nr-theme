@@ -105,7 +105,7 @@
   input[type="number"] {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-  font-family: var(--cds-code-01-font-family);
+  font-family: var(--#{variables.$bcgov-prefix}-code-01-font-family);
 }
 
 .#{variables.$bcgov-prefix}--number__control-btn {
