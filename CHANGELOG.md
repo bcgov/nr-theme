@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/bcgov/nr-theme/compare/v1.9.0...v1.9.1) (2026-03-10)
+
+
+### Bug Fixes
+
+* Remove hardcoded classname from the stylesheet ([#195](https://github.com/bcgov/nr-theme/issues/195)) ([e6d8a19](https://github.com/bcgov/nr-theme/commit/e6d8a19adade8d5c5723fbe9cd0a78d7eb23f63a))
+
 ## [1.9.0](https://github.com/bcgov/nr-theme/compare/v1.8.9...v1.9.0) (2026-03-06)
 
 
