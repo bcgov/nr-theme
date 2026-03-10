@@ -111,7 +111,9 @@ createRoot(document.getElementById("root")!).render(<RootComponent />);
 ```
 
 ### Usage (React)
+Note: This is the usage for older  @bcgov-nr/nr-theme version (<= v1.8.9)
 
+-   Install the pacakge `npm i @bcgov-nr/nr-theme@1.8.9`
 -   Create a `custom.scss` file in `./src`
 -   Add `import './custom.scss';` to your `App.tsx` file
 -   Configure your `custom.scss` file to your taste with this [example](/examples/React/example-custom.scss)

@@ -2,7 +2,9 @@
 // will be used over other style files
 
 // This is the prefix for all the carbon components when
-// they are generated
+// they are generated (used in SPAR, CLIENT, SILVA)
 $bcgov-prefix: 'bx';
 $primevue-prefix: 'p';
-$default-prefix: 'cds'; // default carbon prefix
+// From @bcgov-nr/nr-theme v1.9.1, 
+// we will use the default carbon prefix with the new stylesheet style-sheets/overrides.scss
+$default-prefix: 'cds';

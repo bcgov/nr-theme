@@ -339,7 +339,7 @@ $types: "error", "info", "success", "warning";
 - First menu item: border-radius 4px top corners
 - Last menu item: border-radius 4px bottom corners
 ------------------------------------------------------------- */
-.#{variables.$default-prefix}--overflow-menu.bcgov--overflow-menu--open {
+.#{variables.$default-prefix}--overflow-menu.#{variables.$default-prefix}--overflow-menu--open {
   border-radius: 0.25rem 0.25rem 0 0;
 }
 
